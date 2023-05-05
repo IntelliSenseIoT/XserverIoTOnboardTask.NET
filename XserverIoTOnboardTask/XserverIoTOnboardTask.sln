@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XserverIoTOnboardTask.NET", "XserverIoTOnboardTask\XserverIoTOnboardTask.NET.csproj", "{D7849983-798A-42A6-92F2-52FA44477E1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7849983-798A-42A6-92F2-52FA44477E1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7849983-798A-42A6-92F2-52FA44477E1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7849983-798A-42A6-92F2-52FA44477E1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7849983-798A-42A6-92F2-52FA44477E1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E611B4B4-0F6E-45BE-9EAC-E0C7A9915830}
+	EndGlobalSection
+EndGlobal
