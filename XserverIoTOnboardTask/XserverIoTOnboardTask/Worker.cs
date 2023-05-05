@@ -13,6 +13,7 @@ namespace XserverIoTOnboardTask
         }
         #endregion
 
+
         public override Task StartAsync(CancellationToken cancellationToken)
         {
             //Start initializing
