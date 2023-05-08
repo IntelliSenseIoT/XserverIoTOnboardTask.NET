@@ -19,18 +19,8 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 
 # XserverIoTOnboardTask:
 
-## Required UWP Target settings
-
-    Min version: Windows 10 Fall Creators Update (10.0; Build 16299) 
-
 ## Required Xserver.IoT firmware
 
-    Min version: 10.3.0
-
-## Required UWP Capabilities
-
-    <Capability Name="internetClient" />
-    <Capability Name="internetClientServer"/>
-    <Capability Name="privateNetworkClientServer"/>
+    Min version: 11.0.x
 
 # Examples:
