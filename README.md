@@ -7,3 +7,30 @@
 - This capabilities allow the use of reporting, analysis, and AI software to access information from devices for data collection, trending, alarm/event management, analysis, remote control, and other functions.
 
 ![](images/ConnectionTechOverview.png)
+
+# Xserver.IoT OnboardTask Overview:
+
+With the Onboard Task project can be implemented customized tasks (Industrial PC communication, Custom protocol matching, Control tasks, Remote parameter setting from cloud, Control with Artificial Intelligence, etc.).
+
+- More details: https://www.intellisense-iot.com/
+- [Technical overview about IoT Server](https://www.intellisense-iot.com/xserver-iot-product) 
+
+![](images/SDKOverview.png)
+
+# XserverIoTOnboardTask:
+
+## Required UWP Target settings
+
+    Min version: Windows 10 Fall Creators Update (10.0; Build 16299) 
+
+## Required Xserver.IoT firmware
+
+    Min version: 10.3.0
+
+## Required UWP Capabilities
+
+    <Capability Name="internetClient" />
+    <Capability Name="internetClientServer"/>
+    <Capability Name="privateNetworkClientServer"/>
+
+# Examples:
