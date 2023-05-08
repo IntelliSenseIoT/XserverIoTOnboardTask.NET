@@ -49,7 +49,7 @@
           "dependencies": {
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.1, )"
             },
             "Microsoft.Extensions.Hosting.Systemd": {
               "target": "Package",
@@ -57,7 +57,11 @@
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.2, )"
+              "version": "[13.0.3, )"
+            },
+            "XserverIoTCommon.NET": {
+              "target": "Package",
+              "version": "[11.0.0, )"
             }
           },
           "imports": [
