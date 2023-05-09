@@ -5,6 +5,12 @@ using XserverIoTCommon;
 
 namespace XserverIoTOnboardTask
 {
+    /// <summary>
+    /// Use the code below to easily write an OnboardTask to Xserver.IoT framework.
+    /// Created by IntelliSense Ltd.
+    /// Website: http://www.intellisense-iot.com/
+    /// </summary>
+
     public class Worker : BackgroundService
     {
         #region XServerIoTOnboardTask service settings
