@@ -5162,9 +5162,9 @@
   "project": {
     "version": "11.0.0",
     "restore": {
-      "projectUniqueName": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.NET.csproj",
-      "projectName": "XserverIoTOnboardTask.NET",
-      "projectPath": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.NET.csproj",
+      "projectUniqueName": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
+      "projectName": "XserverIoTOnboardTask",
+      "projectPath": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
       "packagesPath": "C:\\Users\\avrep\\.nuget\\packages\\",
       "outputPath": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\obj\\",
       "projectStyle": "PackageReference",

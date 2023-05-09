@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\EM_IOT\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj": {}
+    "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj": {}
   },
   "projects": {
-    "D:\\EM_IOT\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj": {
+    "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj": {
       "version": "11.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EM_IOT\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
+        "projectUniqueName": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
         "projectName": "XserverIoTOnboardTask",
-        "projectPath": "D:\\EM_IOT\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
+        "projectPath": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
         "packagesPath": "C:\\Users\\avrep\\.nuget\\packages\\",
-        "outputPath": "D:\\EM_IOT\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\obj\\",
+        "outputPath": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,7 +49,7 @@
           "dependencies": {
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.1, )"
             },
             "Microsoft.Extensions.Hosting.Systemd": {
               "target": "Package",
@@ -57,7 +57,11 @@
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.2, )"
+              "version": "[13.0.3, )"
+            },
+            "XserverIoTCommon.NET": {
+              "target": "Package",
+              "version": "[11.0.0, )"
             }
           },
           "imports": [

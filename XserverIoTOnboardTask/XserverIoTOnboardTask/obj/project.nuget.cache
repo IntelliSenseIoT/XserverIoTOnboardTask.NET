@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CU4NG/1RxGhsA3NviSn+5uO0AKVCmeLmGLZLlRZqKxaT0c086jkq9+K7qx2ZfMxm66MD8UMHwxzSN1Lo3IVqGA==",
+  "dgSpecHash": "FFpfme3WPQGgTHIWTY85l9he8pftHImWqy3r0dsayPp7oYofyLHgtzZ///gd4xTTC/0vHeUwHYPpeY58geQFnA==",
   "success": true,
-  "projectFilePath": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.NET.csproj",
+  "projectFilePath": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\avrep\\.nuget\\packages\\azure.core\\1.22.0\\azure.core.1.22.0.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\cloud.net.deviceservice\\11.0.1\\cloud.net.deviceservice.11.0.1.nupkg.sha512",
