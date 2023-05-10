@@ -6,7 +6,7 @@
 
 ## Code:
 
-![](images/XserverIoTOnboardTaskCode.png)
+![](images/OnboardTaskCode.png)
 
 ## More details:
 
