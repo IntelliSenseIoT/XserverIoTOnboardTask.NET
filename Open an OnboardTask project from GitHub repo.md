@@ -2,13 +2,11 @@
 
 ## Prerequisites
 
-- Visual Studio 2019 - [Download & Install](https://visualstudio.microsoft.com/downloads/)
-- Windows 10 SDK, version 1803 (10.0.17134.12) - [Download & Install](https://developer.microsoft.com/en-gb/windows/downloads/sdk-archive/)
-- Windows 10 SDK, version 1903 (10.0.18362.1) - [Download & Install](https://developer.microsoft.com/en-gb/windows/downloads/sdk-archive/)
+- Visual Studio 2022 - [Download & Install](https://visualstudio.microsoft.com/downloads/)
 
 ## Steps
 
-1) Open IoT Server OnboardTask project on Github website [Click here](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io)
+1) Open IoT Server OnboardTask project on Github website [Click here](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET)
 2) Copy the repository location
 
 ![](images/Github.png)
