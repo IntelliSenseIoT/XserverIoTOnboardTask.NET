@@ -9,7 +9,7 @@
 1) Open IoT Server OnboardTask project on Github website [Click here](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET)
 2) Copy the repository location
 
-![](images/Github.png)
+![](images/GitHub.png)
 
 3) Open Visual Studio 2019
 
