@@ -23,7 +23,7 @@
 In the code below, the tasks required for the first run are performed.
     
      private async void Initialize()
-        {
+     {
             await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
 
             try
@@ -41,15 +41,15 @@ In the code below, the tasks required for the first run are performed.
             }
 
             await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
-        }
-
+     }
+        
 ### RESTAPI Calls
 
 We can make our own RESTAPI interface that external applications can call. GET and POST calls are supported.
 This RESTAPI interface is used by the DATA service also, which invokes certain events ([for example: Desired properties change callback](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/6_Device_Twin_Desired_Change_Callback.md)). 
     
      private async void HttpRestServer_ClientRequestEvent(object sender, HttpRestServerService.ClientRequestEventArgs e)
-        {
+     {
             IO.NET.SimpleHttpServer.Result res = new IO.NET.SimpleHttpServer.Result();
 
             try
@@ -87,4 +87,4 @@ This RESTAPI interface is used by the DATA service also, which invokes certain e
             {
                 await EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Http REST server exception error! Error: " + ex.Message);
             }
-        }
+    }
