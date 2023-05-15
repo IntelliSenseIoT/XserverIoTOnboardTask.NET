@@ -11,7 +11,7 @@
 
 ![](images/GitHub.png)
 
-3) Open Visual Studio 2019
+3) Open Visual Studio 2022
 
 ![](images/VS2022_Clone.png)
 
