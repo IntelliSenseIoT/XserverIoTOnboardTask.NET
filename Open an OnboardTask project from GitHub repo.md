@@ -13,7 +13,7 @@
 
 3) Open Visual Studio 2019
 
-![](images/VS2022.png)
+![](images/VS2022_Clone.png)
 
 4) Paste the repository location and then select Clone.
 
