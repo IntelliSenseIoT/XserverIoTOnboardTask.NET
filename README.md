@@ -15,6 +15,7 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 - More details: https://www.intellisense-iot.com/
 - [Technical overview about IoT Server](https://www.intellisense-iot.com/xserver-iot-product) 
 - [OnboardTask Architecture Overview](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/OnboardTask%20Architecture%20Overview.md)
+- [Open an OnboardTask project from GitHub repo](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Open%20an%20OnboardTask%20project%20from%20GitHub%20repo.md)
 
 ![](images/SDKOverview.png)
 
