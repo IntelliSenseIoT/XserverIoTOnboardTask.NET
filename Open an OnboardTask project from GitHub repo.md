@@ -19,6 +19,6 @@
 
 ![](images/VS2022_1.png)
 
-![](images/VS3.png)
+![](images/VS2022_Code.png)
 
 [Microsoft Tutorial: Open a project from a repo](https://learn.microsoft.com/en-us/visualstudio/get-started/tutorial-open-project-from-repo?view=vs-2022&tabs=vs168later)
