@@ -21,4 +21,4 @@
 
 ![](images/VS3.png)
 
-[Microsoft Tutorial: Open a project from a repo](https://docs.microsoft.com/en-us/visualstudio/get-started/tutorial-open-project-from-repo-visual-studio-2019?view=vs-2019&tabs=vs168later)
+[Microsoft Tutorial: Open a project from a repo](https://learn.microsoft.com/en-us/visualstudio/get-started/tutorial-open-project-from-repo?view=vs-2022&tabs=vs168later)
