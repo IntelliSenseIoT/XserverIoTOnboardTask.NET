@@ -17,7 +17,7 @@
 
 4) Paste the repository location and then select Clone.
 
-![](images/VS2.png)
+![](images/VS1.png)
 
 ![](images/VS3.png)
 
