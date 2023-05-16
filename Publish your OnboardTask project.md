@@ -19,6 +19,8 @@ Download your App file from Azure Storage to your IoT Device:
 
 ![](images/ProjectPublish6.png)
 
+Install and run your app:
+
 ![](images/ProjectPublish7_1.png)
 
 ![](images/ProjectPublish8.png)
