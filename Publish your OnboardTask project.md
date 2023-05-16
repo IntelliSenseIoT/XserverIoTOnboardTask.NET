@@ -15,6 +15,8 @@ Upload your App file (XserverIoTOnboardTask.YOURTASKNAME.zip) from your computer
 
 ![](images/ProjectPublish5.png)
 
+Download your App file from Azure Storage to your IoT Device:
+
 ![](images/ProjectPublish6.png)
 
 ![](images/ProjectPublish7_1.png)
