@@ -1,5 +1,6 @@
 # Publish your OnboardTask project
-## Publish your project:
+Publish your project:
+
 ![](images/ProjectPublish1.png)
 
 ![](images/ProjectPublish2.png)
