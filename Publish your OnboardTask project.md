@@ -12,6 +12,6 @@
 
 ![](images/ProjectPublish6.png)
 
-![](images/ProjectPublish7.png)
+![](images/ProjectPublish7_1.png)
 
 ![](images/ProjectPublish8.png)
