@@ -11,6 +11,8 @@ Compress your project files to a zip file. The file name must be XserverIoTOnboa
 
 ![](images/ProjectPublish4.png)
 
+Upload your App file (XserverIoTOnboardTask.YOURTASKNAME.zip) from your computer to Azure Storage:
+
 ![](images/ProjectPublish5.png)
 
 ![](images/ProjectPublish6.png)
