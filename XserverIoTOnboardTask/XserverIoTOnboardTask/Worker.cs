@@ -60,6 +60,7 @@ namespace XserverIoTOnboardTask
                 await RestServer.HttpRESTServerStart();
                 RestServer.ClientEvent += HttpRestServer_ClientRequestEvent;
 
+                await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Checking services...");
                 _logger.LogInformation("Checking services...");
                 bool exit = false;
                 while (exit == false)
@@ -70,6 +71,7 @@ namespace XserverIoTOnboardTask
                     if (com.Initialized == true && data.Initialized == true && core.Initialized == true)
                     {
                         exit = true;
+                        await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Services are running.");
                         _logger.LogInformation("Services are running.");
                     }
                     await Task.Delay(5000);
