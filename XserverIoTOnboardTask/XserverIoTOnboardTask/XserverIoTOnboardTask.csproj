@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>dotnet-XserverIoTOnboardTask-7bbcbeff-9f63-4607-abab-0b8245b79d0a</UserSecretsId>
-    <Version>11.0.0</Version>
+    <Version>11.0.1</Version>
     <Title>XserverIoTOnboardTask</Title>
     <Company>IntelliSense</Company>
     <Copyright>Copyright ©  2023</Copyright>

@@ -60,6 +60,21 @@ namespace XserverIoTOnboardTask
                 await RestServer.HttpRESTServerStart();
                 RestServer.ClientEvent += HttpRestServer_ClientRequestEvent;
 
+                _logger.LogInformation("Checking services...");
+                bool exit = false;
+                while (exit == false)
+                {
+                    var com = await Services.ComIsInitialized();
+                    var data = await Services.DataIsInitialized();
+                    var core = await Services.CoreIsInitialized();
+                    if (com.Initialized == true && data.Initialized == true && core.Initialized == true)
+                    {
+                        exit = true;
+                        _logger.LogInformation("Services are running.");
+                    }
+                    await Task.Delay(5000);
+                }
+
                 //Todo: Write your initial code here
                 //_logger.LogInformation("Debug message");
             }

@@ -5160,7 +5160,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "11.0.0",
+    "version": "11.0.1",
     "restore": {
       "projectUniqueName": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
       "projectName": "XserverIoTOnboardTask",
