@@ -5,7 +5,10 @@
     ComPort - 8001
     DataPort - 8002
     CorePort - 8003
-    OnboardTaskPort - 8006
+    OnboardTaskPort1 - 8006
+    OnboardTaskPort2 - 8007 (from Xserver.IoT.200)
+    OnboardTaskPort3 - 8008 (from Xserver.IoT.200)
+    OnboardTaskPort4 - 8009 (from Xserver.IoT.200)
 
 ## Authentication info:
 
