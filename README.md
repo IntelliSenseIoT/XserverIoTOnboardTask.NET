@@ -31,4 +31,4 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 
 # Examples:
 
-[Example 1 - Real-time values (Access Sources and Quantites)](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/XserverIoT_RestAPI_Interface_doumentation.md)
+[Example 1 - Real-time values (Access Sources and Quantites)](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/examples/1_Real-time%20values.md)
