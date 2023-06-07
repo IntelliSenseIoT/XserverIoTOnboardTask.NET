@@ -32,6 +32,23 @@ In the code below, the tasks required for the first run are performed.
                 await RestServer.HttpRESTServerStart();
                 RestServer.ClientEvent += HttpRestServer_ClientRequestEvent;
 
+                await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Checking services...");
+                _logger.LogInformation("Checking services...");
+                bool exit = false;
+                while (exit == false)
+                {
+                    var com = await Services.ComIsInitialized();
+                    var data = await Services.DataIsInitialized();
+                    var core = await Services.CoreIsInitialized();
+                    if (com.Initialized == true && data.Initialized == true && core.Initialized == true)
+                    {
+                        exit = true;
+                        await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Services are running.");
+                        _logger.LogInformation("Services are running.");
+                    }
+                    await Task.Delay(5000);
+                }
+
                 //Todo: Write your initial code here
                 //_logger.LogInformation("Debug message");
             }
