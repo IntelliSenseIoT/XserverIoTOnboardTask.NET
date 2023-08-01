@@ -2,8 +2,6 @@
 
 The example below shows how it can be write a Modbus register via Azure Device Twin.
 
-![](images/RTtopology.png)
-
 ### Code:
 
         #region Helpers
@@ -22,25 +20,31 @@ The example below shows how it can be write a Modbus register via Azure Device T
 
             try
             {
-                
-                ...
-               
+                //Initialize Http REST server
+                await RestServer.HttpRESTServerStart();
+                RestServer.ClientEvent += HttpRestServer_ClientRequestEvent;
+
+                #region Checking services
+                await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Checking services...");
+                _logger.LogInformation("Checking services...");
                 bool exit = false;
                 while (exit == false)
                 {
                     var com = await Services.ComIsInitialized();
                     var data = await Services.DataIsInitialized();
                     var core = await Services.CoreIsInitialized();
-                    _logger.LogInformation("#Debug: Checked services");
                     if (com.Initialized == true && data.Initialized == true && core.Initialized == true)
                     {
                         exit = true;
+                        await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Services are running.");
+                        _logger.LogInformation("Services are running.");
                     }
                     await Task.Delay(5000);
                 }
+                #endregion
 
                 #region Login to Xserver.IoT Service
-                var res = await Authentication.Login("operator", "operator");
+                var res = await Authentication.Login("onboardtask", "onboardtask");
                 if (res.Success == false)
                 {
                     await EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + res.ErrorMessage);
@@ -65,38 +69,84 @@ The example below shows how it can be write a Modbus register via Azure Device T
         
         ...
 
-        /// <summary>
-        /// Periodic Task
-        /// </summary>
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+         private async void HttpRestServer_ClientRequestEvent(object sender, HttpRestServerService.ClientRequestEventArgs e)
         {
-            while (!stoppingToken.IsCancellationRequested)
+            IO.NET.SimpleHttpServer.Result res = new IO.NET.SimpleHttpServer.Result();
+
+            try
             {
-                try
+                if (e.RequestMethod == RequestMethodType.GET)
                 {
-                    var Temp = await RObj.GetValue("TempSensor", "Temperature");
-                   
-                    if (Temp.Value <10)
-                    {
-                        var writeresult = await RObj.WriteValue("TempSensor", "SetPointValue", 20);
-                    }
-                    if (Temp.Value >= 10)
-                    {
-                        var writeresult = await RObj.WriteValue("TempSensor", "SetPointValue", 5);
-                    }
-
-                    _logger.LogInformation("Debug, Temp:" + Temp.Value.ToString());
-
+                    //Todo: Type your code here
+                    //_logger.LogInformation("Debug message");
+                    // Example:
+                    //if (e.uriString.ToLower() == "/onboardtask/examplegeturi")
+                    //{
+                    //    string content = JsonConvert.SerializeObject(YourObject);
+                    //    res = await RestServer.ServerResponse(HTTPStatusCodes.OK, e.OStream, content);
+                    //}
                 }
-                catch (Exception ex)
+                else if (e.RequestMethod == RequestMethodType.POST)
                 {
-                    await EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
-                }
+                    //_logger.LogInformation("Received request");
 
-                await Task.Delay(TaskHandlerPeriod, stoppingToken);
+                    if (e.uriString.ToLower() == "/onboardtask/desiredpropertyupdatecallback")
+                    {
+                        res = await RestServer.ServerResponse(HTTPStatusCodes.OK, e.OStream, null);
+
+                        //Gets Desired properties from IoT Server Onboard storage
+                        var DesiredPropertiesFromOnboard = await XserverIoTCommon.DeviceTwin.GetDesiredProperties();
+                        //Information: DesiredPropertiesFromContent and DesiredPropertiesFromOnboard are equal, because UpdateCallBack event saves Desired properties into the Onboard storage also.
+
+                        List<DeviceTwinProperty> NewReportedProperties = new List<DeviceTwinProperty>();
+
+                        foreach (var item in DesiredPropertiesFromOnboard.DesiredProperties)
+                        {
+                            String Source =String.Empty;
+                            String Quantity = String.Empty;
+                            bool OKw = false;
+                            try
+                            {
+                                if (item.Key.ToLower().IndexOf("source>") == 0)
+                                {
+                                    var Stype = item.Key.Split('>');
+                                    var DevQuan = Stype[1].Split("|");
+
+                                    if (string.IsNullOrEmpty(DevQuan[0]) == false && string.IsNullOrEmpty(DevQuan[1]) == false)
+                                    {
+                                        Source = DevQuan[0];
+                                        Quantity = DevQuan[1];
+                                        //_logger.LogInformation("Source:" + Source + " Quantity:" + Quantity);
+                                        OKw = true;
+                                    }
+                                }
+                            }
+                            catch (Exception ex) 
+                            {
+                                OKw = false;
+                                _logger.LogInformation("Exception [/onboardtask/desiredpropertyupdatecallback]: " + ex.Message);
+                            }
+
+                            if (OKw == true) 
+                            {
+                                var val = Convert.ToDouble(item.Value);
+                                var writeresult = await RObj.WriteValue(Source, Quantity, val);
+                            }
+                            NewReportedProperties.Add(item);
+                        }
+                        //Saves New Reported properties into the Onboard storage and sends to Azure Device Twin also.
+                        await XserverIoTCommon.DeviceTwin.SaveReportedProperties(NewReportedProperties);
+                    }
+                }
+                else
+                {
+                    res = await RestServer.ServerResponse(HTTPStatusCodes.Not_Found, e.OStream, null);
+                }
+            }
+            catch (Exception ex)
+            {
+                await EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Http REST server exception error! Error: " + ex.Message);
             }
         }
-
-        ...
         
 
