@@ -10,7 +10,7 @@ The example below shows how it can be write a Modbus register via Azure Device T
   - Add a property to Device Twin (Syntax: Source>source name|quantity name)
   - Send desired properties to Device Twin and update desired properties on the IoT Device from Device Twin
 
-![](images/DeviceTwinWriteRegister.png)
+![](images/ConnectionTechOverview.png)
 
 ### Code:
 
