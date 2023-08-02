@@ -8,7 +8,7 @@
 
 ![](images/ConnectionTechOverview.png)
 
-# Xserver.IoT OnboardTask Overview:
+# Xserver.IoT.200 OnboardTask Overview:
 
 With the Onboard Task project can be implemented customized tasks (Industrial PC communication, Custom protocol matching, Control tasks, Remote parameter setting from cloud, Control with Artificial Intelligence, etc.).
 
@@ -20,12 +20,13 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 - [XserverIoTCommon API description](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/XserverIoTCommon.NET.md)
 - [Xserver.IoT REST API interface documentation](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/XserverIoT_RestAPI_Interface_doumentation.md)
 - [Nugets](https://www.nuget.org/packages/XserverIoTCommon.NET)
+- [Xserver.IoT.100 OnboardTask Overview](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io)
 
 ![](images/SDKOverview.png)
 
 # XserverIoTOnboardTask:
 
-## Required Xserver.IoT firmware
+## Required Xserver.IoT.200 firmware
 
     Required Xservet.IoT.200 device
     Min version: 11.0.x
@@ -35,3 +36,5 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 [Example 1 - Real-time values (Access Sources and Quantites)](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/examples/1_Real-time%20values.md)
 
 [Example 2 - Write Modbus register via Azure Device Twin](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/examples/1_Real-time%20values.md)
+
+More examples: [Xserver.IoT.100 OnboardTask examples](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io)
