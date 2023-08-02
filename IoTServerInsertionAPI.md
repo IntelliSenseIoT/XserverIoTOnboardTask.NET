@@ -1,10 +1,10 @@
-# IoTServerInsertionAPI to Xserver.IoT.200
+# IoTServerInsertionAPI.NET to Xserver.IoT.200
 
-IoTServerInsertionAPI helps to easily create custom interfaces to IoT Server for various services (Google Cloud, AWS, IBM Cloud, My SQL, Oracle, REST API services, etc.).<br>
+IoTServerInsertionAPI.NET helps to easily create custom interfaces to IoT Server for various services (Google Cloud, AWS, IBM Cloud, My SQL, Oracle, REST API services, etc.).<br>
 
-IoTServerInsertionAPI is an add-on to the OnboardTask that makes it easier to connect to different interfaces. [More details about OnboardTask, Click here!](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/OnboardTask%20Architecture%20Overview.md)<br>
+IoTServerInsertionAPI.NET is an add-on to the OnboardTask that makes it easier to connect to different interfaces. [More details about OnboardTask, Click here!](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/OnboardTask%20Architecture%20Overview.md)<br>
 
-The IoTServerInsertionAPI includes:<br>
+The IoTServerInsertionAPI.NET includes:<br>
 
     -	Read real-time data to cache in memory (LogPuffer)
     -	Save data from LogPuffer to Onboard Storage. (if the connection is not available)
@@ -20,7 +20,7 @@ The IoTServerInsertionAPI includes:<br>
 - Required Xserver.IoT firmware, minimum version: 11.0.29
 - Required IoT Explorer, minimum version: 11.0.20
 
-## IoTServerInsertionAPI.LogHelpers
+## IoTServerInsertionAPI.NET.LogHelpers
 
 ### Logging class
 
