@@ -12,7 +12,7 @@ The IoTServerInsertionAPI includes:<br>
     -	Objects and methods needed to manage data.
 <br>
 
-![](images/IoTServerInsertionAPI.png)
+![](/images/IoTServerInsertionAPI.png)
 
 ## Prerequisites
 
