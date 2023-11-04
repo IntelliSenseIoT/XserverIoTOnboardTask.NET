@@ -167,3 +167,8 @@ Methods:
 
     /// Gets Serial Port settings  
     public static async Task<ResultSerialPortSettings> GetSettings()
+
+# SMTPInfo methods:
+
+    /// Gets SMTP Settings
+    public static async Task<ResultSMTPSettings> GetSMTPSettings()
