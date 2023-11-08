@@ -35,6 +35,9 @@ Properties:
     /// One communication package size Default value: 100, Range: 1-10000 - Specifies the number of items during data transmission.
     public int PackageSize
 
+    /// Value rounding Default value: 4, Range: 0-10
+    public int ValueRounding
+
 Methods:
 
     /// Reads Realtime values to LogPuffer
