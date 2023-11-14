@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>dotnet-XserverIoTOnboardTask-7bbcbeff-9f63-4607-abab-0b8245b79d0a</UserSecretsId>
-    <Version>11.0.1</Version>
+    <Version>11.0.2</Version>
     <Title>XserverIoTOnboardTask</Title>
     <Company>IntelliSense</Company>
     <Copyright>Copyright ©  2023</Copyright>
@@ -15,6 +15,6 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="7.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="XserverIoTCommon.NET" Version="11.0.0" />
+    <PackageReference Include="XserverIoTCommon.NET" Version="11.0.7" />
   </ItemGroup>
 </Project>

@@ -21,6 +21,7 @@ namespace XserverIoTOnboardTask
         #endregion
 
         #region Helpers
+        bool InitFinished = false;
         HttpRestServerService RestServer = new HttpRestServerService();
         Application serviceinfo = new Application();
         #endregion
@@ -52,6 +53,7 @@ namespace XserverIoTOnboardTask
         /// </summary>
         private async void Initialize()
         {
+            _logger.LogInformation(ServiceDisplayName + " - " + "Start initializing...");
             await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
 
             try
@@ -85,7 +87,9 @@ namespace XserverIoTOnboardTask
                 await EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Initialization exception error! Error: " + ex.Message);
             }
 
+            InitFinished = true;
             await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
+            _logger.LogInformation(ServiceDisplayName + " - " + "Finished initialization.");
         }
 
         /// <summary>
@@ -97,8 +101,11 @@ namespace XserverIoTOnboardTask
             {
                 try
                 {
-                    //Todo: Type your task code here
-                    //_logger.LogInformation("Debug, Task running at: {time}", DateTimeOffset.Now);
+                    if (InitFinished)
+                    {
+                        //Todo: Type your task code here
+                        //_logger.LogInformation("Debug, Task running at: {time}", DateTimeOffset.Now);
+                    }
                 }
                 catch (Exception ex)
                 {

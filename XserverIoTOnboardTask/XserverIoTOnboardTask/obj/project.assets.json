@@ -995,7 +995,7 @@
           }
         }
       },
-      "Models.NET.Interface/11.0.5": {
+      "Models.NET.Interface/11.0.6": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Models.NET.Interface.dll": {
@@ -1771,7 +1771,7 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "SystemDB.Model/11.0.3": {
+      "SystemDB.Model/11.0.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.31"
@@ -1806,16 +1806,16 @@
           }
         }
       },
-      "XserverIoTCommon.NET/11.0.0": {
+      "XserverIoTCommon.NET/11.0.7": {
         "type": "package",
         "dependencies": {
           "IO.NET.SimpleHttpServer": "11.0.13",
           "Models.NET.Com": "11.0.1",
           "Models.NET.Data": "11.0.1",
-          "Models.NET.Interface": "11.0.5",
-          "Newtonsoft.Json": "13.0.2",
+          "Models.NET.Interface": "11.0.6",
+          "Newtonsoft.Json": "13.0.3",
           "Service.Common.NET": "11.0.3",
-          "SystemDB.Model": "11.0.3",
+          "SystemDB.Model": "11.0.6",
           "Xserver.IoT.Connectivity.Interface.NET": "11.0.2"
         },
         "compile": {
@@ -3164,16 +3164,16 @@
         "models.net.data.nuspec"
       ]
     },
-    "Models.NET.Interface/11.0.5": {
-      "sha512": "ElSJdtVynUR5ONT/IO3IFNlVWoAW+cPnZnXwZVUyBofltbnZZms30oPsqxyjvOVQNJ/KudWPug3lLx7KRQ178g==",
+    "Models.NET.Interface/11.0.6": {
+      "sha512": "TiFaYZduKlfrTs1lgDtx82mbmAmBZnp335tC2mPU9XZa5PQLS4q+F2eGjObuqAlk2XAAVTNXJvBg/i3qftl1tA==",
       "type": "package",
-      "path": "models.net.interface/11.0.5",
+      "path": "models.net.interface/11.0.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Models.NET.Interface.dll",
         "lib/netstandard2.0/Models.NET.Interface.xml",
-        "models.net.interface.11.0.5.nupkg.sha512",
+        "models.net.interface.11.0.6.nupkg.sha512",
         "models.net.interface.nuspec"
       ]
     },
@@ -5107,16 +5107,16 @@
         "version.txt"
       ]
     },
-    "SystemDB.Model/11.0.3": {
-      "sha512": "yuEqVrSyt3TSwsmm5VWcPTj0o0xYXn0Js+odfnP0Gq/AshhJKLvXDDlcfbI3g1YPJSQlb6TJ9pE81oST4pRndg==",
+    "SystemDB.Model/11.0.6": {
+      "sha512": "vbZO8W6MSRfMoZJSSQoKNLeVfvTcdfNMeuFOaLm/MEdy5H+11hb1Xxlou9VOsgTeGghQMEcYHBtBeRj/x8OD5w==",
       "type": "package",
-      "path": "systemdb.model/11.0.3",
+      "path": "systemdb.model/11.0.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/SystemDB.Model.dll",
         "lib/netstandard2.0/SystemDB.Model.xml",
-        "systemdb.model.11.0.3.nupkg.sha512",
+        "systemdb.model.11.0.6.nupkg.sha512",
         "systemdb.model.nuspec"
       ]
     },
@@ -5133,16 +5133,15 @@
         "xserver.iot.connectivity.interface.net.nuspec"
       ]
     },
-    "XserverIoTCommon.NET/11.0.0": {
-      "sha512": "HW8T2ZKT47iUHcMTcDcd9Cyp1kKkyKFDs60/0KBBpqXqJrG7q2M7adTWQ9Jh4U4XilQtyUzLXB1CWQmbqalbEQ==",
+    "XserverIoTCommon.NET/11.0.7": {
+      "sha512": "CPvQl0EgWtVNg96cnCt3C8YJdjton2+DA2DxhcAC7HE9ipI7MdgcZ9kObMrhCPj7BFQ/NbVcrV9NculoHwA9TQ==",
       "type": "package",
-      "path": "xserveriotcommon.net/11.0.0",
+      "path": "xserveriotcommon.net/11.0.7",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "lib/net6.0/XserverIoT.OnboardTask.Common.NET.dll",
         "lib/net6.0/XserverIoT.OnboardTask.Common.NET.xml",
-        "xserveriotcommon.net.11.0.0.nupkg.sha512",
+        "xserveriotcommon.net.11.0.7.nupkg.sha512",
         "xserveriotcommon.net.nuspec"
       ]
     }
@@ -5152,7 +5151,7 @@
       "Microsoft.Extensions.Hosting >= 7.0.1",
       "Microsoft.Extensions.Hosting.Systemd >= 7.0.0",
       "Newtonsoft.Json >= 13.0.3",
-      "XserverIoTCommon.NET >= 11.0.0"
+      "XserverIoTCommon.NET >= 11.0.7"
     ]
   },
   "packageFolders": {
@@ -5160,7 +5159,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "11.0.1",
+    "version": "11.0.2",
     "restore": {
       "projectUniqueName": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
       "projectName": "XserverIoTOnboardTask",
@@ -5216,7 +5215,7 @@
           },
           "XserverIoTCommon.NET": {
             "target": "Package",
-            "version": "[11.0.0, )"
+            "version": "[11.0.7, )"
           }
         },
         "imports": [
@@ -5235,7 +5234,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

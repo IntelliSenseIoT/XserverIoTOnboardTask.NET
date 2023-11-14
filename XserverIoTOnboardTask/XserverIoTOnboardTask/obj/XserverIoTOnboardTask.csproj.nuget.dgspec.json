@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj": {
-      "version": "11.0.1",
+      "version": "11.0.2",
       "restore": {
         "projectUniqueName": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
         "projectName": "XserverIoTOnboardTask",
@@ -61,7 +61,7 @@
             },
             "XserverIoTCommon.NET": {
               "target": "Package",
-              "version": "[11.0.0, )"
+              "version": "[11.0.7, )"
             }
           },
           "imports": [
@@ -80,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

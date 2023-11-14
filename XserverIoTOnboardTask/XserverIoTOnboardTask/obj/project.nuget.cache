@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "f9nTQma2WCQNWXNyvpQjVsnVxLz9HkelRbHUNW5GUSM/MflNqp/vZsru26Xbb6KAn96cq3Aou6X9IUaIydoXaQ==",
+  "dgSpecHash": "PC6Es+9pxAxoZSxtZHYyUEBHgqyAZxoqBYz10HO2IyTQOW+ESC7hk6S9ueXGlUq9Xpfl7PJUJ8t56f41vZHBUg==",
   "success": true,
   "projectFilePath": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
   "expectedPackageFiles": [
@@ -59,7 +59,7 @@
     "C:\\Users\\avrep\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\models.net.com\\11.0.1\\models.net.com.11.0.1.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\models.net.data\\11.0.1\\models.net.data.11.0.1.nupkg.sha512",
-    "C:\\Users\\avrep\\.nuget\\packages\\models.net.interface\\11.0.5\\models.net.interface.11.0.5.nupkg.sha512",
+    "C:\\Users\\avrep\\.nuget\\packages\\models.net.interface\\11.0.6\\models.net.interface.11.0.6.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\7.0.0\\runtime.linux-arm.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\7.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
@@ -108,9 +108,9 @@
     "C:\\Users\\avrep\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\avrep\\.nuget\\packages\\systemdb.model\\11.0.3\\systemdb.model.11.0.3.nupkg.sha512",
+    "C:\\Users\\avrep\\.nuget\\packages\\systemdb.model\\11.0.6\\systemdb.model.11.0.6.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\xserver.iot.connectivity.interface.net\\11.0.2\\xserver.iot.connectivity.interface.net.11.0.2.nupkg.sha512",
-    "C:\\Users\\avrep\\.nuget\\packages\\xserveriotcommon.net\\11.0.0\\xserveriotcommon.net.11.0.0.nupkg.sha512"
+    "C:\\Users\\avrep\\.nuget\\packages\\xserveriotcommon.net\\11.0.7\\xserveriotcommon.net.11.0.7.nupkg.sha512"
   ],
   "logs": []
 }
