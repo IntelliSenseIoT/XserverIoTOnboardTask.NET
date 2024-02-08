@@ -172,3 +172,8 @@ Methods:
 
     /// Gets SMTP Settings
     public static async Task<ResultSMTPSettings> GetSMTPSettings()
+
+# TCPIP methods:
+
+    /// Ping command
+    public static async Task<Result> Ping(string IPaddress)
