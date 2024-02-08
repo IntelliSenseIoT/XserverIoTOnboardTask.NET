@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj": {
-      "version": "11.0.2",
+      "version": "11.0.3",
       "restore": {
         "projectUniqueName": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
         "projectName": "XserverIoTOnboardTask",
@@ -49,11 +49,11 @@
           "dependencies": {
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.Extensions.Hosting.Systemd": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[8.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -61,7 +61,7 @@
             },
             "XserverIoTCommon.NET": {
               "target": "Package",
-              "version": "[11.0.7, )"
+              "version": "[11.0.8, )"
             }
           },
           "imports": [
