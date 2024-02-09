@@ -82,6 +82,55 @@ The IoT server sets a bit in the PLC to "1" if the Internet connection is workin
         
         ...
 
+        Stopwatch InternetChecking = new Stopwatch();
+        /// <summary>
+        /// Periodic Task
+        /// </summary>
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        {
+            while (!stoppingToken.IsCancellationRequested)
+            {
+                try
+                {
+                    if (InitFinished)
+                    {
+                        #region Checking Internet connection
+                        if (InternetChecking.IsRunning == false)
+                        {
+                            InternetChecking.Reset();
+                            InternetChecking.Start();
+                        }
+                        else
+                        {
+                            if (InternetChecking.Elapsed.TotalSeconds>60)
+                            {
+                                InternetChecking.Stop();
+                                var pingres =await TCPIP.Ping("www.google.com");
+                                if (pingres.Success == true)
+                                {
+                                    var writeresult = await RObj.WriteValue("Siemens PLC", "Internet Status", 1);
+                                    _logger.LogInformation("Debug, Internet OK.");
+                                }
+                                else
+                                {
+                                    var writeresult = await RObj.WriteValue("Siemens PLC", "Internet Status", 0);
+                                    _logger.LogInformation("Debug, Internet error!");
+                                }
+                            }
+                        }
+                        #endregion
+                    }
+                }
+                catch (Exception ex)
+                {
+                    await EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
+                }
+        
+                await Task.Delay(TaskHandlerPeriod, stoppingToken);
+            }
+        }
+
+        ...
     
         
 
