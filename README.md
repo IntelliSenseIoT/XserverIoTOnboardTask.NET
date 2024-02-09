@@ -38,4 +38,6 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 
 [Example 2 - Write Modbus register via Azure Device Twin](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/examples/2_WriteModbusRegisterAzureDeviceTwin.md)
 
+[Example 3 - Write Modbus register via Azure Device Twin](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/examples/2_WriteModbusRegisterAzureDeviceTwin.md)
+
 More examples: [Xserver.IoT.100 OnboardTask examples](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io)
