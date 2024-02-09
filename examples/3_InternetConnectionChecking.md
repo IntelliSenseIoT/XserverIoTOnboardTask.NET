@@ -12,7 +12,7 @@ The IoT server sets a bit in the PLC to "1" if the Internet connection is workin
 
 
 ![](/images/IoTExplorerSiemensPLC.png)
-
+![](/images/IoTExplorerInternetCheckingTask.png)
 
 ### Code:
 
