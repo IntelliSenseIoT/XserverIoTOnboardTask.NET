@@ -11,7 +11,7 @@ The IoT server sets a bit in the PLC to "1" if the Internet connection is workin
   - Send desired properties to Device Twin and update desired properties on the IoT Device from Device Twin
 
 
-![](/images/DeviceTwinWriteRegister.png)
+![](/images/IoTExplorerSiemensPLC.png)
 
 
 ### Code:
