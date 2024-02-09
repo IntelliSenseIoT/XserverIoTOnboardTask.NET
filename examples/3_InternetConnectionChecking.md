@@ -7,6 +7,7 @@ The IoT server sets a bit in the PLC to "1" if the Internet connection is workin
   - Configure IoT Server with IoT Explorer (Create Sources. More details: [Field device (Power Meter, PLC) communication settings](https://www.intellisense-iot.com/online-iot-training))
   - Create OnboardTasks user group with Control privilege and create onboardtask user (password: onboardtask)
   - Create InternetChecking OnboardTask and install to IoT Server
+  - Install Write Register from Azure app from App Store to IoT Server with IoT Explorer
   - Add a property to Device Twin (Syntax: Source>source name|quantity name)
   - Send desired properties to Device Twin and update desired properties on the IoT Device from Device Twin
 
