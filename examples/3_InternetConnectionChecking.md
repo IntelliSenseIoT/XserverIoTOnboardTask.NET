@@ -10,10 +10,13 @@ The IoT server sets a bit in the PLC to "1" if the Internet connection is workin
   - Install Write Register from Azure app from App Store to IoT Server with IoT Explorer
   - Add a property to Device Twin (Syntax: Source>source name|quantity name)
   - Send desired properties to Device Twin and update desired properties on the IoT Device from Device Twin
+    
 
 ![](/images/IoTExplorerSiemensPLC.png)
 
 ![](/images/IoTExplorerInternetCheckingTask.png)
+
+![](/images/IoTExplorerDeviceTwin.png)
 
 ### Code:
 
