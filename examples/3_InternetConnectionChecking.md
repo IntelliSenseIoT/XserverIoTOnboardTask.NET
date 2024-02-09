@@ -1,4 +1,4 @@
-## Checking Internet connection with IoT server:
+## Checking Internet connection with IoT server - Set a PLC bit
 
 The IoT server sets a bit in the PLC to "1" if the Internet connection is working, and to "0" if the Internet connection is interrupted.
 
