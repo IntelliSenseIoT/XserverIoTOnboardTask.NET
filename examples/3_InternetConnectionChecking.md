@@ -4,7 +4,7 @@ The IoT server sets a bit in the PLC to "1" if the Internet connection is workin
 
 ### Prerequisites:
 
-  - Configure IoT Server with IoT Explorer (Create the Source. More details: Field device (Power Meter, PLC) communication settings
+  - Configure IoT Server with IoT Explorer (Create the Source. More details: [Field device (Power Meter, PLC) communication settings](https://www.intellisense-iot.com/online-iot-training))
   - Create OnboardTasks user group with Control privilege and create onboardtask user (password: onboardtask)
   - Create OnboardTask and install to IoT Server
   - Add a property to Device Twin (Syntax: Source>source name|quantity name)
