@@ -2,11 +2,11 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Azure.Core/1.22.0": {
+      "Azure.Core/1.36.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
-          "System.Diagnostics.DiagnosticSource": "4.6.0",
+          "System.Diagnostics.DiagnosticSource": "6.0.1",
           "System.Memory.Data": "1.0.2",
           "System.Numerics.Vectors": "4.5.0",
           "System.Text.Encodings.Web": "4.7.2",
@@ -14,20 +14,20 @@
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
-          "lib/net5.0/Azure.Core.dll": {
+          "lib/net6.0/Azure.Core.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/Azure.Core.dll": {
+          "lib/net6.0/Azure.Core.dll": {
             "related": ".xml"
           }
         }
       },
-      "Cloud.NET.DeviceService/11.0.1": {
+      "Cloud.NET.DeviceService/11.0.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Azure.Devices": "1.38.2"
+          "Microsoft.Azure.Devices": "1.39.1"
         },
         "compile": {
           "lib/netstandard2.0/Cloud.NET.DeviceService.dll": {
@@ -53,10 +53,10 @@
           }
         }
       },
-      "IO.NET.RestClient/11.0.1": {
+      "IO.NET.RestClient/11.0.2": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "13.0.2"
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
           "lib/netstandard2.0/IO.NET.RestClient.dll": {
@@ -104,41 +104,41 @@
           "lib/netstandard2.0/Microsoft.Azure.Amqp.dll": {}
         }
       },
-      "Microsoft.Azure.Devices/1.38.2": {
+      "Microsoft.Azure.Devices/1.39.1": {
         "type": "package",
         "dependencies": {
-          "Azure.Core": "1.22.0",
+          "Azure.Core": "1.36.0",
           "Microsoft.Azure.Amqp": "2.5.12",
-          "Microsoft.Azure.Devices.Shared": "1.30.2",
-          "Microsoft.Rest.ClientRuntime": "2.3.21",
-          "Newtonsoft.Json": "13.0.1",
+          "Microsoft.Azure.Devices.Shared": "1.30.4",
+          "Microsoft.Rest.ClientRuntime": "2.3.24",
+          "Newtonsoft.Json": "13.0.3",
           "System.Diagnostics.Contracts": "4.3.0",
           "System.Diagnostics.TraceSource": "4.3.0"
         },
         "compile": {
-          "lib/net5.0/Microsoft.Azure.Devices.dll": {
+          "lib/net6.0/Microsoft.Azure.Devices.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/Microsoft.Azure.Devices.dll": {
+          "lib/net6.0/Microsoft.Azure.Devices.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.Azure.Devices.Shared/1.30.2": {
+      "Microsoft.Azure.Devices.Shared/1.30.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
-          "Newtonsoft.Json": "13.0.1"
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
-          "lib/net5.0/Microsoft.Azure.Devices.Shared.dll": {
+          "lib/net6.0/Microsoft.Azure.Devices.Shared.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/Microsoft.Azure.Devices.Shared.dll": {
+          "lib/net6.0/Microsoft.Azure.Devices.Shared.dll": {
             "related": ".xml"
           }
         }
@@ -972,7 +972,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Rest.ClientRuntime/2.3.21": {
+      "Microsoft.Rest.ClientRuntime/2.3.24": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "10.0.3"
@@ -1015,7 +1015,7 @@
           }
         }
       },
-      "Models.NET.Com/11.0.1": {
+      "Models.NET.Com/11.1.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Models.NET.Com.dll": {
@@ -1024,6 +1024,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/Models.NET.Com.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Models.NET.Core/11.0.28": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Models.NET.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Models.NET.Core.dll": {
             "related": ".xml"
           }
         }
@@ -1067,7 +1080,7 @@
           }
         }
       },
-      "runtime.linux-arm.runtime.native.System.IO.Ports/7.0.0": {
+      "runtime.linux-arm.runtime.native.System.IO.Ports/8.0.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/linux-arm/native/libSystem.IO.Ports.Native.so": {
@@ -1076,7 +1089,7 @@
           }
         }
       },
-      "runtime.linux-arm64.runtime.native.System.IO.Ports/7.0.0": {
+      "runtime.linux-arm64.runtime.native.System.IO.Ports/8.0.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/linux-arm64/native/libSystem.IO.Ports.Native.so": {
@@ -1085,7 +1098,7 @@
           }
         }
       },
-      "runtime.linux-x64.runtime.native.System.IO.Ports/7.0.0": {
+      "runtime.linux-x64.runtime.native.System.IO.Ports/8.0.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/linux-x64/native/libSystem.IO.Ports.Native.so": {
@@ -1115,17 +1128,17 @@
           "runtime.win-x86.runtime.native.System.Data.SqlClient.sni": "4.4.0"
         }
       },
-      "runtime.native.System.IO.Ports/7.0.0": {
+      "runtime.native.System.IO.Ports/8.0.0": {
         "type": "package",
         "dependencies": {
-          "runtime.linux-arm.runtime.native.System.IO.Ports": "7.0.0",
-          "runtime.linux-arm64.runtime.native.System.IO.Ports": "7.0.0",
-          "runtime.linux-x64.runtime.native.System.IO.Ports": "7.0.0",
-          "runtime.osx-arm64.runtime.native.System.IO.Ports": "7.0.0",
-          "runtime.osx-x64.runtime.native.System.IO.Ports": "7.0.0"
+          "runtime.linux-arm.runtime.native.System.IO.Ports": "8.0.0",
+          "runtime.linux-arm64.runtime.native.System.IO.Ports": "8.0.0",
+          "runtime.linux-x64.runtime.native.System.IO.Ports": "8.0.0",
+          "runtime.osx-arm64.runtime.native.System.IO.Ports": "8.0.0",
+          "runtime.osx-x64.runtime.native.System.IO.Ports": "8.0.0"
         }
       },
-      "runtime.osx-arm64.runtime.native.System.IO.Ports/7.0.0": {
+      "runtime.osx-arm64.runtime.native.System.IO.Ports/8.0.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/osx-arm64/native/libSystem.IO.Ports.Native.dylib": {
@@ -1134,7 +1147,7 @@
           }
         }
       },
-      "runtime.osx-x64.runtime.native.System.IO.Ports/7.0.0": {
+      "runtime.osx-x64.runtime.native.System.IO.Ports/8.0.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/osx-x64/native/libSystem.IO.Ports.Native.dylib": {
@@ -1170,14 +1183,14 @@
           }
         }
       },
-      "Service.Common.NET/11.0.6": {
+      "Service.Common.NET/11.0.9": {
         "type": "package",
         "dependencies": {
           "DataConversations.NET": "11.0.1",
-          "IO.NET.RestClient": "11.0.1",
+          "IO.NET.RestClient": "11.0.2",
           "IO.NET.TCPIP": "11.0.6",
-          "StratoPiBase.Driver.Device.NET": "11.0.6",
-          "System.Data.SqlClient": "4.8.5"
+          "StratoPiBase.Driver.Device.NET": "11.0.8",
+          "System.Data.SqlClient": "4.8.6"
         },
         "compile": {
           "lib/net6.0/Service.Common.NET.dll": {
@@ -1293,11 +1306,11 @@
           "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
-      "StratoPiBase.Driver.Device.NET/11.0.6": {
+      "StratoPiBase.Driver.Device.NET/11.0.8": {
         "type": "package",
         "dependencies": {
-          "System.Device.Gpio": "2.2.0",
-          "System.IO.Ports": "7.0.0"
+          "System.Device.Gpio": "3.1.0",
+          "System.IO.Ports": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Driver.Device.NET.Interface.dll": {
@@ -1355,7 +1368,7 @@
           }
         }
       },
-      "System.Data.SqlClient/4.8.5": {
+      "System.Data.SqlClient/4.8.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
@@ -1383,7 +1396,7 @@
           }
         }
       },
-      "System.Device.Gpio/2.2.0": {
+      "System.Device.Gpio/3.1.0": {
         "type": "package",
         "compile": {
           "lib/net6.0/System.Device.Gpio.dll": {
@@ -1528,10 +1541,10 @@
           }
         }
       },
-      "System.IO.Ports/7.0.0": {
+      "System.IO.Ports/8.0.0": {
         "type": "package",
         "dependencies": {
-          "runtime.native.System.IO.Ports": "7.0.0"
+          "runtime.native.System.IO.Ports": "8.0.0"
         },
         "compile": {
           "lib/net6.0/System.IO.Ports.dll": {
@@ -1833,13 +1846,13 @@
           }
         }
       },
-      "Xserver.IoT.Connectivity.Interface.NET/11.0.2": {
+      "Xserver.IoT.Connectivity.Interface.NET/11.0.7": {
         "type": "package",
         "dependencies": {
-          "Cloud.NET.DeviceService": "11.0.1",
-          "IO.NET.RestClient": "11.0.1",
+          "Cloud.NET.DeviceService": "11.0.2",
+          "IO.NET.RestClient": "11.0.2",
           "Models.NET.Data": "11.0.1",
-          "Newtonsoft.Json": "13.0.2"
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
           "lib/net6.0/Xserver.IoT.Connectivity.Interface.NET.dll": {
@@ -1852,17 +1865,18 @@
           }
         }
       },
-      "XserverIoTCommon.NET/11.0.8": {
+      "XserverIoTCommon.NET/11.0.16": {
         "type": "package",
         "dependencies": {
           "IO.NET.SimpleHttpServer": "11.0.13",
-          "Models.NET.Com": "11.0.1",
+          "Models.NET.Com": "11.1.0",
+          "Models.NET.Core": "11.0.28",
           "Models.NET.Data": "11.0.1",
           "Models.NET.Interface": "11.0.6",
           "Newtonsoft.Json": "13.0.3",
-          "Service.Common.NET": "11.0.6",
+          "Service.Common.NET": "11.0.9",
           "SystemDB.Model": "11.0.6",
-          "Xserver.IoT.Connectivity.Interface.NET": "11.0.2"
+          "Xserver.IoT.Connectivity.Interface.NET": "11.0.7"
         },
         "compile": {
           "lib/net6.0/XserverIoT.OnboardTask.Common.NET.dll": {
@@ -1878,36 +1892,40 @@
     }
   },
   "libraries": {
-    "Azure.Core/1.22.0": {
-      "sha512": "ze/xRCHSSDe5TIk5vBDbVrauW1EN7UIbnBvIBfMH8KSt/I9+/7yPAjTBDgNBk0IwG6WBV+BBHp4IUtS/PGAQwQ==",
+    "Azure.Core/1.36.0": {
+      "sha512": "vwqFZdHS4dzPlI7FFRkPx9ctA+aGGeRev3gnzG8lntWvKMmBhAmulABi1O9CEvS3/jzYt7yA+0pqVdxkpAd7dQ==",
       "type": "package",
-      "path": "azure.core/1.22.0",
+      "path": "azure.core/1.36.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.core.1.22.0.nupkg.sha512",
+        "azure.core.1.36.0.nupkg.sha512",
         "azure.core.nuspec",
         "azureicon.png",
         "lib/net461/Azure.Core.dll",
         "lib/net461/Azure.Core.xml",
+        "lib/net472/Azure.Core.dll",
+        "lib/net472/Azure.Core.xml",
         "lib/net5.0/Azure.Core.dll",
         "lib/net5.0/Azure.Core.xml",
+        "lib/net6.0/Azure.Core.dll",
+        "lib/net6.0/Azure.Core.xml",
         "lib/netcoreapp2.1/Azure.Core.dll",
         "lib/netcoreapp2.1/Azure.Core.xml",
         "lib/netstandard2.0/Azure.Core.dll",
         "lib/netstandard2.0/Azure.Core.xml"
       ]
     },
-    "Cloud.NET.DeviceService/11.0.1": {
-      "sha512": "wYF8t0YhrHaVrn+RrS6CO0IFyKHFEDG6cVXJZ6ny46rkAgrRSDDPHDNt+Qgx6K84V/BAmR+RGx+z69EogV4t/A==",
+    "Cloud.NET.DeviceService/11.0.2": {
+      "sha512": "AAU0ef1N16QJQOP+yz2Hpxp/ea82X0Qpjs+hN1S8RLjkoRvcy0Dn1j5v0hagoJD9F3y8x6RZk+vo+LrrMTzw4w==",
       "type": "package",
-      "path": "cloud.net.deviceservice/11.0.1",
+      "path": "cloud.net.deviceservice/11.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "cloud.net.deviceservice.11.0.1.nupkg.sha512",
+        "cloud.net.deviceservice.11.0.2.nupkg.sha512",
         "cloud.net.deviceservice.nuspec",
         "lib/netstandard2.0/Cloud.NET.DeviceService.dll",
         "lib/netstandard2.0/Cloud.NET.DeviceService.xml"
@@ -1926,14 +1944,14 @@
         "lib/netstandard2.0/DataConversations.NET.xml"
       ]
     },
-    "IO.NET.RestClient/11.0.1": {
-      "sha512": "FU4UOKylJpI1E1ymVOqh1yVBIf1/1KllwFu/fBKBvlqxTIMny31HFjkOlZcptfoEhSnTNhZD91RK7SceIdoJnA==",
+    "IO.NET.RestClient/11.0.2": {
+      "sha512": "680fGShOdkeuZw1DMtrwohg6GGL1o0tGgA85N698xtQMzHLlNy4RoRPO0DMyPy71pFfjC3EcUhkRTTyfDB22oQ==",
       "type": "package",
-      "path": "io.net.restclient/11.0.1",
+      "path": "io.net.restclient/11.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "io.net.restclient.11.0.1.nupkg.sha512",
+        "io.net.restclient.11.0.2.nupkg.sha512",
         "io.net.restclient.nuspec",
         "lib/netstandard2.0/IO.NET.RestClient.dll",
         "lib/netstandard2.0/IO.NET.RestClient.xml"
@@ -1984,52 +2002,44 @@
         "microsoft.azure.amqp.nuspec"
       ]
     },
-    "Microsoft.Azure.Devices/1.38.2": {
-      "sha512": "Nk5lqmMnw2aQrbnTIivOxCoInwLvSVeVzgVqaIO5w6/yFmXygMbAUhPXXDwvUbE2QH1EfMLhLYguuNDl0TK+iQ==",
+    "Microsoft.Azure.Devices/1.39.1": {
+      "sha512": "vdTQfsASAY01D8epHHWKZILqxWDs/RMECYZjRTVw9bwZH4lklgTelH3cyRI2auDZZzKJT0LHgChpsFL88iknUQ==",
       "type": "package",
-      "path": "microsoft.azure.devices/1.38.2",
+      "path": "microsoft.azure.devices/1.39.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
-        "lib/net451/Microsoft.Azure.Devices.dll",
-        "lib/net451/Microsoft.Azure.Devices.xml",
         "lib/net472/Microsoft.Azure.Devices.dll",
         "lib/net472/Microsoft.Azure.Devices.xml",
-        "lib/net5.0/Microsoft.Azure.Devices.dll",
-        "lib/net5.0/Microsoft.Azure.Devices.xml",
-        "lib/netcoreapp2.1/Microsoft.Azure.Devices.dll",
-        "lib/netcoreapp2.1/Microsoft.Azure.Devices.xml",
+        "lib/net6.0/Microsoft.Azure.Devices.dll",
+        "lib/net6.0/Microsoft.Azure.Devices.xml",
         "lib/netstandard2.0/Microsoft.Azure.Devices.dll",
         "lib/netstandard2.0/Microsoft.Azure.Devices.xml",
         "lib/netstandard2.1/Microsoft.Azure.Devices.dll",
         "lib/netstandard2.1/Microsoft.Azure.Devices.xml",
-        "microsoft.azure.devices.1.38.2.nupkg.sha512",
+        "microsoft.azure.devices.1.39.1.nupkg.sha512",
         "microsoft.azure.devices.nuspec",
         "nugetIcon.png"
       ]
     },
-    "Microsoft.Azure.Devices.Shared/1.30.2": {
-      "sha512": "SQdJWTyU0P1ILHtf2YOqF34NuJILxcT3fsGxVN3dKRqXUu00OByfY/PveGBFdd4XfADtPgSxzp6Tq4QhzRzg7Q==",
+    "Microsoft.Azure.Devices.Shared/1.30.4": {
+      "sha512": "c24XKJ2PnugnDe/CHSYVcvP0TBua/P2S520PrV/edIcz+UmmNziV0U0aWpxmbj0BaVlIVhAtj26CcQuO0q+UjQ==",
       "type": "package",
-      "path": "microsoft.azure.devices.shared/1.30.2",
+      "path": "microsoft.azure.devices.shared/1.30.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
-        "lib/net451/Microsoft.Azure.Devices.Shared.dll",
-        "lib/net451/Microsoft.Azure.Devices.Shared.xml",
         "lib/net472/Microsoft.Azure.Devices.Shared.dll",
         "lib/net472/Microsoft.Azure.Devices.Shared.xml",
-        "lib/net5.0/Microsoft.Azure.Devices.Shared.dll",
-        "lib/net5.0/Microsoft.Azure.Devices.Shared.xml",
-        "lib/netcoreapp2.1/Microsoft.Azure.Devices.Shared.dll",
-        "lib/netcoreapp2.1/Microsoft.Azure.Devices.Shared.xml",
+        "lib/net6.0/Microsoft.Azure.Devices.Shared.dll",
+        "lib/net6.0/Microsoft.Azure.Devices.Shared.xml",
         "lib/netstandard2.0/Microsoft.Azure.Devices.Shared.dll",
         "lib/netstandard2.0/Microsoft.Azure.Devices.Shared.xml",
         "lib/netstandard2.1/Microsoft.Azure.Devices.Shared.dll",
         "lib/netstandard2.1/Microsoft.Azure.Devices.Shared.xml",
-        "microsoft.azure.devices.shared.1.30.2.nupkg.sha512",
+        "microsoft.azure.devices.shared.1.30.4.nupkg.sha512",
         "microsoft.azure.devices.shared.nuspec",
         "nugetIcon.png"
       ]
@@ -3274,10 +3284,10 @@
         "runtime.json"
       ]
     },
-    "Microsoft.Rest.ClientRuntime/2.3.21": {
-      "sha512": "KDYlgTyO693V6pi6SGk9eg+dDvKjuOgmkapbHdpnB1SmTPKpvWxVLIMyARJsCFLfB6axyURUJHOfvxBQ0yJKeg==",
+    "Microsoft.Rest.ClientRuntime/2.3.24": {
+      "sha512": "hZH7XgM3eV2jFrnq7Yf0nBD4WVXQzDrer2gEY7HMNiwio2hwDsTHO6LWuueNQAfRpNp4W7mKxcXpwXUiuVIlYw==",
       "type": "package",
-      "path": "microsoft.rest.clientruntime/2.3.21",
+      "path": "microsoft.rest.clientruntime/2.3.24",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3289,7 +3299,7 @@
         "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.runtimeconfig.json",
         "lib/netstandard2.0/Microsoft.Rest.ClientRuntime.dll",
         "lib/netstandard2.0/Microsoft.Rest.ClientRuntime.runtimeconfig.json",
-        "microsoft.rest.clientruntime.2.3.21.nupkg.sha512",
+        "microsoft.rest.clientruntime.2.3.24.nupkg.sha512",
         "microsoft.rest.clientruntime.nuspec"
       ]
     },
@@ -3340,17 +3350,29 @@
         "version.txt"
       ]
     },
-    "Models.NET.Com/11.0.1": {
-      "sha512": "HIL3k/TAu8pKXovX9resbeB5SwTUAk8LYu2lbIAXpIx0q9MBOU+EDEzrObpoiRP5+4NEzcn1BT5yFpUxn0xREA==",
+    "Models.NET.Com/11.1.0": {
+      "sha512": "3Wuuasi5FdTACyVvpQhAEp4w7fVKNtt8nQ4WmUI170p3KZ3a2jpBua0FQH05/M2C3+ieMEC7U6depmj/06TJmQ==",
       "type": "package",
-      "path": "models.net.com/11.0.1",
+      "path": "models.net.com/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/netstandard2.0/Models.NET.Com.dll",
+        "lib/netstandard2.0/Models.NET.Com.xml",
+        "models.net.com.11.1.0.nupkg.sha512",
+        "models.net.com.nuspec"
+      ]
+    },
+    "Models.NET.Core/11.0.28": {
+      "sha512": "X3bBtfUThoUSwpf/vNm5QuaUMLTW7lAk014MX1c61c7mJppsN3ocDiND1FdmlJyPyOhKR143F+WjHDV1nDORbg==",
+      "type": "package",
+      "path": "models.net.core/11.0.28",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard2.0/Models.NET.Com.dll",
-        "lib/netstandard2.0/Models.NET.Com.xml",
-        "models.net.com.11.0.1.nupkg.sha512",
-        "models.net.com.nuspec"
+        "lib/netstandard2.0/Models.NET.Core.dll",
+        "lib/netstandard2.0/Models.NET.Core.xml",
+        "models.net.core.11.0.28.nupkg.sha512",
+        "models.net.core.nuspec"
       ]
     },
     "Models.NET.Data/11.0.1": {
@@ -3409,49 +3431,49 @@
         "packageIcon.png"
       ]
     },
-    "runtime.linux-arm.runtime.native.System.IO.Ports/7.0.0": {
-      "sha512": "CBvgRaF+M0xGLDv2Geb/0v0LEADheH8aK72GRAUJdnqnJVsQO60ki1XO8M3keEhnjm+T5NvLm41pNXAVYAPiSg==",
+    "runtime.linux-arm.runtime.native.System.IO.Ports/8.0.0": {
+      "sha512": "gK720fg6HemDg8sXcfy+xCMZ9+hF78Gc7BmREbmkS4noqlu1BAr9qZtuWGhLzFjBfgecmdtl4+SYVwJ1VneZBQ==",
       "type": "package",
-      "path": "runtime.linux-arm.runtime.native.system.io.ports/7.0.0",
+      "path": "runtime.linux-arm.runtime.native.system.io.ports/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "runtime.linux-arm.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+        "runtime.linux-arm.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
         "runtime.linux-arm.runtime.native.system.io.ports.nuspec",
         "runtimes/linux-arm/native/libSystem.IO.Ports.Native.so",
         "useSharedDesignerContext.txt"
       ]
     },
-    "runtime.linux-arm64.runtime.native.System.IO.Ports/7.0.0": {
-      "sha512": "5VCyRCtCIYU8FR/W8oo7ouFuJ8tmAg9ddsuXhfCKZfZrbaVZSKxkmNBa6fxkfYPueD0jQfOvwFBmE5c6zalCSw==",
+    "runtime.linux-arm64.runtime.native.System.IO.Ports/8.0.0": {
+      "sha512": "KYG6/3ojhEWbb3FwQAKgGWPHrY+HKUXXdVjJlrtyCLn3EMcNTaNcPadb2c0ndQzixZSmAxZKopXJr0nLwhOrpQ==",
       "type": "package",
-      "path": "runtime.linux-arm64.runtime.native.system.io.ports/7.0.0",
+      "path": "runtime.linux-arm64.runtime.native.system.io.ports/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "runtime.linux-arm64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+        "runtime.linux-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
         "runtime.linux-arm64.runtime.native.system.io.ports.nuspec",
         "runtimes/linux-arm64/native/libSystem.IO.Ports.Native.so",
         "useSharedDesignerContext.txt"
       ]
     },
-    "runtime.linux-x64.runtime.native.System.IO.Ports/7.0.0": {
-      "sha512": "DV9dWDUs23OoZqMWl5IhLr3D+b9koDiSHQxFKdYgWnQbnthv8c/yDjrlrI8nMrDc71RAKCO8jlUojzuPMX04gg==",
+    "runtime.linux-x64.runtime.native.System.IO.Ports/8.0.0": {
+      "sha512": "Wnw5vhA4mgGbIFoo6l9Fk3iEcwRSq49a1aKwJgXUCUtEQLCSUDjTGSxqy/oMUuOyyn7uLHsH8KgZzQ1y3lReiQ==",
       "type": "package",
-      "path": "runtime.linux-x64.runtime.native.system.io.ports/7.0.0",
+      "path": "runtime.linux-x64.runtime.native.system.io.ports/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "runtime.linux-x64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+        "runtime.linux-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
         "runtime.linux-x64.runtime.native.system.io.ports.nuspec",
         "runtimes/linux-x64/native/libSystem.IO.Ports.Native.so",
         "useSharedDesignerContext.txt"
@@ -3486,48 +3508,48 @@
         "version.txt"
       ]
     },
-    "runtime.native.System.IO.Ports/7.0.0": {
-      "sha512": "L4Ivegqc3B0Fee7VifFy2JST9nndm+uvJ0viLIZUaImDfnr+JmRin9Tbqd56KuMtm0eVxHpNOWZBPtKrA/1h5Q==",
+    "runtime.native.System.IO.Ports/8.0.0": {
+      "sha512": "Ee7Sz5llLpTgyKIWzKI/GeuRSbFkOABgJRY00SqTY0OkTYtkB+9l5rFZfE7fxPA3c22RfytCBYkUdAkcmwMjQg==",
       "type": "package",
-      "path": "runtime.native.system.io.ports/7.0.0",
+      "path": "runtime.native.system.io.ports/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+        "runtime.native.system.io.ports.8.0.0.nupkg.sha512",
         "runtime.native.system.io.ports.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "runtime.osx-arm64.runtime.native.System.IO.Ports/7.0.0": {
-      "sha512": "jFwh4sKSXZ7al5XrItEO4GdGWa6XNxvNx+LhEHjrSzOwawO1znwJ+Dy+VjnrkySX9Qi4bnHNLoiqOXbqMuka4g==",
+    "runtime.osx-arm64.runtime.native.System.IO.Ports/8.0.0": {
+      "sha512": "rbUBLAaFW9oVkbsb0+XSrAo2QdhBeAyzLl5KQ6Oci9L/u626uXGKInsVJG6B9Z5EO8bmplC8tsMiaHK8wOBZ+w==",
       "type": "package",
-      "path": "runtime.osx-arm64.runtime.native.system.io.ports/7.0.0",
+      "path": "runtime.osx-arm64.runtime.native.system.io.ports/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "runtime.osx-arm64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+        "runtime.osx-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
         "runtime.osx-arm64.runtime.native.system.io.ports.nuspec",
         "runtimes/osx-arm64/native/libSystem.IO.Ports.Native.dylib",
         "useSharedDesignerContext.txt"
       ]
     },
-    "runtime.osx-x64.runtime.native.System.IO.Ports/7.0.0": {
-      "sha512": "X4LrHEfke/z9+z+iuVr35NlkhdZldY8JGNMYUN+sfPK/U/6TcE+vP44I0Yv0ir1v0bqIzq3v6Qdv1c1vmp8s4g==",
+    "runtime.osx-x64.runtime.native.System.IO.Ports/8.0.0": {
+      "sha512": "IcfB4jKtM9pkzP9OpYelEcUX1MiDt0IJPBh3XYYdEISFF+6Mc+T8WWi0dr9wVh1gtcdVjubVEIBgB8BHESlGfQ==",
       "type": "package",
-      "path": "runtime.osx-x64.runtime.native.system.io.ports/7.0.0",
+      "path": "runtime.osx-x64.runtime.native.system.io.ports/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "runtime.osx-x64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+        "runtime.osx-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
         "runtime.osx-x64.runtime.native.system.io.ports.nuspec",
         "runtimes/osx-x64/native/libSystem.IO.Ports.Native.dylib",
         "useSharedDesignerContext.txt"
@@ -3581,16 +3603,16 @@
         "version.txt"
       ]
     },
-    "Service.Common.NET/11.0.6": {
-      "sha512": "dJiiFCvNtSg+bI7Roj+OnbWMMeJweKMS0cBBRqPw7PTiQFCQJKYwG8pxQ7zcFno2uoYydTosDJq4SDgJK6ZrGw==",
+    "Service.Common.NET/11.0.9": {
+      "sha512": "a3RJeaZlU+A7IaWwhMezZgZFSwcEH+tzx6B4kXSebWC6NsbgUAkZIjlk8skv7wuTRm/3vdh5JOlqUJ1e5tnbNA==",
       "type": "package",
-      "path": "service.common.net/11.0.6",
+      "path": "service.common.net/11.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net6.0/Service.Common.NET.dll",
         "lib/net6.0/Service.Common.NET.xml",
-        "service.common.net.11.0.6.nupkg.sha512",
+        "service.common.net.11.0.9.nupkg.sha512",
         "service.common.net.nuspec"
       ]
     },
@@ -3667,10 +3689,10 @@
         "sqlitepclraw.provider.dynamic_cdecl.nuspec"
       ]
     },
-    "StratoPiBase.Driver.Device.NET/11.0.6": {
-      "sha512": "OvFyHHj3n9/KAj6g0CiOx8YIEqJ8muVn1CGZDdF+Yjzci2357TdTqNg6mwIjqPbY3sG+rwbo0anCOM7Jq1Uhxw==",
+    "StratoPiBase.Driver.Device.NET/11.0.8": {
+      "sha512": "Rz7gIoKXkjAflRu90P0L0NzH5eXAuunthCEmDaxC9GesbyFOjQPGg+3PO+bRAep+aXEuOjQh4Vvr8jY2yjQ+CQ==",
       "type": "package",
-      "path": "stratopibase.driver.device.net/11.0.6",
+      "path": "stratopibase.driver.device.net/11.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3678,7 +3700,7 @@
         "lib/netstandard2.0/Driver.Device.NET.Interface.xml",
         "lib/netstandard2.0/Driver.Device.NET.dll",
         "lib/netstandard2.0/Driver.Device.NET.xml",
-        "stratopibase.driver.device.net.11.0.6.nupkg.sha512",
+        "stratopibase.driver.device.net.11.0.8.nupkg.sha512",
         "stratopibase.driver.device.net.nuspec"
       ]
     },
@@ -3865,10 +3887,10 @@
         "version.txt"
       ]
     },
-    "System.Data.SqlClient/4.8.5": {
-      "sha512": "fRqxut4lrndPHrXD+ht1XRmCL3obuKldm4XjCRYS9p5f7FSR7shBxAwTkDrpFMsHC9BhNgjjmUtiIjvehn5zkg==",
+    "System.Data.SqlClient/4.8.6": {
+      "sha512": "2Ij/LCaTQRyAi5lAv7UUTV9R2FobC8xN9mE0fXBZohum/xLl8IZVmE98Rq5ugQHjCgTBRKqpXRb4ORulRdA6Ig==",
       "type": "package",
-      "path": "system.data.sqlclient/4.8.5",
+      "path": "system.data.sqlclient/4.8.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3945,16 +3967,16 @@
         "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.xml",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.dll",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.xml",
-        "system.data.sqlclient.4.8.5.nupkg.sha512",
+        "system.data.sqlclient.4.8.6.nupkg.sha512",
         "system.data.sqlclient.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
-    "System.Device.Gpio/2.2.0": {
-      "sha512": "ShuBDkL/QlQvaeUXcTvtY8xnb0U/ueisVw3VcIgybmrHAl4BiQ/oZEi8yQFzb/xlzDc12AZ/J1oUE9AawV7Yag==",
+    "System.Device.Gpio/3.1.0": {
+      "sha512": "4Jw7+lTwdU63zsaD9a6H47YC/LK6lGhi3SKBGdf1jV0ySj22NJkglQ35dBZWbtwiXOzbBn3Gl8XzIcpv1pai3Q==",
       "type": "package",
-      "path": "system.device.gpio/2.2.0",
+      "path": "system.device.gpio/3.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3967,7 +3989,7 @@
         "lib/net6.0/System.Device.Gpio.xml",
         "lib/netstandard2.0/System.Device.Gpio.dll",
         "lib/netstandard2.0/System.Device.Gpio.xml",
-        "system.device.gpio.2.2.0.nupkg.sha512",
+        "system.device.gpio.3.1.0.nupkg.sha512",
         "system.device.gpio.nuspec"
       ]
     },
@@ -4357,15 +4379,16 @@
         "system.io.nuspec"
       ]
     },
-    "System.IO.Ports/7.0.0": {
-      "sha512": "0nWQjM5IofaIGpvkifN+LLuYwBG6BHlpmphLhhOJepcW12G8qToGuNDRgBzeTVBZzp33wVsESSZ8hUOCfq+8QA==",
+    "System.IO.Ports/8.0.0": {
+      "sha512": "MaiPbx2/QXZc62gm/DrajRrGPG1lU4m08GWMoWiymPYM+ba4kfACp2PbiYpqJ4QiFGhHD00zX3RoVDTucjWe9g==",
       "type": "package",
-      "path": "system.io.ports/7.0.0",
+      "path": "system.io.ports/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/System.IO.Ports.targets",
         "buildTransitive/net462/_._",
@@ -4377,17 +4400,23 @@
         "lib/net6.0/System.IO.Ports.xml",
         "lib/net7.0/System.IO.Ports.dll",
         "lib/net7.0/System.IO.Ports.xml",
+        "lib/net8.0/System.IO.Ports.dll",
+        "lib/net8.0/System.IO.Ports.xml",
         "lib/netstandard2.0/System.IO.Ports.dll",
         "lib/netstandard2.0/System.IO.Ports.xml",
         "runtimes/unix/lib/net6.0/System.IO.Ports.dll",
         "runtimes/unix/lib/net6.0/System.IO.Ports.xml",
         "runtimes/unix/lib/net7.0/System.IO.Ports.dll",
         "runtimes/unix/lib/net7.0/System.IO.Ports.xml",
+        "runtimes/unix/lib/net8.0/System.IO.Ports.dll",
+        "runtimes/unix/lib/net8.0/System.IO.Ports.xml",
         "runtimes/win/lib/net6.0/System.IO.Ports.dll",
         "runtimes/win/lib/net6.0/System.IO.Ports.xml",
         "runtimes/win/lib/net7.0/System.IO.Ports.dll",
         "runtimes/win/lib/net7.0/System.IO.Ports.xml",
-        "system.io.ports.7.0.0.nupkg.sha512",
+        "runtimes/win/lib/net8.0/System.IO.Ports.dll",
+        "runtimes/win/lib/net8.0/System.IO.Ports.xml",
+        "system.io.ports.8.0.0.nupkg.sha512",
         "system.io.ports.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -5336,29 +5365,29 @@
         "systemdb.model.nuspec"
       ]
     },
-    "Xserver.IoT.Connectivity.Interface.NET/11.0.2": {
-      "sha512": "fc3OkOpBOVOfn+xGQLS/2BjUaJ3GLHY2fMWRTbaLDp0JAZt3/Epe0ftlx1baEGSOMEZbVtdKeOqf5sw55adc/g==",
+    "Xserver.IoT.Connectivity.Interface.NET/11.0.7": {
+      "sha512": "MNfkEQj893Ri+UOwOt1N95HOKYLQd3Oo5I/GftSFgY6aq3mIZ5xZFnl4hE3LaoRKs1RVF1ZGV8/BJ9GgrKGXhg==",
       "type": "package",
-      "path": "xserver.iot.connectivity.interface.net/11.0.2",
+      "path": "xserver.iot.connectivity.interface.net/11.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net6.0/Xserver.IoT.Connectivity.Interface.NET.dll",
         "lib/net6.0/Xserver.IoT.Connectivity.Interface.NET.xml",
-        "xserver.iot.connectivity.interface.net.11.0.2.nupkg.sha512",
+        "xserver.iot.connectivity.interface.net.11.0.7.nupkg.sha512",
         "xserver.iot.connectivity.interface.net.nuspec"
       ]
     },
-    "XserverIoTCommon.NET/11.0.8": {
-      "sha512": "zsnnCngen7XkvZhEi/k/kJ2fLxRSN77VWbf+HshD4wa+JzsIboZP0tI3LTowZ7oRtvpoK056KnADdOA4/CZUFg==",
+    "XserverIoTCommon.NET/11.0.16": {
+      "sha512": "khr0eYbR4hDEboq77mWYkR8hhPUD11kHS6ZozgpJNC05pvzkyXS4z0dQC11qn5jMPRoFm3IkWu1FcaDlr0Yepg==",
       "type": "package",
-      "path": "xserveriotcommon.net/11.0.8",
+      "path": "xserveriotcommon.net/11.0.16",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net6.0/XserverIoT.OnboardTask.Common.NET.dll",
         "lib/net6.0/XserverIoT.OnboardTask.Common.NET.xml",
-        "xserveriotcommon.net.11.0.8.nupkg.sha512",
+        "xserveriotcommon.net.11.0.16.nupkg.sha512",
         "xserveriotcommon.net.nuspec"
       ]
     }
@@ -5368,7 +5397,7 @@
       "Microsoft.Extensions.Hosting >= 8.0.0",
       "Microsoft.Extensions.Hosting.Systemd >= 8.0.0",
       "Newtonsoft.Json >= 13.0.3",
-      "XserverIoTCommon.NET >= 11.0.8"
+      "XserverIoTCommon.NET >= 11.0.16"
     ]
   },
   "packageFolders": {
@@ -5376,7 +5405,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "11.0.3",
+    "version": "11.0.5",
     "restore": {
       "projectUniqueName": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
       "projectName": "XserverIoTOnboardTask",
@@ -5412,6 +5441,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -5432,7 +5466,7 @@
           },
           "XserverIoTCommon.NET": {
             "target": "Package",
-            "version": "[11.0.8, )"
+            "version": "[11.0.16, )"
           }
         },
         "imports": [
@@ -5451,7 +5485,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
