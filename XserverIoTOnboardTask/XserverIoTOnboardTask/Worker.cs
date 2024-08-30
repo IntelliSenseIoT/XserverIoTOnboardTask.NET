@@ -18,6 +18,9 @@ namespace XserverIoTOnboardTask
         private const string ServiceDisplayName = "Xserver.OnboardTask";
         //Task Handler Period (ms)
         private const int TaskHandlerPeriod = 1000;
+        //The OnboardTask login name and the password required for login.
+        private const string OnboardTaskLoginName = "<required field>";
+        private const string OnboardTaskPassword = "<required field>";
         #endregion
 
         #region Helpers
@@ -62,6 +65,7 @@ namespace XserverIoTOnboardTask
                 await RestServer.HttpRESTServerStart();
                 RestServer.ClientEvent += HttpRestServer_ClientRequestEvent;
 
+                #region Checking services
                 await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Checking services...");
                 _logger.LogInformation("Checking services...");
                 bool exit = false;
@@ -78,6 +82,32 @@ namespace XserverIoTOnboardTask
                     }
                     await Task.Delay(5000);
                 }
+                #endregion
+
+                #region Login to Xserver.IoT Service
+                bool FirstLogin = false;
+                bool exitlogin = false;
+                while (exitlogin == false)
+                {
+                    var res = await Authentication.Login(OnboardTaskLoginName, OnboardTaskPassword);
+                    if (res.Success == false && FirstLogin == false)
+                    {
+                        _logger.LogWarning(this.GetType().Name + " - " + ServiceDisplayName + " - " + "Authentication error! " + res.ErrorMessage);
+                        await EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Authentication error! " + res.ErrorMessage);
+                        FirstLogin = true;
+                    }
+                    else if (res.Success == true)
+                    {
+                        exitlogin = true;
+                        _logger.LogInformation(this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask login was successful.");
+                        await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask login was successful.");
+                    }
+                    else
+                    {
+                        await Task.Delay(5000);
+                    }
+                }
+                #endregion
 
                 //Todo: Write your initial code here
                 //_logger.LogInformation("Debug message");
