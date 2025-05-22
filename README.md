@@ -6,7 +6,7 @@
 
 - This capabilities allow the use of reporting, analysis, and AI software to access information from devices for data collection, trending, alarm/event management, analysis, remote control, and other functions.
 
-![](images/ConnectionTechOverview.png)
+![](images/XServerIoT2025.png)
 
 # Xserver.IoT.200 OnboardTask Overview:
 
