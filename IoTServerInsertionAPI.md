@@ -16,9 +16,9 @@ The IoTServerInsertionAPI.NET includes:<br>
 
 ## Prerequisites
 
-- XServerIoTOnboardTaskProject, minimum version: 11.0.1
-- Required Xserver.IoT firmware, minimum version: 11.0.29
-- Required IoT Explorer, minimum version: 11.0.20
+- XServerIoTOnboardTaskProject, minimum version: 11.2.0
+- Required Xserver.IoT firmware, minimum version: 11.2.0
+- Required IoT Explorer, minimum version: 11.2.x
 
 ## IoTServerInsertionAPI.NET.LogHelpers
 
