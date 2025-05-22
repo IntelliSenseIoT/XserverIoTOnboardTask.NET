@@ -30,7 +30,7 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 ## Required Xserver.IoT.200 firmware
 
     Required Xservet.IoT.200 device
-    Min version: 11.0.x
+    Min version: 11.2.x
 
 # Examples:
 
