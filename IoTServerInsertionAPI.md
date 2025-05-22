@@ -29,6 +29,9 @@ Properties:
     /// Prefetch realtime data (seconds) Default value: 45, Range: 30-55
     public int PreReadSecond
 
+    ///Log second (seconds) Default value: 20, Range: 5-25
+    public int LogSecond
+
     /// Maximum reading density (minutes) Default value: 1, Range: 1-60 - Do not use more frequent data.
     public int DensityMaxFreq
 
@@ -37,6 +40,9 @@ Properties:
 
     /// Value rounding Default value: 4, Range: 0-10
     public int ValueRounding
+
+    /// Addational Tag to DataType
+    public string DataTypeTag
 
 Methods:
 
