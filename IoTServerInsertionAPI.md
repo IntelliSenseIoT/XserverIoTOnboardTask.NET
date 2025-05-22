@@ -26,7 +26,7 @@ The IoTServerInsertionAPI.NET includes:<br>
 
 Properties:
 
-    /// Prefetch realtime data (seconds) Default value: 45, Range: 30-55
+        /// Prefetch realtime data (seconds) Default value: 45, Range: 30-55
     public int PreReadSecond
 
     ///Log second (seconds) Default value: 20, Range: 5-25
@@ -34,6 +34,12 @@ Properties:
 
     /// Maximum reading density (minutes) Default value: 1, Range: 1-60 - Do not use more frequent data.
     public int DensityMaxFreq
+
+    /// Maximum size of LogPuffer, Default value: 10000, Range: 1000-500000
+    public int MaxLogPufferSize
+    
+    /// Maximum number of onboard files, Default value: 1000, Range: 10-5000
+    public int MaxOnboardFileNumber
 
     /// One communication package size Default value: 100, Range: 1-10000 - Specifies the number of items during data transmission.
     public int PackageSize
@@ -43,7 +49,7 @@ Properties:
 
     /// Addational Tag to DataType
     public string DataTypeTag
-
+    
 Methods:
 
     /// Reads Realtime values to LogPuffer
