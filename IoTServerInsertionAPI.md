@@ -26,7 +26,7 @@ The IoTServerInsertionAPI.NET includes:<br>
 
 Properties:
 
-        /// Prefetch realtime data (seconds) Default value: 45, Range: 30-55
+    /// Prefetch realtime data (seconds) Default value: 45, Range: 30-55
     public int PreReadSecond
 
     ///Log second (seconds) Default value: 20, Range: 5-25
