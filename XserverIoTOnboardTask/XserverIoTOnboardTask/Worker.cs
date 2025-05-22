@@ -54,7 +54,7 @@ namespace XserverIoTOnboardTask
         /// <summary>
         /// Start OnboardTask Service initialize
         /// </summary>
-        private async void Initialize()
+        private async Task Initialize()
         {
             _logger.LogInformation(ServiceDisplayName + " - " + "Start initializing...");
             await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
