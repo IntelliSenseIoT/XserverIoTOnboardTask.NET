@@ -16,9 +16,9 @@ The IoTServerInsertionAPI.NET includes:<br>
 
 ## Prerequisites
 
-- XServerIoTOnboardTaskProject, minimum version: 11.0.1
-- Required Xserver.IoT firmware, minimum version: 11.0.29
-- Required IoT Explorer, minimum version: 11.0.20
+- XServerIoTOnboardTaskProject, minimum version: 11.2.0
+- Required Xserver.IoT firmware, minimum version: 11.2.0
+- Required IoT Explorer, minimum version: 11.2.x
 
 ## IoTServerInsertionAPI.NET.LogHelpers
 
@@ -29,8 +29,17 @@ Properties:
     /// Prefetch realtime data (seconds) Default value: 45, Range: 30-55
     public int PreReadSecond
 
+    ///Log second (seconds) Default value: 20, Range: 5-25
+    public int LogSecond
+
     /// Maximum reading density (minutes) Default value: 1, Range: 1-60 - Do not use more frequent data.
     public int DensityMaxFreq
+
+    /// Maximum size of LogPuffer, Default value: 10000, Range: 1000-500000
+    public int MaxLogPufferSize
+    
+    /// Maximum number of onboard files, Default value: 1000, Range: 10-5000
+    public int MaxOnboardFileNumber
 
     /// One communication package size Default value: 100, Range: 1-10000 - Specifies the number of items during data transmission.
     public int PackageSize
@@ -38,6 +47,9 @@ Properties:
     /// Value rounding Default value: 4, Range: 0-10
     public int ValueRounding
 
+    /// Addational Tag to DataType
+    public string DataTypeTag
+    
 Methods:
 
     /// Reads Realtime values to LogPuffer
