@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\EM_IOT\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj": {}
+    "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj": {}
   },
   "projects": {
-    "D:\\EM_IOT\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj": {
-      "version": "11.0.0",
+    "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj": {
+      "version": "11.2.0",
       "restore": {
-        "projectUniqueName": "D:\\EM_IOT\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
+        "projectUniqueName": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
         "projectName": "XserverIoTOnboardTask",
-        "projectPath": "D:\\EM_IOT\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
+        "projectPath": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
         "packagesPath": "C:\\Users\\avrep\\.nuget\\packages\\",
-        "outputPath": "D:\\EM_IOT\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\obj\\publish\\linux-arm\\",
+        "outputPath": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\obj\\publish\\linux-arm\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -32,8 +32,8 @@
           "https://nuget.devexpress.com/koBig17e3qZr8DHcgSlWPoeZbWHuDKlPmaocvURz3pGuPsaw43/api": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -41,23 +41,33 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[9.0.6, )"
             },
             "Microsoft.Extensions.Hosting.Systemd": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[9.0.6, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.2, )"
+              "version": "[13.0.3, )"
+            },
+            "XserverIoTCommon.NET": {
+              "target": "Package",
+              "version": "[11.2.4, )"
             }
           },
           "imports": [
@@ -74,15 +84,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.linux-arm",
-              "version": "[6.0.11, 6.0.11]"
+              "version": "[8.0.17, 8.0.17]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.linux-arm",
-              "version": "[6.0.11, 6.0.11]"
+              "version": "[8.0.17, 8.0.17]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.linux-arm",
-              "version": "[6.0.11, 6.0.11]"
+              "version": "[8.0.17, 8.0.17]"
             }
           ],
           "frameworkReferences": {
@@ -90,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

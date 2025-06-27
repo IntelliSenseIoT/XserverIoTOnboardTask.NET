@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright ©  2025")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("11.2.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("11.2.0+6483a3656581ebb1c892e295468a9e25cf03921c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("11.2.0+621349085f3cfbee18d91b08c80a45ed7af3b0b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("XserverIoTOnboardTask")]
 [assembly: System.Reflection.AssemblyTitleAttribute("XserverIoTOnboardTask")]
 [assembly: System.Reflection.AssemblyVersionAttribute("11.2.0.0")]
