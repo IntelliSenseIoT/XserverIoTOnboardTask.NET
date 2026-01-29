@@ -47,6 +47,8 @@ who are familiar with:
 For day-to-day operation or single-device configuration, the graphical user interface may be more convenient.  
 For **advanced workflows and large-scale operations**, `xserveriotctl` is the recommended tool.
 
+---
+
 ## XserverIoTCtl – Download & Installation
 
 ### Download
@@ -82,6 +84,8 @@ The Windows version is also distributed as a ZIP archive.
 - Run from the extracted folder or add it to PATH
 
 **xserveriotctl**
+
+---
 
 # xserveriotctl – Command Reference
 
@@ -121,23 +125,20 @@ cloud
 docker
 ```
 
----
-
 ### Show profile details
 
-```bash
+```
 xserveriotctl config show
 ```
 
-```bash
+```
 xserveriotctl config show cloud
 ```
 
 The profile configuration is printed as formatted JSON.
 
----
 
-## Create or update a local profile
+### Create or update a local profile
 
 ```bash
 xserveriotctl config set   --profile local   --local   --ip 192.168.1.100   --user admin   --pass admin
@@ -148,9 +149,8 @@ Typical use cases:
 - Local maintenance
 - Offline or isolated networks
 
----
 
-## Create or update a cloud profile (Azure IoT Hub)
+### Create or update a cloud profile (Azure IoT Hub)
 
 ```bash
 xserveriotctl config set   --profile cloud   --remote   --device-id MyIoTDevice01   --iothub "HostName=my-iothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=REDACTED_KEY"   --user admin   --pass admin
