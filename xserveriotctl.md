@@ -1,4 +1,4 @@
-## Introduction
+## XserverIoTCtl Introduction
 
 **xserveriotctl** is a cross-platform command-line interface (CLI) tool designed to configure, manage, and operate **Xserver.IoT** systems programmatically.
 
@@ -46,4 +46,13 @@ who are familiar with:
 
 For day-to-day operation or single-device configuration, the graphical user interface may be more convenient.  
 For **advanced workflows and large-scale operations**, `xserveriotctl` is the recommended tool.
+
+## XserverIoTCtl – Download & Installation
+
+###Download
+
+The latest prebuilt binaries are available for the following platforms:
+- Linux x64: 
+- Windows x64: 
+
 
