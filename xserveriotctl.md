@@ -364,47 +364,47 @@ The Windows version is also distributed as a ZIP archive.
 
 ### Examples:
 
-  xserveriotctl config init
-  xserveriotctl config set --profile local --local --ip 192.168.1.100 --user admin --pass admin
-  xserveriotctl config set --profile cloud --remote --device-id IoTDevice1 --iothub "HostName=...;..." --user admin --pass admin
-  xserveriotctl config probe local
-  xserveriotctl config show local
-  
-  xserveriotctl com status
-  xserveriotctl com getvalue --source "Main Energy Meter" --quantity "Active Power"
-  xserveriotctl com writevalue --source "TempSensor" --quantity "SetPointValue" --value 20
-  
-  xserveriotctl data comsettings template --out "comsettings.json"
-  xserveriotctl data comsettings get --out "comsettings.json"
-  xserveriotctl json set --file "comsettings.json" --path "SerialTimeOut" --value 5000
-  xserveriotctl data comsettings apply --file "comsettings.json"
-  
-  xserveriotctl data datasettings template --out "datasettings.json"
-  xserveriotctl data datasettings get --out "datasettings.json"
-  xserveriotctl data datasettings apply --file "datasettings.json"
-  
-  xserveriotctl data usergroup template --out "usergroup.json"
-  xserveriotctl data usergroup get --out "usergroup.json" --id 16
-  xserveriotctl data usergroup applynew --file "usergroup.json"
-  xserveriotctl data usergroup applyupdate --file "usergroup.json"
-  xserveriotctl data usergroup remove --id 16
-  xserveriotctl data usersupdate
-  
-  xserveriotctl json set --file "datasettings.json" --path "CloudPeriodLogToCloud" --value true
-  xserveriotctl json set --file "datasettings.json" --path "CloudIoTDeviceConnectionString" --value "HostName=myhub.azure-devices.net;DeviceId=IoTDevice1;SharedAccessKey=ABC123==" --encrypt
-  
-  xserveriotctl data backup create --out "d:\OfficeBuilding.IoTBackup"
-  xserveriotctl data restore run --file "d:\OfficeBuilding.IoTBackup"
-  
-  xserveriotctl core setntpservers "pool.ntp.org;time.google.com;time.windows.com"
-  xserveriotctl core setdatetime "2026-01-21" "21:00"
-  
-  xserveriotctl core setiface eth0 static 192.168.10.50 255.255.255.0 192.168.10.1 8.8.8.8 1.1.1.1
-  xserveriotctl core setiface wlan0 dhcp --ssid FactoryWiFi --wifipass StrongPassword123
-  
-  xserveriotctl core factoryip --newip 192.168.1.50 --subnet 255.255.255.0 --gateway 192.168.1.1
-  
-  xserveriotctl core firewall rule del --ip Anywhere --port 443 --action allow
-  xserveriotctl core firewall rule add --ip 192.168.1.10 --port Anywhere --action deny
-  
-  xserveriotctl system waitservices --timeout 120
+      xserveriotctl config init
+      xserveriotctl config set --profile local --local --ip 192.168.1.100 --user admin --pass admin
+      xserveriotctl config set --profile cloud --remote --device-id IoTDevice1 --iothub "HostName=...;..." --user admin --pass admin
+      xserveriotctl config probe local
+      xserveriotctl config show local
+      
+      xserveriotctl com status
+      xserveriotctl com getvalue --source "Main Energy Meter" --quantity "Active Power"
+      xserveriotctl com writevalue --source "TempSensor" --quantity "SetPointValue" --value 20
+      
+      xserveriotctl data comsettings template --out "comsettings.json"
+      xserveriotctl data comsettings get --out "comsettings.json"
+      xserveriotctl json set --file "comsettings.json" --path "SerialTimeOut" --value 5000
+      xserveriotctl data comsettings apply --file "comsettings.json"
+      
+      xserveriotctl data datasettings template --out "datasettings.json"
+      xserveriotctl data datasettings get --out "datasettings.json"
+      xserveriotctl data datasettings apply --file "datasettings.json"
+      
+      xserveriotctl data usergroup template --out "usergroup.json"
+      xserveriotctl data usergroup get --out "usergroup.json" --id 16
+      xserveriotctl data usergroup applynew --file "usergroup.json"
+      xserveriotctl data usergroup applyupdate --file "usergroup.json"
+      xserveriotctl data usergroup remove --id 16
+      xserveriotctl data usersupdate
+      
+      xserveriotctl json set --file "datasettings.json" --path "CloudPeriodLogToCloud" --value true
+      xserveriotctl json set --file "datasettings.json" --path "CloudIoTDeviceConnectionString" --value "HostName=myhub.azure-devices.net;DeviceId=IoTDevice1;SharedAccessKey=ABC123==" --encrypt
+      
+      xserveriotctl data backup create --out "d:\OfficeBuilding.IoTBackup"
+      xserveriotctl data restore run --file "d:\OfficeBuilding.IoTBackup"
+      
+      xserveriotctl core setntpservers "pool.ntp.org;time.google.com;time.windows.com"
+      xserveriotctl core setdatetime "2026-01-21" "21:00"
+      
+      xserveriotctl core setiface eth0 static 192.168.10.50 255.255.255.0 192.168.10.1 8.8.8.8 1.1.1.1
+      xserveriotctl core setiface wlan0 dhcp --ssid FactoryWiFi --wifipass StrongPassword123
+      
+      xserveriotctl core factoryip --newip 192.168.1.50 --subnet 255.255.255.0 --gateway 192.168.1.1
+      
+      xserveriotctl core firewall rule del --ip Anywhere --port 443 --action allow
+      xserveriotctl core firewall rule add --ip 192.168.1.10 --port Anywhere --action deny
+      
+      xserveriotctl system waitservices --timeout 120
