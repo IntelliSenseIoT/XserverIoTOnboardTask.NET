@@ -59,16 +59,16 @@ The latest prebuilt binaries are available for the following platforms:
 
 The Linux version is provided as a ZIP archive that contains the executable and all required components.
 
-Extract the archive: unzip xserveriotctl-linux-x64.zip
+Extract the archive: **unzip xserveriotctl-linux-x64.zip**
 
-Grant execute permission to the CLI: chmod +x xserveriotctl
+Grant execute permission to the CLI: **chmod +x xserveriotctl**
 
 **Note**: Only the xserveriotctl binary requires execute permission.
 The included DLL files are loaded automatically at runtime.
 
 ### Run the CLI
 
-./xserveriotctl
+  ./xserveriotctl
 
 Running the command without parameters prints the full help output, listing all available commands and subcommands.
 
@@ -76,9 +76,9 @@ Running the command without parameters prints the full help output, listing all 
 
 The Windows version is also distributed as a ZIP archive.
 
-- Extract xserveriotctl-win-x64.zip
+- Extract **xserveriotctl-win-x64.zip**
 - The extracted folder contains: xserveriotctl.exe and required .dll files
 - No installation is required
 - Run from the extracted folder or add it to PATH
 
-xserveriotctl
+  xserveriotctl
