@@ -101,6 +101,145 @@ The Windows version is also distributed as a ZIP archive.
       path                       - print config.json path
       init                       - create sample local/cloud profiles
 
+### xserveriotctl – Config Command Reference and Examples
+
+This document describes the usage of the `config` command in **xserveriotctl**.
+The `config` command is responsible for managing connection profiles that define
+how the CLI connects to Xserver.IoT systems.
+
+The tool is designed primarily for **advanced users**, automation scenarios,
+and large-scale IoT Server operations.
+
+### List profiles
+
+xserveriotctl config list
+
+Example output:
+```
+local
+cloud
+docker
+```
+
+---
+
+## Show profile details
+
+```bash
+xserveriotctl config show
+```
+
+```bash
+xserveriotctl config show cloud
+```
+
+The profile configuration is printed as formatted JSON.
+
+---
+
+## Create or update a local profile
+
+```bash
+xserveriotctl config set   --profile local   --local   --ip 192.168.1.100   --user admin   --pass admin
+```
+
+Typical use cases:
+- On-site commissioning
+- Local maintenance
+- Offline or isolated networks
+
+---
+
+## Create or update a cloud profile (Azure IoT Hub)
+
+```bash
+xserveriotctl config set   --profile cloud   --remote   --device-id MyIoTDevice01   --iothub "HostName=my-iothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=REDACTED_KEY"   --user admin   --pass admin
+```
+
+Typical use cases:
+- Remote access to IoT Servers
+- Fleet-wide configuration
+- Cloud-based automation
+
+---
+
+## Create a local Docker / WSL profile
+
+```bash
+xserveriotctl config set   --profile docker   --local   --ip 127.0.0.1   --user admin   --pass admin
+```
+
+---
+
+## Detect device type (probe)
+
+```bash
+xserveriotctl config probe
+```
+
+```bash
+xserveriotctl config probe cloud
+```
+
+The detected device type is stored in the profile and used automatically
+for device-specific Core commands.
+
+---
+
+## Set the default profile
+
+```bash
+xserveriotctl config use local
+```
+
+---
+
+## Delete a profile
+
+```bash
+xserveriotctl config delete docker
+```
+
+---
+
+## Rename a profile
+
+```bash
+xserveriotctl config rename local onsite
+```
+
+---
+
+## Show configuration file path
+
+```bash
+xserveriotctl config path
+```
+
+---
+
+## Initialize sample profiles
+
+```bash
+xserveriotctl config init
+```
+
+---
+
+## Recommended workflow
+
+```bash
+xserveriotctl config init
+xserveriotctl config set --profile local --local --ip 192.168.1.100 --user admin --pass admin
+xserveriotctl config probe
+xserveriotctl config use local
+```
+
+After these steps, xserveriotctl is ready for use with all Core, Com, Data,
+and System commands.
+
+
+
     com                          - The Com service is responsible for communication with field devices (Modbus RTU, Modbus TCP/IP, and related protocols).
       status                     - Com service status
       appinfo                    - Com service information
