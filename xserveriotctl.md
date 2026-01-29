@@ -101,7 +101,7 @@ Available commands:
     path                       - print config.json path
     init                       - create sample local/cloud profiles
 
-  **com**                      - The Com service is responsible for communication with field devices (Modbus RTU, Modbus TCP/IP, and related protocols).
+  com                      - The Com service is responsible for communication with field devices (Modbus RTU, Modbus TCP/IP, and related protocols).
     status                     - Com service status
     appinfo                    - Com service information
     settings                   - Com configuration settings
@@ -146,17 +146,17 @@ Available commands:
         - Existing configuration and data will be removed
         - User passwords will be requested during restore
 
-    **comsettings**       
+    comsettings       
         get --out <file>            - Download ComSettings from Data service to JSON file
         template --out <file>       - Save ComSettings template to JSON file
         apply --file <file>         - Apply ComSettings from JSON file. Note: After modifying the ComSettings, the Com service must be restarted.
 
-    **datasettings**              
+    datasettings              
         get --out <file>            - Download DataSettings to JSON file
         template --out <file>       - Save DataSettings template to JSON file
         apply --file <file>         - Apply DataSettings from JSON file. Note: After applying DataSettings, run 'xserveriotctl data update' to activate the changes. 
 
-    **usergroup**
+    usergroup
         get --out <file> --id <id>  - Download UserGroup to JSON file
         getall                      - List user groups (prints JSON to console)
         alarmgroups --id <id>       - List AlarmGroups assigned to a UserGroup (prints JSON to console)
@@ -165,7 +165,7 @@ Available commands:
         applyupdate --file <file>   - Apply UserGroup from JSON file. Note: After applying, run 'xserveriotctl data usersupdate' to activate the changes. 
         remove --id <id>            - Remove an existing UserGroup from the system. Note: After removing, run 'xserveriotctl data usersupdate' to activate the changes. 
 
-    **user**
+    user
         get --out <file> --id <id>  - Download User to JSON file
         getall                      - List users (prints JSON to console)
         getallwithgroups            - Display all user settings grouped by UserGroups (prints JSON to console).
@@ -174,7 +174,7 @@ Available commands:
         applyupdate --file <file>   - Apply User from JSON file. Note: After applying, run 'xserveriotctl data usersupdate' to activate the changes.
         remove --id <id>            - Remove an existing User from the system. After removing, run 'xserveriotctl data usersupdate' to activate the changes.
 
-    **alarmgroup**
+    alarmgroup
         get --out <file> --id <id>    - Download AlarmGroup to JSON file
         getall                        - List alarm groups (prints JSON to console)
         template --out <file>         - Save AlarmGroup template to JSON file
@@ -182,13 +182,13 @@ Available commands:
         applyupdate --file <file>     - Apply an existing AlarmGroup from JSON file. Note: After applying, run 'xserveriotctl data usersupdate' and 'xserveriotctl com updatesources' to activate the changes.
         remove --id <id>              - Remove an existing AlarmGroup from the system. Note: After removing, run 'xserveriotctl data usersupdate' and 'xserveriotctl com updatesources' to activate the changes.
 
-    **usergroupalarmgroup**
+    usergroupalarmgroup
         template --out <file>         - Save UsersGroupAlarmGroup template to JSON file
         add --file <file>             - Add a AlarmGroup to UserGroup mapping from JSON file. After adding, run 'xserveriotctl data usersupdate' and 'xserveriotctl com updatesources' to activate the changes.
         remove --file <file>          - Remove one UserGroup-to-AlarmGroup mapping from JSON file. 
                                         After removing, run 'xserveriotctl data usersupdate' and 'xserveriotctl com updatesources' to activate the changes.
 
-    **templatedevice**
+    templatedevice
         get --out <file> --id <id>    - Download TemplateDevice to JSON file
         getall                        - List TemplateDevices (prints JSON to console)
         template --out <file>         - Save TemplateDevice template to JSON file
@@ -199,7 +199,7 @@ Available commands:
         remove --id <id>              - Remove a TemplateDevice by ID. Note: After removing, run 'xserveriotctl com updatesources' to activate the changes.
         removeall                     - Remove all TemplateDevices. Note: After removing, run 'xserveriotctl com updatesources' to activate the changes.
 
-    **templatequantity**
+    templatequantity
         get --out <file> --id <id>    - Download TemplateQuantity to JSON file
         getall --id <id>              - List TemplateQuantities of a TemplateDevice (prints JSON to console)
         template --out <file>         - Save TemplateQuantity template to JSON file
@@ -208,7 +208,7 @@ Available commands:
         remove --id <id>              - Remove an existing TemplateQuantity from the system. Note: After removing, run 'xserveriotctl com updatesources' to activate the changes.
         removeall --id <id>           - Remove all TemplateQuantities of a TemplateDevice. Note: After removing, run 'xserveriotctl com updatesources' to activate the changes.
 
-    **templatealarmsetting**
+    templatealarmsetting
         get --out <file> --id <id>    - Download TemplateAlarmSetting to JSON file
         getall --id <id>              - List all TemplateAlarmSettings of a TemplateDevice (prints JSON to console)
         listall                       - List all TemplateAlarmSettings of all TemplateDevices (prints JSON to console)
@@ -218,7 +218,7 @@ Available commands:
         remove --id <id>              - Remove an existing TemplateAlarmSetting from the system. After removing, run 'xserveriotctl com updatesources' to activate the changes.
         removeall --id <id>           - Remove all TemplateAlarmSettings of a TemplateQuantity. After removing, run 'xserveriotctl com updatesources' to activate the changes.
 
-    **gateway**
+    gateway
         get --out <file> --id <id>    - Download Gateway to JSON file
         getall                        - List Gateways (prints JSON to console)
         template --out <file>         - Save Gateway template to JSON file
@@ -226,7 +226,7 @@ Available commands:
         applyupdate --file <file>     - Apply an existing Gateway from JSON file. Note: After applying, run 'xserveriotctl com updatesources' to activate the changes.
         remove --id <id>              - Remove an existing Gateway from the system. Note: After removing, run 'xserveriotctl com updatesources' to activate the changes.
     
-    **source**
+    source
         get --out <file> --id <id>    - Download Source to JSON file
         getall                        - List all sources (prints JSON to console)
         template --out <file>         - Save Source template to JSON file
@@ -238,7 +238,7 @@ Available commands:
         disable --id <id> | --name <name>   - Disable a Source (sets SourceEnabled=false) by Id or SourceName
                                               After applying, run 'xserveriotctl com updatesources' to activate the changes.
 
-    **virtualsource**
+    virtualsource
         get --out <file> --id <id>    - Download Virtual Source to JSON file
         getall                        - List Virtual Sources (prints JSON to console)
         sources --id <id>             - List Sources assigned to a Virtual Source (prints JSON to console) 
@@ -250,7 +250,7 @@ Available commands:
         remove --id <id>              - Remove an existing Virtual Source from the system. 
                                         Note: After removing, run 'xserveriotctl com updatesources' and 'xserveriotctl com updatevirtualsources' to activate the changes.
                                     
-    **virtualcalc**                   - Used to configure calculation rules for Virtual Sources.
+    virtualcalc                       - Used to configure calculation rules for Virtual Sources.
         template --out <file>         - Save SourcesOfVirtualSource template to JSON file
         add --file <file>             - Add a Source-to-VirtualSource mapping from JSON file. 
                                         Note: After adding, run 'xserveriotctl com updatesources' and 'xserveriotctl com updatevirtualsources' to activate the changes.
