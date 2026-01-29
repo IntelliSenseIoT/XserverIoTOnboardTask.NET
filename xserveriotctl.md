@@ -111,9 +111,9 @@ The tool is designed primarily for **advanced users**, automation scenarios,
 and large-scale IoT Server operations.
 
 ### List profiles
-
+```
 xserveriotctl config list
-
+```
 Example output:
 ```
 local
@@ -123,7 +123,7 @@ docker
 
 ---
 
-## Show profile details
+### Show profile details
 
 ```bash
 xserveriotctl config show
