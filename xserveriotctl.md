@@ -90,7 +90,7 @@ The Windows version is also distributed as a ZIP archive.
 
   Available commands:
 
-    config                    - Manage connection profiles (local/cloud)
+    config                       - Manage connection profiles (local/cloud)
       list                       - list profiles
       show [name]                - show profile details (defaults to current default)
       set --profile <name> (--local|--remote) [options]
@@ -101,7 +101,7 @@ The Windows version is also distributed as a ZIP archive.
       path                       - print config.json path
       init                       - create sample local/cloud profiles
 
-    com                      - The Com service is responsible for communication with field devices (Modbus RTU, Modbus TCP/IP, and related protocols).
+    com                          - The Com service is responsible for communication with field devices (Modbus RTU, Modbus TCP/IP, and related protocols).
       status                     - Com service status
       appinfo                    - Com service information
       settings                   - Com configuration settings
@@ -120,7 +120,7 @@ The Windows version is also distributed as a ZIP archive.
       writevalue                 - Write a realtime value (double) to a quantity
       virtualsources             - List all Virtual Sources
 
-    data                      - The Data service handles configuration, and historical datasets.
+    data                         - The Data service handles configuration, and historical datasets.
       status                     - Data service status
       appinfo                    - Data application information
       settings                   - Dataset configuration
@@ -285,79 +285,79 @@ The Windows version is also distributed as a ZIP archive.
         get                           - Show current heartbeat interval (prints to console)
         set --minutes <minutes>       - Set heartbeat interval in minutes
 
-  json                      - JSON utility commands
-    set --file <file>
-        --path <propertyPath>
-        --value <value>
-        [--encrypt]                   - Update a JSON property (optionally encrypt value)
+    json                      - JSON utility commands
+      set --file <file>
+          --path <propertyPath>
+          --value <value>
+          [--encrypt]                   - Update a JSON property (optionally encrypt value)
  
-  core                      - Core service commands (system, network, diagnostics, device information)
-   Common (Xserver.IoT.200 + Xserver.IoT.Docker)
-     status                  - Core service status
-     appinfo                 - Core application information
-     events                  - Diagnostic event list
-     systeminfo              - System information (device name, OS version, platform, device ID)
-     memoryinfo              - System memory information
-     processinfo             - System process information (Core, Com, Data services)
-     timezone                - Current system timezone
-     supportedtimezones      - List supported timezones
-     timeinfo                - System time information
-     firmwareinfo            - Firmware information
-     downloadedapps          - Downloaded Onboard applications
-     services                - List core system services and Onboard applications on Xserver.IoT.200; Onboard applications only on Xserver.IoT.Docker
-     onboardapps             - List all Onboard applications
-     onboardappsinfo         - Onboard application details
-     interfaces              - Network interface information
-     updateblobsettings      - Apply and update Blob storage settings originating from the data service
-     downloadfirmwareinfo [latest|preview|previous] - Download firmware info (latest/preview on Docker, latest/previous/preview on Xserver.IoT.200)
-     appstorelist            - List available applications from AppStore (downloads the AppStore content)
-     downloadappfromstore <TaskName>  - Download an Onboard application from the store by task name
-     downloadapp <TaskName>  - Send download request for an Onboard application from the user's Blob Storage 
-                               (requires Data Service configuration: BlobContainerName and StorageConnectionString)
-     checkapp <TaskName>     - Check whether an Onboard App task exists or is available on the device
-     installapp <TaskName>   - Send install request for an Onboard application
-     uninstallapp <TaskName> - Send uninstall request for an Onboard application (the application must be in stopped state)
-     installedappinfo <TaskName>  - Get package information for an Onboard application (name, version, description, release date)
-     runapp <TaskName>       - Send run request for an Onboard application
-     stopapp <TaskName>      - Send stop request for an Onboard application
-     deleteinstallerfiles    - Send request to delete Onboard application installer files from the IoT Server
-     ifaceinfo <interface>   - Query network interface settings (DHCP/static, IP/subnet, gateway/DNS, WiFi SSID, MAC)
-     ping <ip|hostname>      - Send ICMP ping request from the IoT Server to the specified target
-     restart [delaySeconds] [--silent]  - Restart the IoT Server after the specified delay (default: 5s); --silent skips confirmation
-     shutdown [delaySeconds] - Shut down the IoT Server after the specified delay (confirmation required)
-   Xserver.IoT.200 only
-     freespaceinfo           - Disk free space information
-     changetimezone <name>   - Change system timezone (restart required)
-     setdatetime <yyyy-MM-dd> <hh:mm> - Set system date and time (24-hour, local) (only when NTP is disabled)
-     ntpservers              - Configured NTP servers
-     ntpstatus               - NTP synchronization status
-     ntpenable <true|false>  - Enable or disable NTP time synchronization (restart required)
-     setntpservers <servers> - Set NTP servers (semicolon-separated list) (restart required)
-     downloadfirmware [latest|previous|preview] - Download firmware to IoT device
-     firmwaremanagerstatus   - Check whether a firmware-related process is running (download in progress)
-     checkfirmware           - Verify that the downloaded firmware is complete and not corrupted before installation
-     installfirmware [--factory] [--silent]  - Install firmware (preserve configuration by default; 
-                                               --factory resets; 
-                                               --silent skips confirmation for preserve configuration)
-     factoryip --newip <ip> --subnet <mask> [--gateway <gw>] [--oldip <ip>]
-                             - Change device IP via UDP broadcast (default old IP: 10.10.10.10; reboot required)
-     setiface <interface> dhcp|static ...    - Set network interface settings on the IoT Server (restart required for changes to take effect)
-     wifiscan <interface>    - Scan available WiFi access points on the specified interface
-     firewallstatus          - Firewall status
-     firewall <enable|disable>        - Enable/disable firewall on the IoT device
-     firewall rule <add|del> --ip <ip|Anywhere> --port <n|Anywhere> --action <allow|deny>  - Add/delete a firewall rule
-   Xserver.IoT.Docker only
-     docker-healthinfo       - Docker update health information
-     docker-environment      - Docker environment information (0-Dev,1-Prod)
-     docker-mode             - Docker update mode (0-Manual,1-Auto)
-     dockerupdatemode <manual|auto>  - Set Docker update mode on the IoT Server (manual or automatic)
-     docker-updateavailable  - Check if Docker update is available
-
-  system 
-    waitservices --timeout <seconds> - Wait until all IoT services (COM, DATA, CORE) are running
-    licences                  - Manage licences installed on the IoT Server
-        show                         - List all installed licences (prints to console)
-        add --file <file>            - Import and install a licence from file. The licence must belong to the target DeviceID.
-                                       Some Onboard Apps may require a restart for the licence to take effect.
-        remove --product <id> --licenceid <id>   - Remove an installed licence from the IoT Server.
-    deviceid get              - Prints the unique DeviceID of the IoT Server to the console.
+    core                      - Core service commands (system, network, diagnostics, device information)
+     Common (Xserver.IoT.200 + Xserver.IoT.Docker)
+       status                  - Core service status
+       appinfo                 - Core application information
+       events                  - Diagnostic event list
+       systeminfo              - System information (device name, OS version, platform, device ID)
+       memoryinfo              - System memory information
+       processinfo             - System process information (Core, Com, Data services)
+       timezone                - Current system timezone
+       supportedtimezones      - List supported timezones
+       timeinfo                - System time information
+       firmwareinfo            - Firmware information
+       downloadedapps          - Downloaded Onboard applications
+       services                - List core system services and Onboard applications on Xserver.IoT.200; Onboard applications only on Xserver.IoT.Docker
+       onboardapps             - List all Onboard applications
+       onboardappsinfo         - Onboard application details
+       interfaces              - Network interface information
+       updateblobsettings      - Apply and update Blob storage settings originating from the data service
+       downloadfirmwareinfo [latest|preview|previous] - Download firmware info (latest/preview on Docker, latest/previous/preview on Xserver.IoT.200)
+       appstorelist            - List available applications from AppStore (downloads the AppStore content)
+       downloadappfromstore <TaskName>  - Download an Onboard application from the store by task name
+       downloadapp <TaskName>  - Send download request for an Onboard application from the user's Blob Storage 
+                                 (requires Data Service configuration: BlobContainerName and StorageConnectionString)
+       checkapp <TaskName>     - Check whether an Onboard App task exists or is available on the device
+       installapp <TaskName>   - Send install request for an Onboard application
+       uninstallapp <TaskName> - Send uninstall request for an Onboard application (the application must be in stopped state)
+       installedappinfo <TaskName>  - Get package information for an Onboard application (name, version, description, release date)
+       runapp <TaskName>       - Send run request for an Onboard application
+       stopapp <TaskName>      - Send stop request for an Onboard application
+       deleteinstallerfiles    - Send request to delete Onboard application installer files from the IoT Server
+       ifaceinfo <interface>   - Query network interface settings (DHCP/static, IP/subnet, gateway/DNS, WiFi SSID, MAC)
+       ping <ip|hostname>      - Send ICMP ping request from the IoT Server to the specified target
+       restart [delaySeconds] [--silent]  - Restart the IoT Server after the specified delay (default: 5s); --silent skips confirmation
+       shutdown [delaySeconds] - Shut down the IoT Server after the specified delay (confirmation required)
+     Xserver.IoT.200 only
+       freespaceinfo           - Disk free space information
+       changetimezone <name>   - Change system timezone (restart required)
+       setdatetime <yyyy-MM-dd> <hh:mm> - Set system date and time (24-hour, local) (only when NTP is disabled)
+       ntpservers              - Configured NTP servers
+       ntpstatus               - NTP synchronization status
+       ntpenable <true|false>  - Enable or disable NTP time synchronization (restart required)
+       setntpservers <servers> - Set NTP servers (semicolon-separated list) (restart required)
+       downloadfirmware [latest|previous|preview] - Download firmware to IoT device
+       firmwaremanagerstatus   - Check whether a firmware-related process is running (download in progress)
+       checkfirmware           - Verify that the downloaded firmware is complete and not corrupted before installation
+       installfirmware [--factory] [--silent]  - Install firmware (preserve configuration by default; 
+                                                 --factory resets; 
+                                                 --silent skips confirmation for preserve configuration)
+       factoryip --newip <ip> --subnet <mask> [--gateway <gw>] [--oldip <ip>]
+                               - Change device IP via UDP broadcast (default old IP: 10.10.10.10; reboot required)
+       setiface <interface> dhcp|static ...    - Set network interface settings on the IoT Server (restart required for changes to take effect)
+       wifiscan <interface>    - Scan available WiFi access points on the specified interface
+       firewallstatus          - Firewall status
+       firewall <enable|disable>        - Enable/disable firewall on the IoT device
+       firewall rule <add|del> --ip <ip|Anywhere> --port <n|Anywhere> --action <allow|deny>  - Add/delete a firewall rule
+     Xserver.IoT.Docker only
+       docker-healthinfo       - Docker update health information
+       docker-environment      - Docker environment information (0-Dev,1-Prod)
+       docker-mode             - Docker update mode (0-Manual,1-Auto)
+       dockerupdatemode <manual|auto>  - Set Docker update mode on the IoT Server (manual or automatic)
+       docker-updateavailable  - Check if Docker update is available
+  
+    system 
+      waitservices --timeout <seconds> - Wait until all IoT services (COM, DATA, CORE) are running
+      licences                  - Manage licences installed on the IoT Server
+          show                         - List all installed licences (prints to console)
+          add --file <file>            - Import and install a licence from file. The licence must belong to the target DeviceID.
+                                         Some Onboard Apps may require a restart for the licence to take effect.
+          remove --product <id> --licenceid <id>   - Remove an installed licence from the IoT Server.
+      deviceid get              - Prints the unique DeviceID of the IoT Server to the console.
