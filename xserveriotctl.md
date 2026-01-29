@@ -58,7 +58,9 @@ The latest prebuilt binaries are available for the following platforms:
 ### Installation on Linux (x64)
 
 The Linux version is provided as a ZIP archive that contains the executable and all required components.
+
 Extract the archive: unzip xserveriotctl-linux-x64.zip
+
 Grant execute permission to the CLI: chmod +x xserveriotctl
 
 **Note**: Only the xserveriotctl binary requires execute permission.
