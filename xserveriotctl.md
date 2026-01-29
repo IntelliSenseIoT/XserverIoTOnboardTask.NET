@@ -88,53 +88,53 @@ The Windows version is also distributed as a ZIP archive.
 ## Usage:
   xserveriotctl <command> [subcommand] [options | args]
 
-Available commands:
+  Available commands:
 
-  config                    - Manage connection profiles (local/cloud)
-    list                       - list profiles
-    show [name]                - show profile details (defaults to current default)
-    set --profile <name> (--local|--remote) [options]
-    probe [name]               - detect device type via Core
-    use <name>                 - set default profile
-    delete <name>              - delete profile
-    rename <from> <to>         - rename profile
-    path                       - print config.json path
-    init                       - create sample local/cloud profiles
+    config                    - Manage connection profiles (local/cloud)
+      list                       - list profiles
+      show [name]                - show profile details (defaults to current default)
+      set --profile <name> (--local|--remote) [options]
+      probe [name]               - detect device type via Core
+      use <name>                 - set default profile
+      delete <name>              - delete profile
+      rename <from> <to>         - rename profile
+      path                       - print config.json path
+      init                       - create sample local/cloud profiles
 
-  com                      - The Com service is responsible for communication with field devices (Modbus RTU, Modbus TCP/IP, and related protocols).
-    status                     - Com service status
-    appinfo                    - Com service information
-    settings                   - Com configuration settings
-    updatesources              - Update Sources configuration in Com service
-    updatevirtualsources       - Update Virtual Sources configuration in Com service
-    reinit-communication       - Reinitializes device communication (Serial and TCP/IP) on the active IoT Server.
-    events                     - Com diagnostic events
-    eventscheck                - Check Com events for 'Exception error', returns true if none found, false otherwise
-    serialcominfo              - Serial (Modbus RTU) communication stats
-    tcpipcominfo               - TCP/IP (Modbus TCP) communication stats
-    sources                    - List all sources
-    quantities                 - List source quantities
-    alarmstat                  - Active alarm statistics
-    getactivealarms            - List all active alarms
-    getvalue                   - Read a realtime value by source and quantity
-    writevalue                 - Write a realtime value (double) to a quantity
-    virtualsources             - List all Virtual Sources
+    com                      - The Com service is responsible for communication with field devices (Modbus RTU, Modbus TCP/IP, and related protocols).
+      status                     - Com service status
+      appinfo                    - Com service information
+      settings                   - Com configuration settings
+      updatesources              - Update Sources configuration in Com service
+      updatevirtualsources       - Update Virtual Sources configuration in Com service
+      reinit-communication       - Reinitializes device communication (Serial and TCP/IP) on the active IoT Server.
+      events                     - Com diagnostic events
+      eventscheck                - Check Com events for 'Exception error', returns true if none found, false otherwise
+      serialcominfo              - Serial (Modbus RTU) communication stats
+      tcpipcominfo               - TCP/IP (Modbus TCP) communication stats
+      sources                    - List all sources
+      quantities                 - List source quantities
+      alarmstat                  - Active alarm statistics
+      getactivealarms            - List all active alarms
+      getvalue                   - Read a realtime value by source and quantity
+      writevalue                 - Write a realtime value (double) to a quantity
+      virtualsources             - List all Virtual Sources
 
-  data                      - The Data service handles configuration, and historical datasets.
-    status                     - Data service status
-    appinfo                    - Data application information
-    settings                   - Dataset configuration
-    update                     - Update Data service settings
-    events                     - Diagnostic events
-    eventscheck                - Check Data events for 'Exception error', returns true if none found, false otherwise
-    useractivities             - List user activity log
-    usersupdate                - Applies user and user group changes by updating user configuration in Core and Com services.
-    registertypes              - Register type definitions
-    scaleregistertypes         - Scaled register type definitions
-    backup
-        create --out <file>.IoTBackup   - Create IoT Server backup (prints progress to console)
-    restore 
-        run --file <file>.IoTBackup [--profile <name>] [--yes]      - Restore IoT Server configuration and data from a backup file.
+    data                      - The Data service handles configuration, and historical datasets.
+      status                     - Data service status
+      appinfo                    - Data application information
+      settings                   - Dataset configuration
+      update                     - Update Data service settings
+      events                     - Diagnostic events
+      eventscheck                - Check Data events for 'Exception error', returns true if none found, false otherwise
+      useractivities             - List user activity log
+      usersupdate                - Applies user and user group changes by updating user configuration in Core and Com services.
+      registertypes              - Register type definitions
+      scaleregistertypes         - Scaled register type definitions
+      backup
+          create --out <file>.IoTBackup   - Create IoT Server backup (prints progress to console)
+      restore 
+          run --file <file>.IoTBackup [--profile <name>] [--yes]      - Restore IoT Server configuration and data from a backup file.
 
         Options:
         --file <file>      Path to the .IoTBackup file
