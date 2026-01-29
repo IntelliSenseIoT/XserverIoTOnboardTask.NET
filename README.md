@@ -22,7 +22,8 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 - [IoTServerInsertionAPI description](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/IoTServerInsertionAPI.md)
 - [Nugets](https://www.nuget.org/packages/XserverIoTCommon.NET)
 - [Xserver.IoT.100 OnboardTask Overview](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io)
-
+- [xserveriotctl Documentation](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/XserverIoTCommon.NET.md)
+  
 ![](images/IoTServerSDK2025.png)
 
 # XserverIoTOnboardTask:
