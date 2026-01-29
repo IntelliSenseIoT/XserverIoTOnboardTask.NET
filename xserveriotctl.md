@@ -55,7 +55,36 @@ The latest prebuilt binaries are available for the following platforms:
 - Linux x64: [XserverIoTctl_1.0.5._linux-x64.zip](https://1drv.ms/u/c/506260ab1001870b/IQCjTRPBie79QLmUVGGnLdP6ARpQhqgHeJX4JlG56Rk-qE0?e=izkOjT)
 - Windows x64: [XserverIoTctl_1.0.5_win-x64.zip](https://1drv.ms/u/c/506260ab1001870b/IQAeG7896EruTKeocQj9e1xyAaDMGd6D4Ow7zjhVM58QK3o?e=vmUDEk)
 
+## XserverIoTCtl – Download & Installation
 
-<a href="https://1drv.ms/u/c/506260ab1001870b/IQCjTRPBie79QLmUVGGnLdP6ARpQhqgHeJX4JlG56Rk-qE0?e=izkOjT>
-Download the latest release
-</a>
+### Download
+
+The latest prebuilt binaries are available for the following platforms:
+- Linux x64: [XserverIoTctl_1.0.5._linux-x64.zip](https://1drv.ms/u/c/506260ab1001870b/IQCjTRPBie79QLmUVGGnLdP6ARpQhqgHeJX4JlG56Rk-qE0?e=izkOjT)
+- Windows x64: [XserverIoTctl_1.0.5_win-x64.zip](https://1drv.ms/u/c/506260ab1001870b/IQAeG7896EruTKeocQj9e1xyAaDMGd6D4Ow7zjhVM58QK3o?e=vmUDEk)
+
+### Installation on Linux (x64)
+
+The Linux version is provided as a ZIP archive that contains the executable and all required components.
+Extract the archive: unzip xserveriotctl-linux-x64.zip
+Grant execute permission to the CLI: chmod +x xserveriotctl
+
+**Note**: Only the xserveriotctl binary requires execute permission.
+The included DLL files are loaded automatically at runtime.
+
+### Run the CLI
+
+./xserveriotctl
+
+Running the command without parameters prints the full help output, listing all available commands and subcommands.
+
+### Installation on Windows (x64)
+
+The Windows version is also distributed as a ZIP archive.
+
+- Extract xserveriotctl-win-x64.zip
+- The extracted folder contains: xserveriotctl.exe and required .dll files
+- No installation is required
+- Run from the extracted folder or add it to PATH
+
+xserveriotctl
