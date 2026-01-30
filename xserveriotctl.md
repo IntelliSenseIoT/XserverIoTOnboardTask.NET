@@ -217,7 +217,7 @@ and System commands.
 
 ---
 
-## Other command
+## Other commands
 
 ```
     com                          - The Com service is responsible for communication with field devices (Modbus RTU, Modbus TCP/IP, and related protocols).
