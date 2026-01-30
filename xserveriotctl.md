@@ -92,8 +92,9 @@ The included DLL files are loaded automatically at runtime.
 
 ### Run the CLI
 
-**./xserveriotctl**
-
+```
+./xserveriotctl
+```
 Running the command without parameters prints the full help output, listing all available commands and subcommands.
 
 ### Setup on Windows (x64)
@@ -105,8 +106,9 @@ The Windows version is also distributed as a ZIP archive.
 - No installation is required
 - Run from the extracted folder or add it to PATH
 
-**xserveriotctl**
-
+```
+xserveriotctl
+```
 ---
 
 # xserveriotctl – Command Reference
