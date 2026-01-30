@@ -413,7 +413,7 @@ and System commands.
           [--encrypt]                   - Update a JSON property (optionally encrypt value)
 ```
 
-
+```
     core                      - Core service commands (system, network, diagnostics, device information)
      Common (Xserver.IoT.200 + Xserver.IoT.Docker)
        status                  - Core service status
@@ -475,7 +475,9 @@ and System commands.
        docker-mode             - Docker update mode (0-Manual,1-Auto)
        dockerupdatemode <manual|auto>  - Set Docker update mode on the IoT Server (manual or automatic)
        docker-updateavailable  - Check if Docker update is available
-  
+```
+
+```
     system 
       waitservices --timeout <seconds> - Wait until all IoT services (COM, DATA, CORE) are running
       licences                  - Manage licences installed on the IoT Server
@@ -484,9 +486,11 @@ and System commands.
                                          Some Onboard Apps may require a restart for the licence to take effect.
           remove --product <id> --licenceid <id>   - Remove an installed licence from the IoT Server.
       deviceid get              - Prints the unique DeviceID of the IoT Server to the console.
+```
 
 ### Examples:
 
+```
       xserveriotctl config init
       xserveriotctl config set --profile local --local --ip 192.168.1.100 --user admin --pass admin
       xserveriotctl config set --profile cloud --remote --device-id IoTDevice1 --iothub "HostName=...;..." --user admin --pass admin
@@ -531,3 +535,4 @@ and System commands.
       xserveriotctl core firewall rule add --ip 192.168.1.10 --port Anywhere --action deny
       
       xserveriotctl system waitservices --timeout 120
+```
