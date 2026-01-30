@@ -116,6 +116,9 @@ xserveriotctl
 ## Usage:
   xserveriotctl <command> [subcommand] [options | args]
 
+The following sections list all available commands grouped by service.
+Use the `config` command first to establish a connection profile.
+
   Config commands:
 
     config                       - Manage connection profiles (local/cloud)
@@ -279,7 +282,7 @@ and System commands.
       backup
           create --out <file>.IoTBackup   - Create IoT Server backup (prints progress to console)
       restore 
-          run --file <file>.IoTBackup [--profile <name>] [--yes]      - Restore IoT Server configuration and data from a backup file.
+          run --file <file>.IoTBackup [--profile <name>] [--yes]      - Restore IoT Server configuration and data from a backup file. ⚠️ Warning: Restore will remove existing configuration and data on the target IoT Server.
 
         Options:
         --file <file>      Path to the .IoTBackup file
