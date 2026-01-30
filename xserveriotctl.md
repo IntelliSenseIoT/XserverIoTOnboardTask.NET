@@ -61,7 +61,7 @@ For **advanced workflows and large-scale operations**, `xserveriotctl` is the re
 - No installation required (portable ZIP package)
 
 ### Windows Server
-- Minimum requirement: Windows Server 2019 (x64)
+- Minimum requirement: Windows Server 2019 (x64) or newer
 - No installation required (portable ZIP package)
 
 ### Notes
