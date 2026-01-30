@@ -282,7 +282,8 @@ and System commands.
       backup
           create --out <file>.IoTBackup   - Create IoT Server backup (prints progress to console)
       restore 
-          run --file <file>.IoTBackup [--profile <name>] [--yes]      - Restore IoT Server configuration and data from a backup file. ⚠️ Warning: Restore will remove existing configuration and data on the target IoT Server.
+          run --file <file>.IoTBackup [--profile <name>] [--yes]      - Restore IoT Server configuration and data from a backup file. 
+                                                                        Warning: Restore will remove existing configuration and data on the target IoT Server.
 
         Options:
         --file <file>      Path to the .IoTBackup file
