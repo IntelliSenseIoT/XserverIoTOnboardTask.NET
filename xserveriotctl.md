@@ -49,7 +49,29 @@ For **advanced workflows and large-scale operations**, `xserveriotctl` is the re
 
 ---
 
-## XserverIoTCtl – Download & Installation
+## Runtime requirements
+
+### Linux
+- Minimum requirement: Ubuntu 20.04 LTS (x64) or newer
+- No installation required (portable ZIP package)
+- Execute permission required (`chmod +x`)
+
+### Windows
+- Minimum requirement: Windows 10 (x64), version 1909 or newer
+- No installation required (portable ZIP package)
+
+### Windows Server
+- Minimum requirement: Windows Server 2019 (x64)
+- No installation required (portable ZIP package)
+
+### Notes
+- No .NET runtime installation required
+- All dependencies are shipped with the CLI
+- Designed for scripting, automation, and CI/CD environments
+
+---
+
+## XserverIoTCtl – Download, Setup and Usage
 
 ### Download
 
@@ -57,7 +79,7 @@ The latest prebuilt binaries are available for the following platforms:
 - Linux x64: [XserverIoTctl_1.0.5._linux-x64.zip](https://1drv.ms/u/c/506260ab1001870b/IQCjTRPBie79QLmUVGGnLdP6ARpQhqgHeJX4JlG56Rk-qE0?e=izkOjT)
 - Windows x64: [XserverIoTctl_1.0.5_win-x64.zip](https://1drv.ms/u/c/506260ab1001870b/IQAeG7896EruTKeocQj9e1xyAaDMGd6D4Ow7zjhVM58QK3o?e=vmUDEk)
 
-### Installation on Linux (x64)
+### Setup on Linux (x64)
 
 The Linux version is provided as a ZIP archive that contains the executable and all required components.
 
@@ -74,7 +96,7 @@ The included DLL files are loaded automatically at runtime.
 
 Running the command without parameters prints the full help output, listing all available commands and subcommands.
 
-### Installation on Windows (x64)
+### Setup on Windows (x64)
 
 The Windows version is also distributed as a ZIP archive.
 
