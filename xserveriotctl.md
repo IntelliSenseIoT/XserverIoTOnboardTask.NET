@@ -92,7 +92,7 @@ The Windows version is also distributed as a ZIP archive.
 ## Usage:
   xserveriotctl <command> [subcommand] [options | args]
 
-  Available commands:
+  Config commands:
 
     config                       - Manage connection profiles (local/cloud)
       list                       - list profiles
@@ -203,7 +203,7 @@ xserveriotctl config path
 xserveriotctl config init
 ```
 
-## Recommended workflow
+### Recommended workflow
 
 ```
 xserveriotctl config init
@@ -217,6 +217,9 @@ and System commands.
 
 ---
 
+## Other command
+
+```
     com                          - The Com service is responsible for communication with field devices (Modbus RTU, Modbus TCP/IP, and related protocols).
       status                     - Com service status
       appinfo                    - Com service information
@@ -235,7 +238,9 @@ and System commands.
       getvalue                   - Read a realtime value by source and quantity
       writevalue                 - Write a realtime value (double) to a quantity
       virtualsources             - List all Virtual Sources
+```
 
+```
     data                         - The Data service handles configuration, and historical datasets.
       status                     - Data service status
       appinfo                    - Data application information
@@ -406,7 +411,9 @@ and System commands.
           --path <propertyPath>
           --value <value>
           [--encrypt]                   - Update a JSON property (optionally encrypt value)
- 
+```
+
+
     core                      - Core service commands (system, network, diagnostics, device information)
      Common (Xserver.IoT.200 + Xserver.IoT.Docker)
        status                  - Core service status
