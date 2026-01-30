@@ -492,8 +492,8 @@ and System commands.
 
 ```
       xserveriotctl config init
-      xserveriotctl config set --profile local --local --ip 192.168.1.100 --user admin --pass admin
-      xserveriotctl config set --profile cloud --remote --device-id IoTDevice1 --iothub "HostName=...;..." --user admin --pass admin
+      xserveriotctl config set --profile local --local --ip 192.168.1.100 --user admin --pass yourpassword
+      xserveriotctl config set --profile cloud --remote --device-id IoTDevice1 --iothub "HostName=...;..." --user admin --pass yourpassword
       xserveriotctl config probe local
       xserveriotctl config show local
       
