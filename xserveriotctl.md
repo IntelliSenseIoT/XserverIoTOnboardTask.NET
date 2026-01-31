@@ -111,6 +111,12 @@ xserveriotctl
 ```
 ---
 
+### Practical Scripts and Use-Case Examples
+
+[Example scripts and solution patterns for specific use cases are available at the following link](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/examples/xserveriotctlexample1)
+
+---
+
 # xserveriotctl – Command Reference
 
 ## Usage:
