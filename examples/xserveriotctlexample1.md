@@ -16,6 +16,7 @@ This workflow is commonly used during **initial device onboarding**, **new proje
 > **Note:**  
 > After the IP change and waiting period, the IoT Server should be restarted to ensure all services run with the new network settings.
 
+```
     # ---------------------------------------------
     # Xserver.IoT factory IP + initial config script
     # ---------------------------------------------
@@ -73,6 +74,5 @@ This workflow is commonly used during **initial device onboarding**, **new proje
     Write-Host "Please restart the IoT Server now to ensure"
     Write-Host "all new settings are fully applied."
     Write-Host "--------------------------------------------------"
-
-
+```
 
