@@ -76,3 +76,39 @@ This workflow is commonly used during **initial device onboarding**, **new proje
     Write-Host "--------------------------------------------------"
 ```
 
+---
+##Example: Waiting for Xserver IoT Server startup using xserveriotctl
+
+PowerShell example script that waits until the Xserver IoT Server is fully started.
+The script uses **xserveriotctl system waitservices** to check the status of COM, DATA, and CORE services.
+If all services are running, the IoT Server is considered operational.
+
+Useful in automated setup, provisioning, and deployment workflows where subsequent steps depend on a fully initialized IoT Server.
+
+```
+# ---------------------------------------------
+# Wait until IoT Server services are running
+# ---------------------------------------------
+
+$xserverIoTCtl = "C:\Tools\xserveriotctl\xserveriotctl.exe"
+$TimeoutSec = 120
+
+Write-Host "Waiting for IoT Server services (timeout: $TimeoutSec s)..."
+
+$output = & $xserverIoTCtl system waitservices --timeout $TimeoutSec 2>&1
+
+# Print CLI output
+$output | ForEach-Object { Write-Host $_ }
+
+# Check success condition
+if ($output -match "All services are running")
+{
+    Write-Host "IoT Server is up and running." -ForegroundColor Green
+    exit 0
+}
+else
+{
+    Write-Error "IoT Server did not start properly within timeout."
+    exit 1
+}
+```
