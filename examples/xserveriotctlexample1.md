@@ -78,7 +78,7 @@ This workflow is commonly used during **initial device onboarding**, **new proje
 
 ---
 
-##Waiting for Xserver IoT Server startup using xserveriotctl
+## Waiting for Xserver IoT Server startup using xserveriotctl
 
 PowerShell example script that waits until the Xserver IoT Server is fully started.
 The script uses **xserveriotctl system waitservices** to check the status of COM, DATA, and CORE services.
