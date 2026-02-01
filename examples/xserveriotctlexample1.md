@@ -113,3 +113,22 @@ else
     exit 1
 }
 ```
+
+---
+
+## Get User Group ID from Xserver IoT Server using xserveriotctl
+
+PowerShell example script that retrieves all user groups from the Xserver IoT Server using xserveriotctl, parses the JSON output, and extracts the ID of a specific user group by name (e.g. IoTExplorerWebPortal).
+Useful for automation scenarios where user group IDs are required for further configuration or user management tasks.
+
+```
+$xserverIoTCtl = "C:\Tools\xserveriotctl\xserveriotctl.exe"
+
+$json = & $xserverIoTCtl data usergroup getall | ConvertFrom-Json
+
+$IoTExplorerWebPortalGroupId = (
+    $json | Where-Object { $_.Name -eq "IoTExplorerWebPortal" }
+).Id
+
+Write-Host "IoTExplorerWebPortal Group Id = $IoTExplorerWebPortalGroupId"
+```
