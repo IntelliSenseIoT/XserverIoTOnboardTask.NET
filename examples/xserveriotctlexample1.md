@@ -133,3 +133,150 @@ $IoTExplorerWebPortalGroupId = (
 
 Write-Host "IoTExplorerWebPortal Group Id = $IoTExplorerWebPortalGroupId"
 ```
+
+---
+
+## Create WebUsers group + webuser account on Xserver IoT (PowerShell)
+
+This PowerShell example demonstrates how to provision an **Xserver IoT Server** using `xserveriotctl` and JSON templates in a fully automated and repeatable way. The script configures project-level settings, creates a user group, assigns alarm group permissions, and creates a user associated with the newly created group.
+
+## Workflow
+
+1. **Select IoT Server profile**  
+   The script selects the target IoT Server instance using `xserveriotctl config use <profile>`.
+
+2. **Wait for IoT Server readiness**  
+   The script waits until all required services (**COM, DATA, CORE**) are running using `xserveriotctl system waitservices --timeout <seconds>`.
+
+3. **Configure ProjectInfo from JSON template**  
+   Project-related settings are written into `projectinfo.json` using `json set`, then applied to the IoT Server.
+
+4. **Create a User Group**  
+   A new user group (for example **WebUsers**) is configured via `usergroup.json` and created using the `data usergroup applynew` command.
+
+5. **Resolve User Group ID**  
+   The script queries all existing user groups and extracts the ID of the newly created group, which is required for subsequent configuration steps.
+
+6. **Assign Alarm Group to User Group**  
+   The user group is linked to an alarm group using `usergroupalarmgroup.json` and the appropriate CLI command.
+
+7. **Create a User and assign it to the User Group**  
+   A user account is created from `user.json`. The password is encrypted using the `--encrypt` option, and the user is assigned to the previously created user group.
+
+## Result
+
+After the script finishes, the IoT Server contains a configured ProjectInfo, a new user group (for example **WebUsers**), a user account assigned to this group, and alarm group permissions correctly applied. This example is intended for automated provisioning, onboarding, and reproducible IoT Server setup workflows.
+
+```
+# (Recommended) Force UTF-8 for proper accented characters
+$utf8 = New-Object System.Text.UTF8Encoding($false)
+[Console]::OutputEncoding = $utf8
+$OutputEncoding = $utf8
+
+#-----------------------------------------------------------------------
+# ----------------- IoT Server Settings (edit these) -------------------
+#-----------------------------------------------------------------------
+
+$TimeoutSec = 120
+
+# ---- ProjectInfo values ----
+$ProjectId              = 1
+$ProjectName            = "Your Project Name"
+$Namespace              = "Your Namespace"
+$IoTGatewayName         = "Xserver.IoT"
+$ProjectCreatorCompany  = "Your Company Name"
+$ProjectDescription     = "Your Description"
+$ProjectCreationDateTimeLT = (Get-Date).ToString("yyyy-MM-ddTHH:mm:ss")
+# ---- UserGroup values ----
+$UserGroupName		= "WebUsers"
+$UserGroupDescription	= "IoT Explorer Web Portal usergroup"
+$UserGroupCanControl	= $true
+# ---- UserGroup values ----
+$UserName		= "webuser"
+$UserDescription	= "IoT Explorer Web Portal user"
+$UserPassword		= "webuser"
+$UserEmail		= "webuser@email.com"
+#-----------------------------------------------------------------------
+
+# Path to xserveriotctl executable (adjust if needed)
+$xserverIoTCtl = "C:\Tools\xserveriotctl\xserveriotctl.exe"
+
+# ---- Select profile ----
+$ProfileName = "newiot"
+
+# ---- Templates ----
+$TemplatesDir = Join-Path -Path (Get-Location) -ChildPath "templates"
+$ProjectInfoFile = Join-Path -Path $TemplatesDir -ChildPath "projectinfo.json"
+$ComSettingsFile = Join-Path -Path $TemplatesDir -ChildPath "comsettings.json"
+$DataSettingsFile = Join-Path -Path $TemplatesDir -ChildPath "datasettings.json"
+$UserGroupFile = Join-Path -Path $TemplatesDir -ChildPath "usergroup.json"
+$UserGroupAlarmGroupFile = Join-Path -Path $TemplatesDir -ChildPath "usergroupalarmgroup.json"
+$UserFile = Join-Path -Path $TemplatesDir -ChildPath "user.json"
+
+Write-Host "Using profile: $ProfileName"
+& $xserverIoTCtl config use $ProfileName | Out-Null
+
+# ---- Waiting for IoT Server services ----
+Write-Host "Waiting for IoT Server services (timeout: $TimeoutSec s)..."
+$output = & $xserverIoTCtl system waitservices --timeout $TimeoutSec 2>&1
+
+# Print CLI output
+$output | ForEach-Object { Write-Host $_ }
+
+# Check success condition
+if ($output -match "All services are running")
+{
+    Write-Host "IoT Server is up and running." -ForegroundColor Green
+}
+else
+{
+    Write-Error "IoT Server did not start properly within timeout."
+    exit 1
+}
+
+Write-Host "Filling projectinfo.json using xserveriotctl json set..."
+& $xserverIoTCtl json set --file $ProjectInfoFile --path Id --value 1 | Out-Null
+& $xserverIoTCtl json set --file $ProjectInfoFile --path ProjectName --value $ProjectName | Out-Null
+& $xserverIoTCtl json set --file $ProjectInfoFile --path Namespace --value $Namespace | Out-Null
+& $xserverIoTCtl json set --file $ProjectInfoFile --path IoTGatewayName --value $IoTGatewayName | Out-Null
+& $xserverIoTCtl json set --file $ProjectInfoFile --path ProjectCreatorCompany --value $ProjectCreatorCompany | Out-Null
+& $xserverIoTCtl json set --file $ProjectInfoFile --path ProjectDescription --value $ProjectDescription | Out-Null
+& $xserverIoTCtl json set --file $ProjectInfoFile --path ProjectCreationDateTimeLT --value $ProjectCreationDateTimeLT | Out-Null
+
+Write-Host "Applying projectinfo settings from JSON template..."
+& $xserverIoTCtl data projectinfo apply --file $ProjectInfoFile
+
+Write-Host "Filling usergroup.json using xserveriotctl json set..."
+& $xserverIoTCtl json set --file $UserGroupFile --path Name --value $UserGroupName | Out-Null
+& $xserverIoTCtl json set --file $UserGroupFile --path Description --value $UserGroupDescription | Out-Null
+& $xserverIoTCtl json set --file $UserGroupFile --path CanControl --value $UserGroupCanControl | Out-Null
+
+Write-Host "Applying usergroup settings from JSON template..."
+& $xserverIoTCtl data usergroup applynew --file $UserGroupFile
+
+$json = & $xserverIoTCtl data usergroup getall | ConvertFrom-Json
+$IoTExplorerWebPortalGroupId = (
+    $json | Where-Object { $_.Name -eq "WebUsers" }
+).Id
+Write-Host "IoTExplorerWebPortal Group Id = $IoTExplorerWebPortalGroupId"
+
+Write-Host "Filling usergroupalarmgroup.json using xserveriotctl json set..."
+& $xserverIoTCtl json set --file $UserGroupAlarmGroupFile --path UserGroupId --value $IoTExplorerWebPortalGroupId | Out-Null
+& $xserverIoTCtl json set --file $UserGroupAlarmGroupFile --path AlarmGroupId --value 1 | Out-Null
+
+Write-Host "Applying usergroupalarmgroup settings from JSON template..."
+& $xserverIoTCtl data usergroupalarmgroup add --file $UserGroupAlarmGroupFile
+
+Write-Host "Filling user.json using xserveriotctl json set..."
+& $xserverIoTCtl json set --file $UserFile --path Name --value $UserName | Out-Null
+& $xserverIoTCtl json set --file $UserFile --path Description --value $UserDescription | Out-Null
+& $xserverIoTCtl json set --file $UserFile --path Password --value $UserPassword --encrypt | Out-Null
+& $xserverIoTCtl json set --file $UserFile --path Email --value $UserEmail | Out-Null
+& $xserverIoTCtl json set --file $UserFile --path UserGroupId --value $IoTExplorerWebPortalGroupId | Out-Null
+
+Write-Host "Applying user settings from JSON template..."
+& $xserverIoTCtl data user applynew --file $UserFile
+
+Write-Host "Done."
+```
+
