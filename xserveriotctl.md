@@ -76,8 +76,8 @@ For **advanced workflows and large-scale operations**, `xserveriotctl` is the re
 ### Download
 
 The latest prebuilt binaries are available for the following platforms:
-- Linux x64: [XserverIoTctl_1.0.11_linux-x64.zip](https://1drv.ms/u/c/506260ab1001870b/IQDi6BlEnMHUQoT9ntbkHOyjAR1TMPoBqXbgn3wxSZRhJUY?e=0b1PuW)
-- Windows x64: [XserverIoTctl_1.0.11_win-x64.zip](https://1drv.ms/u/c/506260ab1001870b/IQDpur2S3ROjRIMPiu12kR_fAVm96-ctOfr0pGO5ZuhtG5g?e=p6epBd)
+- Linux x64: [XserverIoTctl_1.0.13_linux-x64.zip](https://1drv.ms/u/c/506260ab1001870b/IQDa_gTKcShHT7WWxlcsLpNwASfl-NyizwNRKJBAGzPcf_M?e=kqoeAW)
+- Windows x64: [XserverIoTctl_1.0.13_win-x64.zip](https://1drv.ms/u/c/506260ab1001870b/IQDHpizKiWFsQ6qAkWj1TjLHAQIxVu-aLBF1PPJp2InAbik?e=vdHcns)
 
 ### Setup on Linux (x64)
 
