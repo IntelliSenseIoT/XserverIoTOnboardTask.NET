@@ -280,3 +280,21 @@ Write-Host "Applying user settings from JSON template..."
 Write-Host "Done."
 ```
 
+---
+
+## Read Xserver Core application version using xserveriotctl
+
+This PowerShell example retrieves the Xserver Core application information using xserveriotctl, extracts the ApplicationVersion value from the JSON response, and trims the trailing version segment to obtain a clean semantic version string (e.g. 11.2.48).
+
+The script is useful for version checks, compatibility validation, and automated provisioning workflows.
+
+```
+$xserverIoTCtl = "C:\Tools\xserveriotctl\xserveriotctl.exe"
+
+$json = & $xserverIoTCtl core appinfo | ConvertFrom-Json
+
+$CoreVersion = $json.ApplicationVersion -replace '\.0$',''
+
+Write-Host "Core version = $CoreVersion"
+```
+
