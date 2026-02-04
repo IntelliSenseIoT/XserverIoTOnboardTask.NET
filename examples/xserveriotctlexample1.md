@@ -298,3 +298,29 @@ $CoreVersion = $json.ApplicationVersion -replace '\.0$',''
 Write-Host "Core version = $CoreVersion"
 ```
 
+---
+
+## Download and read firmware version information
+
+This PowerShell example triggers the download of the latest firmware information from the Xserver IoT Server using xserveriotctl, waits briefly to ensure the download is completed, and then queries the firmware information.
+The script extracts the firmware Version field from the returned JSON response and stores it in a PowerShell variable.
+
+This example is useful for automated firmware checks, version validation, and provisioning workflows.
+
+```
+$xserverIoTCtl = "C:\Tools\xserveriotctl\xserveriotctl.exe"
+
+Write-Host "Starting firmware info download..."
+& $xserverIoTCtl core downloadfirmwareinfo latest | Out-Null
+
+Write-Host "Waiting 5 seconds to ensure download is completed..."
+Start-Sleep -Seconds 5
+
+Write-Host "Querying firmware info..."
+$json = & $xserverIoTCtl core firmwareinfo | ConvertFrom-Json
+
+$FirmwareVersion = $json.Version
+
+Write-Host "Firmware version = $FirmwareVersion"
+```
+
