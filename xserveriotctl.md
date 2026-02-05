@@ -454,6 +454,7 @@ and System commands.
        status                  - Core service status
        appinfo                 - Core application information
        events                  - Diagnostic event list
+       eventscheck             - Check Core events for 'Exception error', returns true if none found, false otherwise
        systeminfo              - System information (device name, OS version, platform, device ID)
        memoryinfo              - System memory information
        processinfo             - System process information (Core, Com, Data services)
