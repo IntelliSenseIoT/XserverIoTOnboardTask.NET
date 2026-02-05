@@ -365,3 +365,69 @@ Write-Host "Password changed successfully." -ForegroundColor Green
 Write-Host "Updating user settings in IoT Server services..."
 & $xserverIoTCtl data usersupdate
 ```
+
+---
+## Configure Cloud settings
+
+This example demonstrates how to configure Cloud-related DataService settings on an Xserver IoT Server using xserveriotctl and a JSON template file.
+The script updates Cloud connection parameters, disables Cloud logging features, serializes application package settings into JSON, and applies the configuration only if a valid Cloud IoT device connection string is provided.
+
+The example is intended for automated provisioning and secure Cloud configuration workflows.
+
+```
+# ---------------------------------------------
+# Example: Configure Cloud settings in DataService
+# ---------------------------------------------
+
+$xserverIoTCtl = "C:\Tools\xserveriotctl\xserveriotctl.exe"
+
+# Cloud connection string (example)
+$CloudIoTDeviceConnectionString = "HostName=xxx;DeviceId=yyy;SharedAccessKey=zzz"
+
+# Path to datasettings.json
+$TemplatesDir     = Join-Path -Path (Get-Location) -ChildPath "templates"
+$DataSettingsFile = Join-Path -Path $TemplatesDir -ChildPath "datasettings.json"
+
+# ---- Cloud connection string (encrypted) ----
+& $xserverIoTCtl json set `
+    --file $DataSettingsFile `
+    --path CloudIoTDeviceConnectionString `
+    --value $CloudIoTDeviceConnectionString `
+    --encrypt | Out-Null
+
+# ---- Disable Cloud logging features ----
+& $xserverIoTCtl json set --file $DataSettingsFile --path CloudEventLogToCloud  --value false | Out-Null
+& $xserverIoTCtl json set --file $DataSettingsFile --path CloudDiffLogToCloud   --value false | Out-Null
+& $xserverIoTCtl json set --file $DataSettingsFile --path CloudAlarmLogToCloud  --value false | Out-Null
+& $xserverIoTCtl json set --file $DataSettingsFile --path CloudPeriodLogToCloud --value false | Out-Null
+& $xserverIoTCtl json set --file $DataSettingsFile --path CloudSnapshotToCloud  --value false | Out-Null
+
+# ---- Enable / disable connections ----
+& $xserverIoTCtl json set --file $DataSettingsFile --path CloudConnectionEnabled --value true  | Out-Null
+& $xserverIoTCtl json set --file $DataSettingsFile --path SQLConnectionEnabled   --value false | Out-Null
+
+# ---- Onboard application package settings (serialized object) ----
+$IoTAppSettings = @{
+    UseEnergyXpert          = $true
+    UseIoTExplorerWebPortal = $true
+    UseIntelliSenseCloud    = $false
+    CustomConfiguration     = $false
+}
+
+$IoTAppSettingsJson = $IoTAppSettings | ConvertTo-Json -Compress
+
+& $xserverIoTCtl json set `
+    --file $DataSettingsFile `
+    --path OnboardAppPackageName `
+    --value $IoTAppSettingsJson | Out-Null
+
+# ---- Apply settings only if Cloud connection is set ----
+if (-not [string]::IsNullOrWhiteSpace($CloudIoTDeviceConnectionString)) {
+    Write-Host "Applying DataService Cloud settings..."
+    & $xserverIoTCtl data datasettings apply --file $DataSettingsFile
+    Write-Host "Cloud settings applied successfully." -ForegroundColor Green
+}
+else {
+    Write-Host "CloudIoTDeviceConnectionString is empty. Skipping apply." -ForegroundColor Yellow
+}
+```
