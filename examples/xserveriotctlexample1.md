@@ -324,3 +324,42 @@ $FirmwareVersion = $json.Version
 Write-Host "Firmware version = $FirmwareVersion"
 ```
 
+---
+
+## Change the password of the currently logged-in user
+
+This PowerShell example demonstrates how to change the password of the currently logged-in user on an Xserver IoT Server using xserveriotctl.
+
+The script selects the active profile, applies the new password via the data user changepassword command, and validates the operation result.
+
+```
+# ---------------------------------------------
+# Change current user password on IoT Server
+# ---------------------------------------------
+
+$xserverIoTCtl = "C:\Tools\xserveriotctl\xserveriotctl.exe"
+
+# Profile to use
+$ProfileName = "newiot"
+
+# New password
+$NewPassword = "NewStrongPassword123!"
+
+if ([string]::IsNullOrWhiteSpace($NewPassword)) {
+    Write-Error "New password is not set."
+    exit 1
+}
+
+Write-Host "Using profile: $ProfileName"
+& $xserverIoTCtl config use $ProfileName | Out-Null
+
+Write-Host "Changing password for the currently logged-in user..."
+& $xserverIoTCtl data user changepassword --password $NewPassword
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "Password change failed."
+    exit 1
+}
+
+Write-Host "Password changed successfully." -ForegroundColor Green
+```
