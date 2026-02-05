@@ -360,6 +360,8 @@ if ($LASTEXITCODE -ne 0) {
     Write-Error "Password change failed."
     exit 1
 }
-
 Write-Host "Password changed successfully." -ForegroundColor Green
+
+Write-Host "Updating user settings in IoT Server services..."
+& $xserverIoTCtl data usersupdate
 ```
