@@ -328,6 +328,7 @@ and System commands.
         applynew --file <file>      - Apply a new User from JSON file. Note: After applying, run 'xserveriotctl data usersupdate' to activate the changes.
         applyupdate --file <file>   - Apply User from JSON file. Note: After applying, run 'xserveriotctl data usersupdate' to activate the changes.
         remove --id <id>            - Remove an existing User from the system. After removing, run 'xserveriotctl data usersupdate' to activate the changes.
+        changepassword --password <password>    - Change the password of the currently logged-in user on the IoT Server and in the active profile.
 
     alarmgroup
         get --out <file> --id <id>    - Download AlarmGroup to JSON file
