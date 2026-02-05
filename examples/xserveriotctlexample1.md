@@ -499,3 +499,59 @@ Download-AppIfSet $App3
 
 Write-Host "App download process finished." -ForegroundColor Green
 ```
+
+---
+## Diagnose Xserver IoT Server services (CORE, DATA, COM)
+
+This example provides a PowerShell diagnostic function that verifies the health of the Xserver IoT Server by checking the CORE, DATA, and COM services using xserveriotctl.
+It parses the output of the eventscheck commands and confirms that no exception errors are present before allowing provisioning or automation workflows to continue.
+
+```
+function Test-IoTServerHealth {
+    param ([string]$XserverIoTCtlPath)
+
+    Write-Host "Running IoT Server diagnostics..." -ForegroundColor Cyan
+
+    function Is-TrueOutput([object]$o) {
+        $s = ($o | Out-String).Trim()
+        return ($s -match '^(?i)\s*true\b')  
+    }
+
+    # ---- CORE ----
+    $coreResult = & $XserverIoTCtlPath core eventscheck 2>&1
+    Write-Host "CORE  : $coreResult"
+    if (-not (Is-TrueOutput $coreResult)) {
+        Write-Error "Core service has errors."
+        return $false
+    }
+
+    # ---- DATA ----
+    $dataResult = & $XserverIoTCtlPath data eventscheck 2>&1
+    Write-Host "DATA  : $dataResult"
+    if (-not (Is-TrueOutput $dataResult)) {
+        Write-Error "Data service has errors."
+        return $false
+    }
+
+    # ---- COM ----
+    $comResult = & $XserverIoTCtlPath com eventscheck 2>&1
+    Write-Host "COM   : $comResult"
+    if (-not (Is-TrueOutput $comResult)) {
+        Write-Error "Com service has errors."
+        return $false
+    }
+
+    Write-Host "IoT Server diagnostics passed. All services are healthy." -ForegroundColor Green
+    return $true
+}
+
+
+$xserverIoTCtl = "C:\Tools\xserveriotctl\xserveriotctl.exe"
+
+if (-not (Test-IoTServerHealth -XserverIoTCtlPath $xserverIoTCtl)) {
+    Write-Error "IoT Server health check failed. Stopping script."
+    exit 1
+}
+
+Write-Host "Continuing provisioning..."
+```
