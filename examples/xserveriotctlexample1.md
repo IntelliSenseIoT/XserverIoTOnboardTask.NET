@@ -431,3 +431,71 @@ else {
     Write-Host "CloudIoTDeviceConnectionString is empty. Skipping apply." -ForegroundColor Yellow
 }
 ```
+
+---
+## Download applications from the Store
+
+This PowerShell example demonstrates how to download up to three Onboard Applications from the Xserver IoT Store using xserveriotctl.
+Application names are defined as variables, and each application is downloaded only if its corresponding variable is not empty.
+
+The script is intended for automated provisioning and onboarding workflows where required applications must be retrieved from the Store in a controlled and repeatable way.
+
+```
+$xserverIoTCtl = "C:\Tools\xserveriotctl\xserveriotctl.exe"
+
+# -------------------------------------------------
+# App names (max 3) – leave empty if not needed
+# -------------------------------------------------
+$App1 = "EnergyXpert"
+$App2 = "SQLInsertionAPI"
+$App3 = ""
+
+# Timeout settings
+$TimeoutSec  = 120
+$IntervalSec = 5
+
+function Download-AppIfSet {
+    param (
+        [string]$AppName
+    )
+
+    if ([string]::IsNullOrWhiteSpace($AppName)) {
+        return
+    }
+
+    Write-Host "Downloading app from store: $AppName" -ForegroundColor Cyan
+    $deadline = (Get-Date).AddSeconds($TimeoutSec)
+
+    while ((Get-Date) -lt $deadline) {
+
+        $output = & $xserverIoTCtl core downloadappfromstore $AppName 2>&1
+        $output | ForEach-Object { Write-Host $_ }
+
+        if ($output -match "Onboard Application Manager is busy") {
+            Write-Host "Application Manager is busy, waiting..." -ForegroundColor Yellow
+            Start-Sleep -Seconds $IntervalSec
+            continue
+        }
+
+        if ($LASTEXITCODE -eq 0) {
+            Write-Host "Download request accepted for app: $AppName" -ForegroundColor Green
+            return
+        }
+
+        Write-Error "Failed to download app: $AppName"
+        exit 1
+    }
+
+    Write-Error "Timeout reached while waiting to download app: $AppName"
+    exit 1
+}
+
+# -------------------------------------------------
+# Download apps
+# -------------------------------------------------
+Download-AppIfSet $App1
+Download-AppIfSet $App2
+Download-AppIfSet $App3
+
+Write-Host "App download process finished." -ForegroundColor Green
+```
