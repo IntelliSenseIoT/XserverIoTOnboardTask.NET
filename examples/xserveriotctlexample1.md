@@ -555,3 +555,71 @@ if (-not (Test-IoTServerHealth -XserverIoTCtlPath $xserverIoTCtl)) {
 
 Write-Host "Continuing provisioning..."
 ```
+
+---
+## Enable or Disable All Sources
+
+The following script allows you to enable or disable all configured sources in the IoT Server. This solution makes bulk operations significantly faster and more efficient, especially in systems with a large number of devices.
+
+```
+param(
+    [Parameter(Mandatory = $true)]
+    [ValidateSet("enable","disable")]
+    [string]$Action
+)
+
+# (Recommended) Force UTF-8 for proper accented characters
+$utf8 = New-Object System.Text.UTF8Encoding($false)
+[Console]::OutputEncoding = $utf8
+$OutputEncoding = $utf8
+
+$xserverIoTCtl = "C:\Tools\xserveriotctl\xserveriotctl.exe"
+
+Write-Host "Querying all sources..."
+$raw = & $xserverIoTCtl data source getall 2>&1
+$rawText = ($raw | Out-String).Trim()
+
+if ($rawText -notmatch '^\s*\[') {
+    Write-Error "Unexpected output from getall (not JSON array):`n$rawText"
+    exit 1
+}
+
+$sources = $rawText | ConvertFrom-Json
+
+if ($null -eq $sources -or $sources.Count -eq 0) {
+    Write-Host "No sources found."
+    exit 0
+}
+
+Write-Host "Found $($sources.Count) source(s). Action: $Action" -ForegroundColor Cyan
+
+foreach ($s in $sources) {
+    $id = $s.Id
+    $name = $s.SourceName
+
+    if ($null -eq $id) {
+        Write-Warning "Skipping a source with missing Id (Name: $name)"
+        continue
+    }
+
+    Write-Host "$Action source: Id=$id Name=$name"
+
+    # Pass arguments explicitly (more reliable parsing)
+    & $xserverIoTCtl "data" "source" $Action "--id" "$id" | Out-Null
+
+    if ($LASTEXITCODE -ne 0) {
+        Write-Error "Failed to $Action source (Id=$id, Name=$name)."
+        exit 1
+    }
+}
+
+Write-Host "Updating COM sources to apply changes..."
+& $xserverIoTCtl com updatesources
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "Failed to update COM sources."
+    exit 1
+}
+
+Write-Host "COM sources successfully updated." -ForegroundColor Green
+```
