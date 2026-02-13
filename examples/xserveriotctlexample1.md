@@ -561,7 +561,11 @@ Write-Host "Continuing provisioning..."
 
 The following script allows you to enable or disable all configured sources in the IoT Server. This solution makes bulk operations significantly faster and more efficient, especially in systems with a large number of devices.
 
+Enable:
+
     .\set-all-sources.ps1 -Action enable
+
+Disable:
     
     .\set-all-sources.ps1 -Action disable
 
