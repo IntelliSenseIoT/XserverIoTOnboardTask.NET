@@ -569,6 +569,8 @@ Disable:
     
     .\set-all-sources.ps1 -Action disable
 
+### set-all-sources.ps1
+
 ```
 param(
     [Parameter(Mandatory = $true)]
