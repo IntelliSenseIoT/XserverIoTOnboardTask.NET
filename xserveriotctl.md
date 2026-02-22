@@ -52,7 +52,7 @@ For **advanced workflows and large-scale operations**, `xserveriotctl` is the re
 ## Runtime requirements
 
 ### Linux
-- Minimum requirement: Ubuntu 20.04 LTS (x64) or newer
+- Minimum requirement: Ubuntu 24.04.1 LTS (x64) or newer
 - No installation required (portable ZIP package)
 - Execute permission required (`chmod +x`)
 
