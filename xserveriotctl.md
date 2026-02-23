@@ -545,7 +545,9 @@ and System commands.
       xserveriotctl config set --profile cloud --remote --device-id IoTDevice1 --iothub "HostName=...;..." --user admin --pass yourpassword
       xserveriotctl config probe local
       xserveriotctl config show local
-      
+
+      xserveriotctl discover
+
       xserveriotctl com status
       xserveriotctl com getvalue --source "Main Energy Meter" --quantity "Active Power"
       xserveriotctl com writevalue --source "TempSensor" --quantity "SetPointValue" --value 20
