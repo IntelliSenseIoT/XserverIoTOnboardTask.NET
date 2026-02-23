@@ -253,6 +253,13 @@ and System commands.
 ## Other commands
 
 ```
+    discover [--timeout <seconds>] [--listenport <port>] [--remoteport <port>]
+                              - Discover IoT Servers on the local network using UDP broadcast.
+
+       --timeout <seconds>      Discovery timeout in seconds (default: 10)
+       --listenport <port>      Local UDP port to listen for responses (default: 8005)
+       --remoteport <port>      Remote UDP port used for broadcast (default: 8004)
+
     com                          - The Com service is responsible for communication with field devices (Modbus RTU, Modbus TCP/IP, and related protocols).
       status                     - Com service status
       appinfo                    - Com service information
@@ -268,8 +275,8 @@ and System commands.
       quantities                 - List source quantities
       alarmstat                  - Active alarm statistics
       getactivealarms            - List all active alarms
-      getvalue                   - Read a realtime value by source and quantity
-      writevalue                 - Write a realtime value (double) to a quantity
+      getvalue --source "<source>" [--quantity "<quantity>"]  - Read a realtime value by source and quantity
+      writevalue --source "<source>" --quantity "<quantity>" --value <double>  - Write a realtime value (double) to a quantity
       virtualsources             - List all Virtual Sources
 ```
 
@@ -441,6 +448,11 @@ and System commands.
         get                           - Show current heartbeat interval (prints to console)
         set --minutes <minutes>       - Set heartbeat interval in minutes
 
+    Xserver.IoT.Docker only
+    getdockerlicencetype              - Returns the Docker license type of the IoT Server
+                                        null no license; -1 = Free license limited to 10 Sources, 0 = Commercial license
+    syncdockerlicense                 - Synchronizes the latest Docker license from the cloud to the IoT Server.
+
     json                      - JSON utility commands
       set --file <file>
           --path <propertyPath>
@@ -511,6 +523,7 @@ and System commands.
        docker-mode             - Docker update mode (0-Manual,1-Auto)
        dockerupdatemode <manual|auto>  - Set Docker update mode on the IoT Server (manual or automatic)
        docker-updateavailable  - Check if Docker update is available
+       dockerupdate            - Downloads the latest Xserver.IoT Docker version from the cloud and updates the IoT Server.
 ```
 
 ```
