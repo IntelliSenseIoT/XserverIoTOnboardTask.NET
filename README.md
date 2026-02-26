@@ -8,6 +8,8 @@
 
 ![](images/XServerIoT2025.png)
 
+![](images/Docker.png)
+
 # Xserver.IoT.200 and Xserver.IoT.Docker OnboardTask Overview:
 
 With the Onboard Task project can be implemented customized tasks (Industrial PC communication, Custom protocol matching, Control tasks, Remote parameter setting from cloud, Control with Artificial Intelligence, etc.).
@@ -29,11 +31,7 @@ xserveriotctl is a cross-platform command-line interface (CLI) tool designed to 
 
 - [xserveriotctl Documentation](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/xserveriotctl.md)
 
-![](images/IoTServerSDK2025.png)
-
-# XserverIoTOnboardTask:
-
-## Required Xserver.IoT enviroment
+# Required Xserver.IoT enviroment
 
     Required Xservet.IoT.200 device
     Min version: 11.2.x
