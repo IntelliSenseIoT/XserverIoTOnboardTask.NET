@@ -27,6 +27,8 @@ Following registration and license validation, we will provide:
 -   The official deployment installer (`install.sh`)
 -   The appropriate license file (Free Tier or Enterprise Runtime)
 
+## Useful links:
+
 - [WSL and SSH Installation on Windows 11](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/InstallWSL.md) 
 
 # Xserver.IoT.200 and Xserver.IoT.Docker OnboardTask Overview:
