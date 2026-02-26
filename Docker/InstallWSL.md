@@ -97,10 +97,11 @@ Modbus TCP/IP - 502
 SSH - 22
 ```
 
+Path: Windows Defender Firewall → Advanced Settings → Inbound Rules
+
+If necessary, create new inbound rules to allow these ports.
+
 ## Power Management Recommendation (WSL Environment)
 
 When running Xserver.IoT.Docker under WSL, the host machine’s sleep mode must be disabled. If the system enters sleep mode, running services will stop, and after resume the WSL system clock may become unsynchronized. This can prevent secure TLS connections to Azure IoT Hub due to time drift. Continuous operation requires disabling sleep mode and ensuring proper time synchronization.
 
-Path: Windows Defender Firewall → Advanced Settings → Inbound Rules
-
-If necessary, create new inbound rules to allow these ports.
