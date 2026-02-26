@@ -8,7 +8,7 @@
 
 ![](images/XServerIoT2025.png)
 
-![](images/Docker2.png)
+![](images/Docker3.png)
 
 # Xserver.IoT.Docker Installation
 
