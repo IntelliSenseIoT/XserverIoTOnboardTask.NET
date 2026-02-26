@@ -6,9 +6,12 @@
 
 - This capabilities allow the use of reporting, analysis, and AI software to access information from devices for data collection, trending, alarm/event management, analysis, remote control, and other functions.
 
+
 ![](images/XServerIoT2025.png)
 
+
 ![](images/Docker2.png)
+
 
 # Xserver.IoT.200 and Xserver.IoT.Docker OnboardTask Overview:
 
