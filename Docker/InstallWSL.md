@@ -1,0 +1,93 @@
+# WSL and SSH Installation on Windows 11
+
+## 1. Installing WSL on Windows 11
+
+Open PowerShell as Administrator:
+
+``` powershell
+wsl --install
+```
+
+This installs WSL2 and the default Ubuntu distribution.\
+After installation, restart your computer.
+
+Start WSL:
+
+``` powershell
+wsl
+```
+
+------------------------------------------------------------------------
+
+## 2. Installing SSH Server in WSL
+
+Check if SSH is already installed:
+
+``` bash
+which sshd
+```
+
+If it is not installed:
+
+``` bash
+sudo apt update
+sudo apt install openssh-server
+```
+
+------------------------------------------------------------------------
+
+## 3. Starting the SSH Service
+
+``` bash
+sudo service ssh start
+```
+
+Check service status:
+
+``` bash
+sudo service ssh status
+```
+
+If the status shows **active (running)**, the SSH server is operational.
+
+------------------------------------------------------------------------
+
+## 4. Retrieving the Docker / WSL IP Address
+
+``` bash
+ip addr
+```
+
+The `inet` address under the `eth0` interface is the current WSL/Docker
+IP address.
+
+------------------------------------------------------------------------
+
+## 5. Configuring Port Forwarding on Windows
+
+Run PowerShell as Administrator:
+
+``` powershell
+netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=8001 connectaddress=DOCKER_IP connectport=8001
+netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=8002 connectaddress=DOCKER_IP connectport=8002
+netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=8003 connectaddress=DOCKER_IP connectport=8003
+netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=502  connectaddress=DOCKER_IP connectport=502
+```
+
+⚠ Replace `DOCKER_IP` with the actual IP address retrieved from the
+`ip addr` command under the `eth0` interface.
+
+------------------------------------------------------------------------
+
+## 6. Verify Firewall Settings
+
+Ensure that the following TCP ports are allowed in Windows Firewall:
+
+-   8001
+-   8002
+-   8003
+-   502
+
+Path: Windows Defender Firewall → Advanced Settings → Inbound Rules
+
+If necessary, create new inbound rules to allow these ports.
