@@ -8,7 +8,7 @@
 
 ![](images/XServerIoT2025.png)
 
-![](images/Docker.png)
+![](images/Docker2.png)
 
 # Xserver.IoT.200 and Xserver.IoT.Docker OnboardTask Overview:
 
