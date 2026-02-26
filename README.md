@@ -28,9 +28,12 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 
 # XserverIoTOnboardTask:
 
-## Required Xserver.IoT.200 firmware
+## Required Xserver.IoT enviroment
 
     Required Xservet.IoT.200 device
+    Min version: 11.2.x
+  
+    Required Xservet.IoT.Docker device
     Min version: 11.2.x
 
 # Examples:
