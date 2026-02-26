@@ -83,10 +83,19 @@ netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=502  conne
 
 Ensure that the following TCP ports are allowed in Windows Firewall:
 
--   8001
--   8002
--   8003
--   502
+```
+ComPort - 8001
+DataPort - 8002
+CorePort - 8003
+UDPPort - 8004 (Server)
+RemoteUDPPort - 8005
+OnboardTaskPort1 - 8006
+OnboardTaskPort2 - 8007
+OnboardTaskPort3 - 8008
+OnboardTaskPort4 - 8009
+Modbus TCP/IP - 502
+SSH - 22
+```
 
 Path: Windows Defender Firewall → Advanced Settings → Inbound Rules
 
