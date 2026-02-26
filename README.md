@@ -12,6 +12,55 @@
 
 # Xserver.IoT.Docker Installation
 
+Xserver.IoT.Docker is a containerized industrial IoT runtime platform built for secure, scalable edge deployments.
+
+It integrates device communication, data processing, and Azure IoT Hub connectivity into a unified Docker-based environment optimized for Linux (Ubuntu) on x64 and ARM64 architectures.
+
+Designed for industrial gateways, enterprise integrations, and custom control logic, Xserver.IoT.Docker delivers a lightweight yet production-ready IoT infrastructure for modern connected systems.
+
+## Installation & Licensing
+
+The official `install.sh` deployment script and required license files
+are distributed upon request.
+
+To obtain the installer, please contact:
+
+**helpdesk@intellisense-iot.com**\
+or submit a request via the Contact form on our website.
+
+Following registration and license validation, we will provide:
+
+-   The official deployment installer (`install.sh`)
+-   The appropriate license file (Free Tier or Enterprise Runtime)
+
+------------------------------------------------------------------------
+
+### Xserver.IoT.Docker -- Free Tier
+
+Designed for evaluation, testing, and pilot projects.
+
+-   Up to 10 connected devices\
+-   Annual license renewal required\
+-   Docker-based deployment model\
+-   Runs on Ubuntu (physical or virtual machines)\
+-   Docker runtime required\
+-   WSL supported for development and evaluation
+
+------------------------------------------------------------------------
+
+### Xserver.IoT.Docker -- Enterprise Runtime
+
+Required for production systems, custom applications, third-party
+integrations, and advanced control logic.
+
+-   Scalable device support\
+-   Recommended maximum of 500 devices per Docker instance\
+-   Enterprise-grade Docker deployment model\
+-   Runs on Ubuntu (physical or virtual machines)\
+-   Docker runtime required\
+-   WSL supported for development and evaluation
+
+
 - [WSL and SSH Installation on Windows 11](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/InstallWSL.md) 
 
 
