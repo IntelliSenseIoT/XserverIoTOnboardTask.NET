@@ -37,9 +37,9 @@ installations.
 
 ### Minimum
 
--   2 CPU cores\
--   2--4 GB RAM\
--   10 GB available storage\
+-   2 CPU cores
+-   2--4 GB RAM
+-   10 GB available storage
 -   1 Ethernet interface
 
 These requirements are comparable to the Xserver.IoT.200 hardware
@@ -47,9 +47,9 @@ platform.
 
 ### Recommended for Industrial Deployment
 
--   4 CPU cores\
--   4 GB RAM\
--   SSD storage\
+-   4 CPU cores
+-   4 GB RAM
+-   SSD storage
 -   Fixed IP address
 
 ------------------------------------------------------------------------
@@ -58,10 +58,10 @@ platform.
 
 Internet access is required for:
 
--   Docker image download\
--   Firmware/version validation\
--   Application updates\
--   Azure IoT Hub communication\
+-   Docker image download
+-   Firmware/version validation
+-   Application updates
+-   Azure IoT Hub communication
 -   Azure Blob Storage access
 
 ------------------------------------------------------------------------
@@ -77,7 +77,7 @@ requirements:
 -   TCP 8883 (MQTT over TLS)
 -   TCP 5671 (AMQP over TLS)
 
-Reference:\
+Reference:
 https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-protocols
 
 ------------------------------------------------------------------------
@@ -86,8 +86,8 @@ https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-protocols
 
 Outbound HTTPS (TCP 443) access required to:
 
--   https://intellisenseblob.blob.core.windows.net/xserveriotdockerdev/versioninfo.json\
--   https://intellisenseblob.blob.core.windows.net/xserveriotdockerlatest/versioninfo.json\
+-   https://intellisenseblob.blob.core.windows.net/xserveriotdockerdev/versioninfo.json
+-   https://intellisenseblob.blob.core.windows.net/xserveriotdockerlatest/versioninfo.json
 -   https://intellisenseblob.blob.core.windows.net/xserveriotdocker/
 
 ------------------------------------------------------------------------
@@ -96,10 +96,19 @@ Outbound HTTPS (TCP 443) access required to:
 
 The following local service ports are used:
 
--   8001 -- Data Service\
--   8002 -- Communication Service\
--   8003 -- Core Service\
--   502 -- Modbus TCP
+```
+ComPort - 8001
+DataPort - 8002
+CorePort - 8003
+UDPPort - 8004 (Server)
+RemoteUDPPort - 8005
+OnboardTaskPort1 - 8006
+OnboardTaskPort2 - 8007
+OnboardTaskPort3 - 8008
+OnboardTaskPort4 - 8009
+Modbus TCP/IP - 502
+SSH - 22
+```
 
 When running under Windows + WSL, proper port forwarding configuration
 is required.
@@ -108,10 +117,10 @@ is required.
 
 ## Infrastructure Requirements
 
--   Dedicated Ethernet endpoint for the IoT server\
--   Outbound Azure IoT Hub access\
--   Outbound Azure Blob Storage access\
--   Firewall rules configured for required ports\
+-   Dedicated Ethernet endpoint for the IoT server
+-   Outbound Azure IoT Hub access
+-   Outbound Azure Blob Storage access
+-   Firewall rules configured for required ports
 -   Documented network configuration
 
 ------------------------------------------------------------------------
@@ -122,6 +131,6 @@ Xserver.IoT.Docker is optimized for lightweight edge environments and
 does not require high-end server hardware.
 
 For production deployments, native Ubuntu Server 22.04 LTS is
-recommended.\
+recommended.
 Windows 11 and Windows Server 2022 (WSL2) are supported for development,
 testing, and smaller installations.
