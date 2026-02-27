@@ -78,6 +78,7 @@ netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=502  conne
 `ip addr` command under the `eth0` interface.
 
 If additional services are deployed (for example OnboardTask services running on ports such as 8006, 8007, or other custom ports), corresponding port forwarding rules must also be created for those ports.
+
 ------------------------------------------------------------------------
 
 ## 6. Verify Firewall Settings
