@@ -21,7 +21,7 @@ detected platform.
 
 ### Recommended for Production
 
--   **Ubuntu Server 22.04 LTS (x64 or ARM64)**
+-   **Ubuntu Server 22.04 LTS or newer (x64 or ARM64)**
 
 ### Supported for Testing / Small Deployments
 
