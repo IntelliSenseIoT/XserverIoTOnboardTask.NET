@@ -31,7 +31,8 @@ Following registration and license validation, we will provide:
 
 - [System Requirements & Network Prerequisites](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/Xserver_IoT_Docker_System_Requirements.md) 
 - [WSL and SSH Installation on Windows 11](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/InstallWSL.md) 
-
+- [Xserver.IoT.Docker – Installation Guide](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/installdocker.md)
+  
 # Xserver.IoT.200 and Xserver.IoT.Docker OnboardTask Overview:
 
 With the Onboard Task project can be implemented customized tasks (Industrial PC communication, Custom protocol matching, Control tasks, Remote parameter setting from cloud, Control with Artificial Intelligence, etc.).
@@ -58,7 +59,7 @@ xserveriotctl is a cross-platform command-line interface (CLI) tool designed to 
     Required Xservet.IoT.200 device
     Min version: 11.2.x
   
-    Required Xservet.IoT.Docker device
+    Required Xservet.IoT.Docker
     Min version: 11.2.x
 
 # Examples:
