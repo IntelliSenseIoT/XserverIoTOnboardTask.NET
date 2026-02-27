@@ -33,7 +33,8 @@ Following registration and license validation, we will provide:
 - [WSL and SSH Installation on Windows 11](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/InstallWSL.md) 
 - [Xserver.IoT.Docker – Installation Guide](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/installdocker.md)
 - [Xserver.IoT.Docker – License Registration](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/LicenseRegistration.md)
-  
+- [Xserver.IoT.Docker – Useful Commands](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/UsefulCommands.md)
+
 # Xserver.IoT.200 and Xserver.IoT.Docker OnboardTask Overview:
 
 With the Onboard Task project can be implemented customized tasks (Industrial PC communication, Custom protocol matching, Control tasks, Remote parameter setting from cloud, Control with Artificial Intelligence, etc.).
