@@ -58,7 +58,6 @@ platform.
 
 Internet access is required for:
 
--   Docker image download
 -   Firmware/version validation
 -   Application updates
 -   Azure IoT Hub communication
