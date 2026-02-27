@@ -174,7 +174,7 @@ is required.
 Xserver.IoT.Docker is optimized for lightweight edge environments and
 does not require high-end server hardware.
 
-For production deployments, native Ubuntu Server 22.04 LTS is
+For production deployments, native Ubuntu Server 22.04 LTS or newer is
 recommended.
 Windows 11 and Windows Server 2022 (WSL2) are supported for development,
 testing, and smaller installations.
