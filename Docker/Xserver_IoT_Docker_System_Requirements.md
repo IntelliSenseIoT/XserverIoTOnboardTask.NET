@@ -68,10 +68,17 @@ Internet access is required for:
 
 ## External Network Requirements
 
+Xserver.IoT.Docker requires outbound internet connectivity for cloud
+communication, version validation, container deployment, and updates.
+
+All communication is outbound only. No inbound cloud ports are required.
+
+------------------------------------------------------------------------
+
 ### Azure IoT Hub Connectivity
 
-Outbound access must be allowed according to Microsoft IoT Hub protocol
-requirements:
+Outbound access must be allowed according to Microsoft Azure IoT Hub
+protocol requirements:
 
 -   TCP 443 (HTTPS)
 -   TCP 8883 (MQTT over TLS)
@@ -86,9 +93,47 @@ https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-protocols
 
 Outbound HTTPS (TCP 443) access required to:
 
--   https://intellisenseblob.blob.core.windows.net/xserveriotdockerdev/versioninfo.json
--   https://intellisenseblob.blob.core.windows.net/xserveriotdockerlatest/versioninfo.json
--   https://intellisenseblob.blob.core.windows.net/xserveriotdocker/
+https://intellisenseblob.blob.core.windows.net
+
+This endpoint is used for:
+
+-   Version validation
+-   Firmware update checks
+-   Application package downloads
+
+Depending on Azure configuration, access to `*.blob.core.windows.net`
+may be required.
+
+------------------------------------------------------------------------
+
+### Azure Container Registry (ACR)
+
+Outbound HTTPS (TCP 443) access required for Docker image download from
+Azure Container Registry.
+
+------------------------------------------------------------------------
+
+### DNS & Time Synchronization
+
+The system must have:
+
+-   Outbound DNS access (TCP/UDP 53)
+-   Proper system time synchronization (NTP or host-based sync)
+
+Accurate system time is required for TLS-based Azure authentication and
+secure communication.
+
+------------------------------------------------------------------------
+
+### Summary for IT / Security Review
+
+The deployment requires:
+
+-   Outbound HTTPS connectivity (TCP 443)
+-   Outbound secure MQTT or AMQP connectivity (TCP 8883 / 5671)
+-   DNS resolution capability
+-   System time synchronization
+-   No inbound cloud ports required
 
 ------------------------------------------------------------------------
 
