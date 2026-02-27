@@ -14,6 +14,7 @@ After installation, Xserver.IoT.Docker requires license registration – includi
 - Automatically renewed, provided the system has the required outbound network connectivity
 - Network requirements are described in detail in the System Requirements section
 
+
 For detailed information about licensing options, commercial terms, technical eligibility, and enterprise deployment scenarios, please visit:
 
 **https://www.intellisense-iot.com**
