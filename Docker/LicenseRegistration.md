@@ -18,9 +18,7 @@ After installation, Xserver.IoT.Docker requires license registration – includi
 
 ## XserverIoTCtl Documentation
 
-Detailed usage instructions for `xserveriotctl` are available at:
-
-link
+Detailed usage instructions for `xserveriotctl` are available at: [more details](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/xserveriotctl.md)
 
 ---
 
