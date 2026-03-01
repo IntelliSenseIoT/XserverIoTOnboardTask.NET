@@ -77,6 +77,18 @@ xserveriotctl system licences show
 
 After successful license installation, restart Xserver.IoT.Docker to apply the changes.
 
+### Industrial PC / Native Linux Installation (Recommended)
+
+If Xserver.IoT.Docker is running on a dedicated Industrial PC or native Linux host, the recommended method is to restart the entire IoT Server using the CLI:
+
+```bash
+xserveriotctl core restart
+```
+
+### WSL (Windows Subsystem for Linux) Development Environment
+
+If Xserver.IoT.Docker is running under WSL (for development purposes), restarting the Docker container is usually sufficient.
+
 If the development version is installed (non-final builds):
 
 ```bash
@@ -88,5 +100,7 @@ If the production (released) version is installed:
 ```bash
 sudo docker restart xserveriotdocker-prod
 ```
+
+Container restart is practical in WSL environments where Docker Desktop manages the runtime.
 
 After restart, the license becomes active.
