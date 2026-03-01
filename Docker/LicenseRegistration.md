@@ -103,4 +103,6 @@ sudo docker restart xserveriotdocker-prod
 
 Container restart is practical in WSL environments where Docker Desktop manages the runtime.
 
+### Result
+
 After restart, the license becomes active.
