@@ -51,6 +51,18 @@ Force remove the development container:
 ```bash
 sudo docker rm -f xserveriotdocker-dev
 ```
+
+Remove all Docker containers:
+
+```bash
+sudo docker rm -f $(sudo docker ps -aq)
+```
+
+Check container system time:
+
+```bash
+docker exec -it xserveriotdocker-dev date
+```
 ---
 
 # 3. Logs & Interactive Debugging
