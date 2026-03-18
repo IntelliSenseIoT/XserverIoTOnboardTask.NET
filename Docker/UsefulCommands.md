@@ -60,11 +60,10 @@ sudo docker rm -f $(sudo docker ps -aq)
 
 Remove all local Docker images:
 
-This command removes all Docker images stored locally on the system.
-
 ```bash
 sudo docker rmi -f $(sudo docker images -aq)
 ```
+This command removes all Docker images stored locally on the system.
 
 Check container system time:
 
