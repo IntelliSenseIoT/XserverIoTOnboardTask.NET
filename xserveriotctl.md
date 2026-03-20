@@ -475,7 +475,6 @@ and System commands.
        timeinfo                - System time information
        firmwareinfo            - Firmware information
        downloadedapps          - Downloaded Onboard applications
-       services                - List core system services and Onboard applications on Xserver.IoT.200; Onboard applications only on Xserver.IoT.Docker
        onboardapps             - List all Onboard applications
        onboardappsinfo         - Onboard application details
        interfaces              - Network interface information
@@ -497,6 +496,7 @@ and System commands.
        restart [delaySeconds] [--silent]  - Restart the IoT Server after the specified delay (default: 5s); --silent skips confirmation
        shutdown [delaySeconds] - Shut down the IoT Server after the specified delay (confirmation required)
      Xserver.IoT.200 only
+       services                - List core system services and Onboard applications
        freespaceinfo           - Disk free space information
        changetimezone <name>   - Change system timezone (restart required)
        setdatetime <yyyy-MM-dd> <hh:mm> - Set system date and time (24-hour, local) (only when NTP is disabled)
