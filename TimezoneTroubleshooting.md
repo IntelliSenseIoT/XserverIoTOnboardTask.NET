@@ -28,7 +28,7 @@ sudo timedatectl set-timezone Europe/Budapest
 timedatectl
 ```
 
-expected:
+Expected:
 
 ```
                Local time: Tue 2026-03-24 11:04:30 CET
@@ -40,11 +40,42 @@ System clock synchronized: yes
           RTC in local TZ: no
 ```
 
+Check timezone file:
 
 ```bash
 cat /etc/timezone
 ```
 
+Expected:
 
+```
+Europe/Budapest
+```
 
+## Restart Container
 
+```bash
+ sudo docker restart xserveriotdocker-prod
+```
+
+## Verify Inside Container
+
+```bash
+sudo docker exec -it xserveriotdocker-prod date
+```
+
+Expected:
+
+```
+Tue Mar 24 10:19:38 CET 2026
+```
+
+## Best Practice
+
+Use host as single source of truth
+
+Configure timezone only on host
+
+Let container inherit via mounted files
+
+Avoid hardcoding timezone inside container
