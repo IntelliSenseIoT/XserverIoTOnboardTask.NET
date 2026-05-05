@@ -96,3 +96,77 @@ Health endpoint:
 curl -v http://localhost:5261/health
 ```
 
+# 4. # Set Static IP Address on Ubuntu (Netplan)
+
+This guide shows how to configure a static IP address on Ubuntu using Netplan.
+
+## 1. Identify Network Interface
+
+```bash
+ip a
+```
+
+## 2. Check Existing Netplan Configuration
+
+```bash
+ls -l /etc/netplan/
+cat /etc/netplan/*.yaml
+```
+
+If 50-cloud-init.yaml exists, it may override your settings.
+
+## 3. Create / Modify Netplan Configuration
+
+```bash
+sudo nano /etc/netplan/01-netcfg.yaml
+```
+
+Example configuration:
+
+```
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      addresses:
+        - 192.168.1.100/24
+      routes:
+        - to: default
+          via: 192.168.1.1
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 1.1.1.1
+```
+
+## 4. Disable Cloud-Init Network Configuration (Recommended)
+
+```bash
+sudo nano /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+```
+
+Add:
+
+```
+network: {config: disabled}
+```
+
+Rename cloud-init netplan file:
+
+```bash
+sudo mv /etc/netplan/50-cloud-init.yaml /etc/netplan/50-cloud-init.yaml.bak
+```
+
+## 5. Apply Configuration
+
+```bash
+sudo mv /etc/netplan/50-cloud-init.yaml /etc/netplan/50-cloud-init.yaml.bak
+```
+
+## 6. Verify
+
+```bash
+ip a
+ip route
+```
