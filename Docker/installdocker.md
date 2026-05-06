@@ -1,4 +1,4 @@
-# Xserver.IoT.Docker -- Installation Guide
+# Xserver.IoT.Docker - Installation Guide
 
 ## Overview
 
