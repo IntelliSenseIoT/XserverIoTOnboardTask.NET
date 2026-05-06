@@ -40,6 +40,8 @@ Steps:
   
   Start the Ubuntu installation
 
+  ---
+
 Follow the installer steps:
 
   Select language and keyboard layout
