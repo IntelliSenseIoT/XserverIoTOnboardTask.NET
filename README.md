@@ -35,6 +35,7 @@ Following registration and license validation, we will provide:
 - [License Registration](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/LicenseRegistration.md)
 - [Useful Commands](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/UsefulCommands.md)
 - [Docker Container Timezone Troubleshooting Guide](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/timezonetroubleshooting.md)
+- [Docker Container Timezone Troubleshooting Guide](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/timezonetroubleshooting.md)
 
 # Xserver.IoT.200 and Xserver.IoT.Docker OnboardTask Overview:
 
