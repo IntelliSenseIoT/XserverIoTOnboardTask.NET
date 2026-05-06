@@ -34,7 +34,7 @@ Following registration and license validation, we will provide:
 - [Installation Guide](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/installdocker.md)
 - [License Registration](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/LicenseRegistration.md)
 - [Useful Commands](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/UsefulCommands.md)
-- [Docker Container Timezone Troubleshooting Guide](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/SetStaticIPAddressOnUbuntu.md)
+- [Set Static IP Address on Ubuntu (Netplan)](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/SetStaticIPAddressOnUbuntu.md)
 - [Docker Container Timezone Troubleshooting Guide](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/timezonetroubleshooting.md)
 
 # Xserver.IoT.200 and Xserver.IoT.Docker OnboardTask Overview:
