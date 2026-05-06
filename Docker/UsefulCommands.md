@@ -34,19 +34,19 @@ List containers (running + stopped):
 sudo docker ps -a
 ```
 
-Restart the development container:
+Restart the container:
 
 ```bash
 sudo docker restart xserveriotdocker-prod
 ```
 
-Stop the development container:
+Stop the container:
 
 ```bash
 sudo docker stop xserveriotdocker-prod
 ```
 
-Force remove the development container:
+Force remove the container:
 
 ```bash
 sudo docker rm -f xserveriotdocker-prod
@@ -68,7 +68,7 @@ This command removes all Docker images stored locally on the system.
 Check container system time:
 
 ```bash
-docker exec -it xserveriotdocker-dev date
+docker exec -it xserveriotdocker-prod date
 ```
 ---
 
