@@ -31,3 +31,22 @@ Steps:
   3. Select the downloaded ISO file
   4. Select your USB drive
   5. Click Flash
+
+## 2. Install Ubuntu Server
+
+Insert the USB drive into the target PC
+Boot from USB (BIOS/UEFI boot menu)
+Start the Ubuntu installation
+
+Follow the installer steps:
+
+  Select language and keyboard layout
+  Configure storage (default is fine in most cases)
+  Create a user and password
+  Complete installation
+
+After installation:
+
+  Remove USB
+  Reboot the system
+
