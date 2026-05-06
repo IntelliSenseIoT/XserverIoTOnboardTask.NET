@@ -14,12 +14,26 @@ Ensure that:
 
 ---
 
-## 1. Configure Host Timezone
+## Configure Host Timezone
 
 Set the correct timezone on the host:
 
 ```bash
 sudo timedatectl set-timezone Europe/Budapest
+```
+
+## Update the system timezone configuration file
+
+```bash
+echo "Europe/Budapest" | sudo tee /etc/timezone
+```
+
+Note: Some systems do not automatically update /etc/timezone, which can lead to inconsistencies for applications relying on this file.
+
+## Restart Container
+
+```bash
+ sudo docker restart xserveriotdocker-prod
 ```
 
 ## Verify Host Configuration
@@ -52,12 +66,6 @@ Expected:
 Europe/Budapest
 ```
 
-## Restart Container
-
-```bash
- sudo docker restart xserveriotdocker-prod
-```
-
 ## Verify Inside Container
 
 ```bash
@@ -68,6 +76,16 @@ Expected:
 
 ```
 Tue Mar 24 10:19:38 CET 2026
+```
+
+```bash
+sudo docker exec -it xserveriotdocker-prod cat /etc/timezone
+```
+
+Expected:
+
+```
+Europe/Budapest
 ```
 
 ## Best Practice
