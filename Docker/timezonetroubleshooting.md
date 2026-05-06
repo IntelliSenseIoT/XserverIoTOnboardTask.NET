@@ -2,7 +2,7 @@
 
 ## Overview
 This guide ensures that Docker containers use the correct timezone based on the host system.  
-Helps avoid issues with logs, reports, and time-based processing.
+It helps avoid issues with logs, reports, and time-based processing.
 
 ---
 
@@ -28,7 +28,7 @@ sudo timedatectl set-timezone Europe/Budapest
 echo "Europe/Budapest" | sudo tee /etc/timezone
 ```
 
-Note: Some systems do not automatically update /etc/timezone, which can lead to inconsistencies for applications relying on this file.
+Note: Some systems do not automatically update `/etc/timezone`, which can lead to inconsistencies for applications relying on this file.
 
 ## Restart Container
 
