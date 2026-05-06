@@ -139,6 +139,7 @@ network:
           - 8.8.8.8
           - 1.1.1.1
 ```
+Replace eth0 (ens32), IP address, gateway, and DNS values as needed.
 
 ## Disable Cloud-Init Network Configuration (Recommended)
 
