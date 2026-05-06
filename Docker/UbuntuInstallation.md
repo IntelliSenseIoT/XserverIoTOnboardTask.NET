@@ -32,7 +32,6 @@ Steps:
   4. Select your USB drive
   5. Click Flash
 
----
 
 ## 2. Install Ubuntu Server
 
@@ -51,6 +50,4 @@ Steps:
 
 - Remove the USB drive
 - Reboot the system
-  
-  Reboot the system
 
