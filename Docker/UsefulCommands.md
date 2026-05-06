@@ -37,19 +37,19 @@ sudo docker ps -a
 Restart the development container:
 
 ```bash
-sudo docker restart xserveriotdocker-dev
+sudo docker restart xserveriotdocker-prod
 ```
 
 Stop the development container:
 
 ```bash
-sudo docker stop xserveriotdocker-dev
+sudo docker stop xserveriotdocker-prod
 ```
 
 Force remove the development container:
 
 ```bash
-sudo docker rm -f xserveriotdocker-dev
+sudo docker rm -f xserveriotdocker-prod
 ```
 
 Remove all Docker containers:
@@ -77,13 +77,13 @@ docker exec -it xserveriotdocker-dev date
 Follow container logs in real time:
 
 ```bash
-sudo docker logs -f xserveriotdocker-dev
+sudo docker logs -f xserveriotdocker-prod
 ```
 
 Enter container shell as root (interactive):
 
 ```bash
-sudo docker exec -u 0 -it xserveriotdocker-dev /bin/bash
+sudo docker exec -u 0 -it xserveriotdocker-prod /bin/bash
 ```
 
 ---
