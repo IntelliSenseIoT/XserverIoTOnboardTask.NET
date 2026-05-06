@@ -1,4 +1,4 @@
-# Ubuntu Installation & Xserver.IoT.Docker Setup Guide
+# Ubuntu Installation Guide
 
 ## Overview
 
@@ -8,9 +8,6 @@ The process includes:
 
 - Creating a bootable USB installer  
 - Installing Ubuntu Server  
-- Configuring network and timezone  
-- Deploying Xserver.IoT.Docker  
-- Activating the license  
 
 ---
 
@@ -25,3 +22,12 @@ Select:
 ```text
 ubuntu-24.04.4-live-server-amd64.iso
 ```
+
+Use a tool like balenaEtcher to create a bootable USB drive.
+
+Steps:
+  1. Open balenaEtcher
+  2. Click Flash from file
+  3. Select the downloaded ISO file
+  4. Select your USB drive
+  5. Click Flash
