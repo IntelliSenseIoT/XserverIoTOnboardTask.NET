@@ -51,3 +51,9 @@ Steps:
 - Remove the USB drive
 - Reboot the system
 
+## Next Steps
+
+1. [Configure IP address](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/SetStaticIPAddressOnUbuntu.md)
+2. [Configure timezone](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/timezonetroubleshooting.md)
+3. [Install Xserver.IoT.Docker](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/installdocker.md)
+
