@@ -162,7 +162,8 @@ sudo mv /etc/netplan/50-cloud-init.yaml /etc/netplan/50-cloud-init.yaml.bak
 ## Apply Configuration
 
 ```bash
-sudo mv /etc/netplan/50-cloud-init.yaml /etc/netplan/50-cloud-init.yaml.bak
+sudo netplan generate
+sudo netplan apply
 ```
 
 ## Verify
