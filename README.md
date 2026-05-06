@@ -30,7 +30,8 @@ Following registration and license validation, we will provide:
 ## Useful links:
 
 - [System Requirements & Network Prerequisites](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/Xserver_IoT_Docker_System_Requirements.md) 
-- [WSL and SSH Installation on Windows 11](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/InstallWSL.md) 
+- [WSL and SSH Installation on Windows 11](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/InstallWSL.md)
+- [Ubuntu Installation Guide](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/UbuntuInstallation.md)
 - [Xserver.IoT.Docker Installation Guide](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/installdocker.md)
 - [License Registration](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/LicenseRegistration.md)
 - [Useful Commands](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/UsefulCommands.md)
