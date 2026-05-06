@@ -90,10 +90,14 @@ Europe/Budapest
 
 ## Best Practice
 
-Use host as single source of truth
+Use the host as the single source of truth  
 
-Configure timezone only on host
+Configure the timezone only on the host system  
 
-Let container inherit via mounted files
+Let the container inherit the timezone via mounted files  
 
-Avoid hardcoding timezone inside container
+Avoid modifying the timezone inside the container  
+
+Container-level changes are not persistent and will be lost after updates or container recreation  
+
+Avoid hardcoding the timezone inside the container
