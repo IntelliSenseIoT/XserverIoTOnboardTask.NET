@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide describes how to install Ubuntu Server on a new machine and deploy the **Xserver.IoT.Docker** platform.
+This guide describes how to install Ubuntu Server on a new machine.
 
 The process includes:
 
