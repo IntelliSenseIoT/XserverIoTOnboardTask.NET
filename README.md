@@ -37,6 +37,7 @@ Following registration and license validation, we will provide:
 - [Useful Commands](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/UsefulCommands.md)
 - [Set Static IP Address on Ubuntu (Netplan)](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/SetStaticIPAddressOnUbuntu.md)
 - [Docker Container Timezone Troubleshooting Guide](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/timezonetroubleshooting.md)
+- [Releasing TCP Port 502 for Modbus TCP/IP Device Simulation in WSL](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/releasing-port-502-wsl-modbus.md)
 
 # Xserver.IoT.200 and Xserver.IoT.Docker OnboardTask Overview:
 
