@@ -10,7 +10,7 @@ To simulate external Modbus TCP/IP devices locally (for example with Modbus simu
 
 Using IoT Explorer, disable the Modbus TCP/IP Server service running inside Xserver.IoT.Docker.
 
-![](images/Disable502Port.png)
+![](../images/Disable502Port.png)
 
 This prevents the Docker environment from actively listening on TCP port `502`.
 
