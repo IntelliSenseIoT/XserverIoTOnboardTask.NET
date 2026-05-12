@@ -2,7 +2,7 @@
 
 When using Xserver.IoT.Docker in a WSL-based Docker environment, the Modbus TCP/IP service typically occupies TCP port `502` via Windows `portproxy` forwarding.
 
-To simulate external Modbus TCP/IP devices locally (for example with Modbus simulators or test tools), TCP port `502` must first be released on the Windows host system.
+To simulate external Modbus TCP/IP devices locally (for example with Modbus simulators or test tools - ModSim), TCP port `502` must first be released on the Windows host system.
 
 ---
 
