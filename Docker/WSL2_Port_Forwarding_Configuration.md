@@ -1,8 +1,8 @@
-# WSL2 Port Forwarding Configuration for Xserver.IoT.Docker
+# WSL Port Forwarding Configuration for Xserver.IoT.Docker
 
 ## Overview
 
-In WSL2-based Docker environments, it is common that Xserver.IoT.Docker services:
+In WSL-based Docker environments, it is common that Xserver.IoT.Docker services:
 
 - work correctly from the local machine,
 - but are not accessible from other devices on the same network.
@@ -15,7 +15,7 @@ This issue typically affects:
 
 The root cause is usually:
 - missing or incorrect Windows `portproxy` configuration,
-- or the dynamic IP address used by WSL2.
+- or the dynamic IP address used by WSL.
 
 ---
 
@@ -195,9 +195,9 @@ sudo systemctl enable ssh
 
 ---
 
-# Important Note About WSL2
+# Important Note About WSL
 
-The WSL2 IP address may change after reboot.
+The WSL IP address may change after reboot.
 
 Because of this:
 - the `portproxy` rules remain,
@@ -211,7 +211,7 @@ In this case:
 
 # Recommended Long-Term Solution
 
-WSL2 is an excellent solution for:
+WSL is an excellent solution for:
 - development,
 - testing,
 - demonstrations.
