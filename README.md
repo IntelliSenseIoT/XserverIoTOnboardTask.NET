@@ -41,8 +41,6 @@ Following registration and license validation, we will provide:
 - [WSL Port Forwarding Configuration for Xserver.IoT.Docker](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/WSL2_Port_Forwarding_Configuration.md)
 - [Reinstalling Xserver.IoT.Docker](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/Reinstall_Xserver_IoT_Docker.md)
 
-- https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/blob/main/Docker/Reinstall_Xserver_IoT_Docker.md
-
 # Xserver.IoT.200 and Xserver.IoT.Docker OnboardTask Overview:
 
 With the Onboard Task project can be implemented customized tasks (Industrial PC communication, Custom protocol matching, Control tasks, Remote parameter setting from cloud, Control with Artificial Intelligence, etc.).
