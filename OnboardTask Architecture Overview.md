@@ -19,14 +19,13 @@
     
 #### appsettings.json:
 
-        //The OnboardTask login name and the password required for login.
+    //The OnboardTask login name and the password required for login.
     "OnboardTaskLoginName": "<required field>",
-    
     "OnboardTaskPassword": "<required field>",
     //Task Handler Period (ms)
     "TaskHandlerPeriod": 1000,
     //For Debug
-//False = No, True = Test mode
+    //False = No, True = Test mode
     "IsTestMode": false,
     //False=Azure, True = Local
     "LocalConnect": false,
