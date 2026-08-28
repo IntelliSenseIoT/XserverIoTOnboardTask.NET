@@ -67,7 +67,7 @@
             },
             "XserverIoTCommon.NET": {
               "target": "Package",
-              "version": "[11.2.4, )"
+              "version": "[11.2.6, )"
             }
           },
           "imports": [

@@ -41,7 +41,7 @@
           }
         }
       },
-      "DataConversations.NET/11.0.1": {
+      "DataConversations.NET/11.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/DataConversations.NET.dll": {
@@ -1159,10 +1159,10 @@
           }
         }
       },
-      "Service.Common.NET/11.2.1": {
+      "Service.Common.NET/11.2.3": {
         "type": "package",
         "dependencies": {
-          "DataConversations.NET": "11.0.1",
+          "DataConversations.NET": "11.0.2",
           "IO.NET.RestClient": "11.0.2",
           "IO.NET.TCPIP": "11.0.6",
           "StratoPiBase.Driver.Device.NET": "11.2.1",
@@ -1810,7 +1810,7 @@
           }
         }
       },
-      "XserverIoTCommon.NET/11.2.4": {
+      "XserverIoTCommon.NET/11.2.6": {
         "type": "package",
         "dependencies": {
           "IO.NET.SimpleHttpServer": "11.2.1",
@@ -1819,7 +1819,7 @@
           "Models.NET.Data": "11.0.2",
           "Models.NET.Interface": "11.0.6",
           "Newtonsoft.Json": "13.0.3",
-          "Service.Common.NET": "11.2.1",
+          "Service.Common.NET": "11.2.3",
           "SystemDB.Model": "11.0.6",
           "Xserver.IoT.Connectivity.Interface.NET": "11.2.9"
         },
@@ -1872,14 +1872,14 @@
         "lib/netstandard2.0/Cloud.NET.DeviceService.xml"
       ]
     },
-    "DataConversations.NET/11.0.1": {
-      "sha512": "ACf1JZBnARIg9lZCyuNi5Bd9+ErRFWhJgyJiogb9SL1bR3dY+jm3w5tk5EQNrbenMZ8YQ1jdHlm9GrLlmhrUww==",
+    "DataConversations.NET/11.0.2": {
+      "sha512": "Sk4E5m4rTWQOFpE1NS7IkXRFOzXaWmkufCf6yoo34J2Jb+QFv7ET6H5+czjJVkUDUdfEnLRUzh8PPqQRT1mFog==",
       "type": "package",
-      "path": "dataconversations.net/11.0.1",
+      "path": "dataconversations.net/11.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dataconversations.net.11.0.1.nupkg.sha512",
+        "dataconversations.net.11.0.2.nupkg.sha512",
         "dataconversations.net.nuspec",
         "lib/netstandard2.0/DataConversations.NET.dll",
         "lib/netstandard2.0/DataConversations.NET.xml"
@@ -3440,16 +3440,16 @@
         "version.txt"
       ]
     },
-    "Service.Common.NET/11.2.1": {
-      "sha512": "5ayKQN8x4RgdbtYD3dJcAxbPFUOgZf7GuyX2QCbQh2F4XOIF+X7JxITYZ65OAoVAk6TKa6bHh4z8dAIrlSy4cg==",
+    "Service.Common.NET/11.2.3": {
+      "sha512": "ja9LYLciobLCs+uQvZ6DP3xyuYA/vfdC6QzTCdnrbN+BpiulmKilXSk03DvZ9iwUIp3GK9NWO+7Jgc+ZlaOZhA==",
       "type": "package",
-      "path": "service.common.net/11.2.1",
+      "path": "service.common.net/11.2.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net8.0/Service.Common.NET.dll",
         "lib/net8.0/Service.Common.NET.xml",
-        "service.common.net.11.2.1.nupkg.sha512",
+        "service.common.net.11.2.3.nupkg.sha512",
         "service.common.net.nuspec"
       ]
     },
@@ -5077,16 +5077,16 @@
         "xserver.iot.connectivity.interface.net.nuspec"
       ]
     },
-    "XserverIoTCommon.NET/11.2.4": {
-      "sha512": "X3ABb//Tp7TC8Wotr/BXlETA/SZFfAR5FlIIDwVq/M9M7YOMau93led/2AEOgah5jMy6RAkieh0DGw89ULjUuA==",
+    "XserverIoTCommon.NET/11.2.6": {
+      "sha512": "fWjT8CQNXyyk5hLgvxtV7ykICupcQ8A+s5LQQ0J6+GfeZuqbueEnaZxo4ptdpsN7wruRWcreJO+Ud0B3+H6n5Q==",
       "type": "package",
-      "path": "xserveriotcommon.net/11.2.4",
+      "path": "xserveriotcommon.net/11.2.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net8.0/XserverIoT.OnboardTask.Common.NET.dll",
         "lib/net8.0/XserverIoT.OnboardTask.Common.NET.xml",
-        "xserveriotcommon.net.11.2.4.nupkg.sha512",
+        "xserveriotcommon.net.11.2.6.nupkg.sha512",
         "xserveriotcommon.net.nuspec"
       ]
     }
@@ -5096,7 +5096,7 @@
       "Microsoft.Extensions.Hosting >= 9.0.6",
       "Microsoft.Extensions.Hosting.Systemd >= 9.0.6",
       "Newtonsoft.Json >= 13.0.3",
-      "XserverIoTCommon.NET >= 11.2.4"
+      "XserverIoTCommon.NET >= 11.2.6"
     ]
   },
   "packageFolders": {
@@ -5166,7 +5166,7 @@
           },
           "XserverIoTCommon.NET": {
             "target": "Package",
-            "version": "[11.2.4, )"
+            "version": "[11.2.6, )"
           }
         },
         "imports": [

@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1E1jJjh97lQ=",
+  "dgSpecHash": "ogXiG/6mNHI=",
   "success": true,
   "projectFilePath": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\avrep\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\cloud.net.deviceservice\\11.2.0\\cloud.net.deviceservice.11.2.0.nupkg.sha512",
-    "C:\\Users\\avrep\\.nuget\\packages\\dataconversations.net\\11.0.1\\dataconversations.net.11.0.1.nupkg.sha512",
+    "C:\\Users\\avrep\\.nuget\\packages\\dataconversations.net\\11.0.2\\dataconversations.net.11.0.2.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\io.net.restclient\\11.0.2\\io.net.restclient.11.0.2.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\io.net.simplehttpserver\\11.2.1\\io.net.simplehttpserver.11.2.1.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\io.net.tcpip\\11.0.6\\io.net.tcpip.11.0.6.nupkg.sha512",
@@ -74,7 +74,7 @@
     "C:\\Users\\avrep\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\avrep\\.nuget\\packages\\service.common.net\\11.2.1\\service.common.net.11.2.1.nupkg.sha512",
+    "C:\\Users\\avrep\\.nuget\\packages\\service.common.net\\11.2.3\\service.common.net.11.2.3.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
@@ -111,7 +111,7 @@
     "C:\\Users\\avrep\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\systemdb.model\\11.0.6\\systemdb.model.11.0.6.nupkg.sha512",
     "C:\\Users\\avrep\\.nuget\\packages\\xserver.iot.connectivity.interface.net\\11.2.9\\xserver.iot.connectivity.interface.net.11.2.9.nupkg.sha512",
-    "C:\\Users\\avrep\\.nuget\\packages\\xserveriotcommon.net\\11.2.4\\xserveriotcommon.net.11.2.4.nupkg.sha512"
+    "C:\\Users\\avrep\\.nuget\\packages\\xserveriotcommon.net\\11.2.6\\xserveriotcommon.net.11.2.6.nupkg.sha512"
   ],
   "logs": []
 }
