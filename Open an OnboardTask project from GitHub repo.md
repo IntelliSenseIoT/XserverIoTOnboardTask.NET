@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Visual Studio 2022 - [Download & Install](https://visualstudio.microsoft.com/downloads/)
+- Visual Studio 2022 or 2026 - [Download & Install](https://visualstudio.microsoft.com/downloads/)
 
 ## Steps
 
