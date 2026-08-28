@@ -11,12 +11,31 @@
 ## More details:
 
 ### XServerIoTOnboardTask service settings
-        
+
+#### worker.cs:
+
     //Service display name
     private const string ServiceDisplayName = "Xserver.OnboardTask";
     
+#### appsettings.json:
+
+        //The OnboardTask login name and the password required for login.
+    "OnboardTaskLoginName": "<required field>",
+    
+    "OnboardTaskPassword": "<required field>",
     //Task Handler Period (ms)
-    private const int TaskHandlerPeriod = 1000;
+    "TaskHandlerPeriod": 1000,
+    //For Debug
+//False = No, True = Test mode
+    "IsTestMode": false,
+    //False=Azure, True = Local
+    "LocalConnect": false,
+    //IP Address 
+    "IP": "",
+    //Azure IoT Device ID
+    "ConnectedIoTDeviceID": "",
+    //Azure IoT Hub Connection string
+    "IoTHubConnectionString": ""
  
 ### First Run
  
