@@ -5104,7 +5104,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "11.2.0",
+    "version": "11.2.1",
     "restore": {
       "projectUniqueName": "D:\\EM_IOT\\XserverIoTOnboardTask.NET\\XserverIoTOnboardTask\\XserverIoTOnboardTask\\XserverIoTOnboardTask.csproj",
       "projectName": "XserverIoTOnboardTask",
@@ -5185,7 +5185,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.317/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
