@@ -41,6 +41,14 @@ Execute the installer from the home directory:
 sudo bash ./install.sh
 ```
 
+To install Xserver.IoT.Docker from Docker Hub, use install-dockerhub.sh instead of the standard Azure installer.
+
+``` bash
+sudo bash ./install-dockerhub.sh
+```
+
+The script downloads the public images and installs the Xserver.IoT.Docker system.
+
 The installation script will:
 
 -   Install required system dependencies
