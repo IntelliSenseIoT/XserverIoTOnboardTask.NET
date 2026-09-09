@@ -21,6 +21,16 @@ It is recommended to upload the file to the user's home directory:
 
 File transfer can be performed using SCP or SFTP.
 
+
+### Public Docker Hub Installation
+
+For test and evaluation environments, Xserver.IoT.Docker can be installed directly from the public Docker Hub repository.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/IntelliSenseIoT/XserverIoTOnboardTask.NET/main/Docker/install-dockerhub.sh -o install-dockerhub.sh
+sudo bash install-dockerhub.sh
+```
+
 ------------------------------------------------------------------------
 
 # 3. Connect to the Server via SSH
