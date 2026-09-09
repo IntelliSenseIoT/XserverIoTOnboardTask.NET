@@ -13,6 +13,8 @@ connectivity.
 
 Copy the official `install.sh` file to the target server.
 
+To request the official installer, please contact the IntelliSense Helpdesk at helpdesk@intellisense-iot.com. Our support team will provide the appropriate installation file and assist you with the necessary registration and licensing steps.
+
 It is recommended to upload the file to the user's home directory:
 
 ```bash
