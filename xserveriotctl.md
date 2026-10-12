@@ -52,7 +52,7 @@ For **advanced workflows and large-scale operations**, `xserveriotctl` is the re
 ## Runtime requirements
 
 ### Linux
-- Minimum requirement: Ubuntu 24.04.1 LTS (x64) or newer
+- Minimum requirement: Ubuntu 24.04.1 LTS (x64 or arm64) or newer
 - No installation required (portable ZIP package)
 - Execute permission required (`chmod +x`)
 
@@ -111,6 +111,24 @@ The Windows version is also distributed as a ZIP archive.
 xserveriotctl
 ```
 ---
+
+### Setup on Linux (arm64)
+
+The Linux version is provided as a ZIP archive that contains the executable and all required components.
+
+Extract the archive: **unzip xserveriotctl-linux-arm64.zip**
+
+Grant execute permission to the CLI: **chmod +x xserveriotctl**
+
+**Note**: Only the xserveriotctl binary requires execute permission.
+The included DLL files are loaded automatically at runtime.
+
+### Run the CLI
+
+```
+./xserveriotctl
+```
+Running the command without parameters prints the full help output, listing all available commands and subcommands.
 
 ### Practical Scripts and Use-Case Examples
 
